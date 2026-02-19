@@ -15,21 +15,20 @@
       <a href="#" class="logo">
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" class="logo__img" width="80" height="33" />
       </a>
-      <p class="header__tagline">THE MOBILITY CLOUD</p>
       <div class="header__actions">
-        <a href="#" class="header__icon" aria-label="Account"><span class="material-symbols-outlined">person</span></a>
+        <a href="#" class="header__icon" aria-label="Language"><span class="material-symbols-outlined">language</span></a>
         <span class="header__text">EN | $</span>
-        <button type="button" class="header__icon" aria-label="Help"><span class="material-symbols-outlined">help</span></button>
-        <a href="#" class="header__link">Login | Register</a>
+        <a href="#" class="header__icon" aria-label="Account"><span class="material-symbols-outlined">person</span></a>
+        <a href="#" class="header__link">Log in | Register</a>
       </div>
     </div>
-    <div class="header__title-bar">
-      <a href="#" class="back-link" aria-label="Back">
-        <span class="material-symbols-outlined">chevron_left</span>
-      </a>
-      <h1 class="page-title">REVIEW YOUR BOOKING</h1>
-    </div>
   </header>
+  <div class="title-bar">
+    <a href="#" class="back-link" aria-label="Back">
+      <span class="material-symbols-outlined">chevron_left</span>
+    </a>
+    <h1 class="page-title">REVIEW YOUR BOOKING</h1>
+  </div>
 
   <main class="main">
     <div class="main__form-wrap">
@@ -38,9 +37,9 @@
         <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=120&h=80&fit=crop" alt="" class="vehicle-card__img" />
         <div class="vehicle-card__body">
           <h2 class="vehicle-card__name">Compact (VOLKSWAGEN TAOS)</h2>
-          <p class="vehicle-card__meta">or similar | 2 DAYS</p>
+          <p class="vehicle-card__meta">or similar (CTA)</p>
           <span class="vehicle-card__price">$160.00</span>
-          <a href="#" class="vehicle-card__details">Details <span class="material-symbols-outlined">chevron_right</span></a>
+          <a href="#" class="vehicle-card__details">Price details</a>
         </div>
       </section>
 
@@ -100,20 +99,20 @@
               <input type="radio" name="protection" value="none" class="radio radio--card" checked />
               <span class="radio__circle"></span>
               <span class="protection-card__name">No extra protection</span>
+              <span class="protection-card__badge">Included</span>
               <span class="protection-card__desc protection-card__desc--warn">Deductible: up to full vehicle value</span>
               <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
-              <span class="protection-card__badge">Included</span>
             </label>
             <label class="protection-card">
               <input type="radio" name="protection" value="cover" class="radio radio--card" />
               <span class="radio__circle"></span>
               <span class="protection-card__name">Cover The Car</span>
+              <span class="protection-card__price">$32.90 / day</span>
               <span class="protection-card__desc protection-card__desc--ok">No deductible</span>
               <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
-              <span class="protection-card__price">$32.99 / day</span>
             </label>
           </div>
-          <a href="#" class="form__link form__link--btn">View all protection packages</a>
+          <a href="#" class="form__link form__link--btn">Show more protection packages</a>
         </section>
 
         <!-- Add-ons -->
@@ -121,14 +120,10 @@
           <h2 class="form-section__title">Which add-ons do you need?</h2>
           <div class="addons">
             <div class="addon-row">
-              <span class="material-symbols-outlined addon-row__icon">shield</span>
-              <label class="addon-row__label">
-                <input type="radio" name="addon_liability" class="radio" />
-                <span class="radio__circle"></span>
-                <span>Supplemental liability insurance</span>
-              </label>
-              <span class="addon-row__price">$18.99 / day</span>
-              <a href="#" class="addon-row__details">Details <span class="material-symbols-outlined">expand_more</span></a>
+              <span class="material-symbols-outlined addon-row__icon addon-row__icon--shield">shield</span>
+              <span class="addon-row__title">Supplemental Liability Insurance</span>
+              <span class="addon-row__price">$18.59 / day</span>
+              <a href="#" class="addon-row__details">Details</a>
               <label class="toggle">
                 <input type="checkbox" class="toggle__input" />
                 <span class="toggle__track"></span>
@@ -136,13 +131,9 @@
             </div>
             <div class="addon-row">
               <span class="material-symbols-outlined addon-row__icon">local_gas_station</span>
-              <label class="addon-row__label">
-                <input type="radio" name="addon_fuel" class="radio" />
-                <span class="radio__circle"></span>
-                <span>Prepaid Fuel</span>
-              </label>
+              <span class="addon-row__title">Prepaid Fuel</span>
               <span class="addon-row__price">$41.99 / one-time</span>
-              <a href="#" class="addon-row__details">Details <span class="material-symbols-outlined">expand_more</span></a>
+              <a href="#" class="addon-row__details">Details</a>
               <label class="toggle">
                 <input type="checkbox" class="toggle__input" />
                 <span class="toggle__track"></span>
@@ -150,20 +141,16 @@
             </div>
             <div class="addon-row">
               <span class="material-symbols-outlined addon-row__icon">toll</span>
-              <label class="addon-row__label">
-                <input type="radio" name="addon_toll" class="radio" />
-                <span class="radio__circle"></span>
-                <span>Toll pass/Express lane</span>
-              </label>
+              <span class="addon-row__title">Toll pass / Express lane</span>
               <span class="addon-row__price">$10.99 / day</span>
-              <a href="#" class="addon-row__details">Details <span class="material-symbols-outlined">expand_more</span></a>
+              <a href="#" class="addon-row__details">Details</a>
               <label class="toggle">
                 <input type="checkbox" class="toggle__input" />
                 <span class="toggle__track"></span>
               </label>
             </div>
           </div>
-          <a href="#" class="form__link form__link--btn">View all add-on options</a>
+          <a href="#" class="form__link form__link--btn">Show more add-on options</a>
         </section>
 
         <!-- Payment -->
@@ -193,17 +180,17 @@
             </div>
           </div>
           <div class="payment-logos" aria-hidden="true">
-            <span class="payment-logo">Visa</span>
-            <span class="payment-logo">Mastercard</span>
-            <span class="payment-logo">Maestro</span>
-            <span class="payment-logo">Visa Electron</span>
-            <span class="payment-logo">American Express</span>
-            <span class="payment-logo">JCB</span>
-            <span class="payment-logo">Discover</span>
+            <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" class="payment-logo-img" width="40" height="28" />
+            <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="" class="payment-logo-img" width="40" height="28" />
+            <img src="https://cdn.simpleicons.org/maestro/0099DF" alt="" class="payment-logo-img" width="40" height="28" />
+            <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" class="payment-logo-img" width="40" height="28" />
+            <img src="https://cdn.simpleicons.org/visa/142787" alt="" class="payment-logo-img" width="40" height="28" />
           </div>
           <p class="form__disclaimer">The payment method must be under the renter's name and physically presented at pickup. Debit cards are accepted for select vehicle classes; <a href="#">additional documentation</a> may be required in some cases.</p>
-          <a href="#" class="form__link form__link--warn">No payment method on hand?</a>
-          <a href="#" class="form__link form__link--small">Return to Pay Later, and have the cancellation included for just $10.00 more. <span class="material-symbols-outlined">info</span></a>
+          <p class="form__pay-later">
+            <strong class="form__pay-later-text">No payment method on hand?</strong>
+            <a href="#" class="form__link form__link--warn">Switch to Pay Later</a>
+          </p>
         </section>
 
         <!-- Invoice address -->
@@ -214,7 +201,7 @@
               <span class="input-wrap__label">Company (optional)</span>
               <input type="text" class="input" placeholder="Company (optional)" name="company" />
             </label>
-            <label class="input-wrap">
+            <label class="input-wrap input-wrap--show-label">
               <span class="input-wrap__label">Country</span>
               <div class="input-wrap__select-wrap">
                 <span class="material-symbols-outlined input-wrap__flag">flag</span>
@@ -261,10 +248,9 @@
           </label>
         </section>
 
-        <!-- Sixt program -->
+        <!-- Bonus program -->
         <section class="form-section">
-          <h2 class="form-section__title">Bonus program</h2>
-          <button type="button" class="expandable">
+          <button type="button" class="expandable expandable--bonus">
             <span>Bonus program</span>
             <span class="material-symbols-outlined">chevron_right</span>
           </button>
@@ -278,7 +264,7 @@
           </div>
           <a href="#" class="form__link form__link--small form__link--price-details">Price details</a>
           <div class="legal-block">
-            <p class="legal-block__title">IMPORTANT INFORMATION</p>
+            <p class="legal-block__title">IMPORTANT INFORMATION about your PREPAID reservation</p>
             <ul class="legal-block__list">
               <li>Cancellation: If you cancel 48 hours or more before pickup, a fee of $10.00 applies.</li>
               <li>No-show: If you do not show up at the pickup time, the total reservation price will be charged.</li>
@@ -288,9 +274,8 @@
           <label class="checkbox-label checkbox-label--legal">
             <input type="checkbox" name="terms" class="checkbox" />
             <span class="checkbox__box"></span>
-            <span class="checkbox-label__text">I have read and accept the <a href="#">General Rental Information</a>, the <a href="#">Terms and Conditions</a>, and the <a href="#">Privacy Policy</a>, and acknowledge that I am booking a prepaid rental, where the total reservation price is immediately charged to the payment method I provided.</span>
+            <span class="checkbox-label__text">I have read and accept the <a href="#">Rental Information</a>, the <a href="#">Terms and Conditions</a>, and the <a href="#">Privacy Policy</a>.</span>
           </label>
-          <a href="#" class="form__link form__link--small">See further information for more details on accepted payment methods.</a>
           <button type="submit" class="cta-button">Pay and Book</button>
         </section>
       </form>
@@ -299,43 +284,46 @@
     <!-- Booking summary (desktop right column) -->
     <aside class="summary-card">
       <div class="summary-card__total-block">
-        <span class="summary-card__total-label">Total</span>
-        <span class="summary-card__total-amount">$160.00</span>
+        <span class="summary-card__total-line">Total: <strong>$160.00</strong></span>
         <a href="#" class="summary-card__price-details">Price details</a>
       </div>
       <div class="vehicle-card vehicle-card--desktop">
         <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=200&h=120&fit=crop" alt="" class="vehicle-card__img" />
         <div class="vehicle-card__body">
           <h2 class="vehicle-card__name">Compact (VOLKSWAGEN TAOS)</h2>
-          <p class="vehicle-card__meta">or similar</p>
+          <p class="vehicle-card__meta">or similar (CTA)</p>
           <span class="vehicle-card__price">$160.00</span>
           <a href="#" class="vehicle-card__details">Price details</a>
         </div>
       </div>
-      <div class="summary-card__section">
+      <div class="summary-card__section summary-card__section--pickup-return">
         <h3 class="summary-card__heading">Pickup and return</h3>
-        <p class="summary-card__row">
-          <span class="material-symbols-outlined summary-card__icon">location_on</span>
-          Miami Intl Airport
-        </p>
-        <p class="summary-card__row">
-          <span class="material-symbols-outlined summary-card__icon">calendar_today</span>
-          Tue, Apr 21, 2026 | 10:00 PM
-        </p>
-        <p class="summary-card__row">
-          <span class="material-symbols-outlined summary-card__icon">location_on</span>
-          Miami Intl Airport
-        </p>
-        <p class="summary-card__row">
-          <span class="material-symbols-outlined summary-card__icon">calendar_today</span>
-          Fri, Apr 24, 2026 | 12:00 PM
-        </p>
+        <div class="pickup-return">
+          <div class="pickup-return__item">
+            <span class="material-symbols-outlined pickup-return__icon">location_on</span>
+            <div class="pickup-return__content">
+              <span class="pickup-return__label">Pickup</span>
+              <span class="pickup-return__location">Miami Intl Airport</span>
+              <span class="pickup-return__datetime">Tue, Apr 21, 2026 | 12:00 PM</span>
+            </div>
+          </div>
+          <div class="pickup-return__item">
+            <span class="material-symbols-outlined pickup-return__icon pickup-return__icon--return">u_turn_right</span>
+            <div class="pickup-return__content">
+              <span class="pickup-return__label">Return</span>
+              <span class="pickup-return__location">Miami Intl Airport</span>
+              <span class="pickup-return__datetime">Fri, Apr 24, 2026 | 12:00 PM</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="summary-card__section">
         <h3 class="summary-card__heading">Pay now</h3>
-        <span class="badge--orange">BEST PRICE</span>
+        <div class="summary-card__pay-now-row">
+          <span class="summary-card__pay-now-label">Pay now</span>
+          <span class="badge badge--orange">BEST PRICE</span>
+        </div>
         <div class="summary-card__best-price">
-          <span class="material-symbols-outlined summary-card__check">check_circle</span>
           <span>Best price available for your rental</span>
           <span class="material-symbols-outlined summary-card__info">info</span>
         </div>
@@ -351,13 +339,13 @@
   <footer class="footer">
     <a href="#">Help</a>
     <span class="footer__sep">|</span>
-    <a href="#">Rental Information</a>
+    <a href="#">Rental information</a>
     <span class="footer__sep">|</span>
     <a href="#">SIXT for business</a>
     <span class="footer__sep">|</span>
     <a href="#">SIXT partners</a>
     <span class="footer__sep">|</span>
-    <a href="#">SIXT Magazin</a>
+    <a href="#">SIXT Magazine</a>
     <span class="footer__sep">|</span>
     <a href="#">Privacy</a>
     <span class="footer__sep">|</span>
@@ -365,11 +353,11 @@
     <span class="footer__sep">|</span>
     <a href="#">Terms & conditions</a>
     <span class="footer__sep">|</span>
-    <a href="#">Customers with a disability</a>
+    <a href="#">Customers with disabilities</a>
     <span class="footer__sep">|</span>
     <a href="#">Cookie-Settings</a>
     <span class="footer__sep">|</span>
-    <span>© 2024 SIXT</span>
+    <span>© Sixt 2025</span>
   </footer>
 </body>
 </html>
