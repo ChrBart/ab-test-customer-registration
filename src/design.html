@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Review Your Booking | SIXT</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="/design.css" />
 </head>
 <body>
@@ -16,10 +16,7 @@
   </header>
   <header class="topbar">
     <div class="topbar_inner">
-      <a href="#" class="topbar_logo" aria-label="SIXT">
-        <img class="topbar_logo_swoosh" src="/sixt-swoosh.svg" alt="" />
-        <img class="topbar_logo_word" src="/sixt-wordmark.svg" alt="SIXT" />
-      </a>
+      <a href="#" class="topbar_logo"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" /></a>
       <div class="topbar_actions">
         <span class="topbar_locale"><span class="material-symbols-outlined topbar_icon">language</span> EN / €</span>
         <a href="#" class="topbar_login"><span class="material-symbols-outlined topbar_icon">person</span> Log in / Sign up</a>
@@ -56,46 +53,46 @@
             <div class="row row_phone">
               <label class="lbl lbl_sel">
                 <span class="lbl_t">Country</span>
-                <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp" name="country">
-                  <option value="+49">+49 Germany</option>
-                  <option value="+43">+43 Austria</option>
-                  <option value="+41">+41 Switzerland</option>
-                  <option value="+31">+31 Netherlands</option>
-                  <option value="+32">+32 Belgium</option>
-                  <option value="+33">+33 France</option>
-                  <option value="+34">+34 Spain</option>
-                  <option value="+39">+39 Italy</option>
-                  <option value="+44">+44 United Kingdom</option>
-                  <option value="+45">+45 Denmark</option>
-                  <option value="+46">+46 Sweden</option>
-                  <option value="+47">+47 Norway</option>
-                  <option value="+48">+48 Poland</option>
-                  <option value="+351">+351 Portugal</option>
-                  <option value="+353">+353 Ireland</option>
-                  <option value="+358">+358 Finland</option>
-                  <option value="+420">+420 Czechia</option>
-                  <option value="+421">+421 Slovakia</option>
-                  <option value="+36">+36 Hungary</option>
-                  <option value="+40">+40 Romania</option>
-                  <option value="+385">+385 Croatia</option>
-                  <option value="+386">+386 Slovenia</option>
-                  <option value="+30">+30 Greece</option>
-                  <option value="+90">+90 Turkey</option>
-                  <option value="+1">+1 USA/Canada</option>
-                  <option value="+52">+52 Mexico</option>
-                  <option value="+55">+55 Brazil</option>
-                  <option value="+54">+54 Argentina</option>
-                  <option value="+61">+61 Australia</option>
-                  <option value="+64">+64 New Zealand</option>
-                  <option value="+81">+81 Japan</option>
-                  <option value="+82">+82 South Korea</option>
-                  <option value="+86">+86 China</option>
-                  <option value="+65">+65 Singapore</option>
-                  <option value="+971">+971 UAE</option>
-                  <option value="+966">+966 Saudi Arabia</option>
-                  <option value="+27">+27 South Africa</option>
-                  <option value="+20">+20 Egypt</option>
-                  <option value="+91">+91 India</option>
+                <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp country_select country_select_phone" name="country">
+                  <option value="+49" data-flag="🇩🇪" data-short="+49" data-long="+49 Germany" selected>+49</option>
+                  <option value="+43" data-flag="🇦🇹" data-short="+43" data-long="+43 Austria">+43</option>
+                  <option value="+41" data-flag="🇨🇭" data-short="+41" data-long="+41 Switzerland">+41</option>
+                  <option value="+31" data-flag="🇳🇱" data-short="+31" data-long="+31 Netherlands">+31</option>
+                  <option value="+32" data-flag="🇧🇪" data-short="+32" data-long="+32 Belgium">+32</option>
+                  <option value="+33" data-flag="🇫🇷" data-short="+33" data-long="+33 France">+33</option>
+                  <option value="+34" data-flag="🇪🇸" data-short="+34" data-long="+34 Spain">+34</option>
+                  <option value="+39" data-flag="🇮🇹" data-short="+39" data-long="+39 Italy">+39</option>
+                  <option value="+44" data-flag="🇬🇧" data-short="+44" data-long="+44 United Kingdom">+44</option>
+                  <option value="+45" data-flag="🇩🇰" data-short="+45" data-long="+45 Denmark">+45</option>
+                  <option value="+46" data-flag="🇸🇪" data-short="+46" data-long="+46 Sweden">+46</option>
+                  <option value="+47" data-flag="🇳🇴" data-short="+47" data-long="+47 Norway">+47</option>
+                  <option value="+48" data-flag="🇵🇱" data-short="+48" data-long="+48 Poland">+48</option>
+                  <option value="+351" data-flag="🇵🇹" data-short="+351" data-long="+351 Portugal">+351</option>
+                  <option value="+353" data-flag="🇮🇪" data-short="+353" data-long="+353 Ireland">+353</option>
+                  <option value="+358" data-flag="🇫🇮" data-short="+358" data-long="+358 Finland">+358</option>
+                  <option value="+420" data-flag="🇨🇿" data-short="+420" data-long="+420 Czechia">+420</option>
+                  <option value="+421" data-flag="🇸🇰" data-short="+421" data-long="+421 Slovakia">+421</option>
+                  <option value="+36" data-flag="🇭🇺" data-short="+36" data-long="+36 Hungary">+36</option>
+                  <option value="+40" data-flag="🇷🇴" data-short="+40" data-long="+40 Romania">+40</option>
+                  <option value="+385" data-flag="🇭🇷" data-short="+385" data-long="+385 Croatia">+385</option>
+                  <option value="+386" data-flag="🇸🇮" data-short="+386" data-long="+386 Slovenia">+386</option>
+                  <option value="+30" data-flag="🇬🇷" data-short="+30" data-long="+30 Greece">+30</option>
+                  <option value="+90" data-flag="🇹🇷" data-short="+90" data-long="+90 Turkey">+90</option>
+                  <option value="+1" data-flag="🇺🇸" data-short="+1" data-long="+1 United States">+1</option>
+                  <option value="+52" data-flag="🇲🇽" data-short="+52" data-long="+52 Mexico">+52</option>
+                  <option value="+55" data-flag="🇧🇷" data-short="+55" data-long="+55 Brazil">+55</option>
+                  <option value="+54" data-flag="🇦🇷" data-short="+54" data-long="+54 Argentina">+54</option>
+                  <option value="+61" data-flag="🇦🇺" data-short="+61" data-long="+61 Australia">+61</option>
+                  <option value="+64" data-flag="🇳🇿" data-short="+64" data-long="+64 New Zealand">+64</option>
+                  <option value="+81" data-flag="🇯🇵" data-short="+81" data-long="+81 Japan">+81</option>
+                  <option value="+82" data-flag="🇰🇷" data-short="+82" data-long="+82 South Korea">+82</option>
+                  <option value="+86" data-flag="🇨🇳" data-short="+86" data-long="+86 China">+86</option>
+                  <option value="+65" data-flag="🇸🇬" data-short="+65" data-long="+65 Singapore">+65</option>
+                  <option value="+971" data-flag="🇦🇪" data-short="+971" data-long="+971 United Arab Emirates">+971</option>
+                  <option value="+966" data-flag="🇸🇦" data-short="+966" data-long="+966 Saudi Arabia">+966</option>
+                  <option value="+27" data-flag="🇿🇦" data-short="+27" data-long="+27 South Africa">+27</option>
+                  <option value="+20" data-flag="🇪🇬" data-short="+20" data-long="+20 Egypt">+20</option>
+                  <option value="+91" data-flag="🇮🇳" data-short="+91" data-long="+91 India">+91</option>
                 </select><span class="material-symbols-outlined sel_arrow">expand_more</span></span>
               </label>
               <label class="lbl lbl_grow"><span class="lbl_t">Phone number</span><input type="tel" class="inp" name="phone" /></label>
@@ -190,7 +187,21 @@
             <label class="chk chk_invoice"><input type="checkbox" name="same_address" /><span class="chk_box"></span><span class="chk_t">Same as driver's address</span></label>
             <label class="lbl lbl_sel">
               <span class="lbl_t">Country/region</span>
-              <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp" name="country_addr"><option>Germany</option></select><span class="material-symbols-outlined sel_arrow">expand_more</span></span>
+              <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp country_select country_select_addr" name="country_addr">
+                <option value="DE" data-flag="🇩🇪" data-short="Germany" data-long="Germany" selected>Germany</option>
+                <option value="AT" data-flag="🇦🇹" data-short="Austria" data-long="Austria">Austria</option>
+                <option value="CH" data-flag="🇨🇭" data-short="Switzerland" data-long="Switzerland">Switzerland</option>
+                <option value="NL" data-flag="🇳🇱" data-short="Netherlands" data-long="Netherlands">Netherlands</option>
+                <option value="BE" data-flag="🇧🇪" data-short="Belgium" data-long="Belgium">Belgium</option>
+                <option value="FR" data-flag="🇫🇷" data-short="France" data-long="France">France</option>
+                <option value="ES" data-flag="🇪🇸" data-short="Spain" data-long="Spain">Spain</option>
+                <option value="IT" data-flag="🇮🇹" data-short="Italy" data-long="Italy">Italy</option>
+                <option value="GB" data-flag="🇬🇧" data-short="United Kingdom" data-long="United Kingdom">United Kingdom</option>
+                <option value="US" data-flag="🇺🇸" data-short="United States" data-long="United States">United States</option>
+                <option value="CA" data-flag="🇨🇦" data-short="Canada" data-long="Canada">Canada</option>
+                <option value="AU" data-flag="🇦🇺" data-short="Australia" data-long="Australia">Australia</option>
+                <option value="JP" data-flag="🇯🇵" data-short="Japan" data-long="Japan">Japan</option>
+              </select><span class="material-symbols-outlined sel_arrow">expand_more</span></span>
             </label>
             <label class="lbl"><span class="lbl_t">Street and house number</span><input type="text" class="inp" name="street" placeholder="Example: Sixt Street 123B" /></label>
             <div class="row row_50">
@@ -338,6 +349,48 @@
           this.value = this.value.replace(/\D/g, '').slice(0, 4);
         });
       }
+    })();
+
+    (function () {
+      const countrySelects = document.querySelectorAll('.country_select');
+      countrySelects.forEach(function (select) {
+        const selWrap = select.closest('.sel');
+        const flagNode = selWrap ? selWrap.querySelector('.sel_flag') : null;
+
+        function updateOptionLabels(mode) {
+          for (const option of select.options) {
+            const shortLabel = option.dataset.short || option.textContent || "";
+            const longLabel = option.dataset.long || shortLabel;
+            option.textContent = mode === "long" ? longLabel : shortLabel;
+          }
+        }
+
+        function syncSelectedState() {
+          const selected = select.options[select.selectedIndex];
+          if (!selected) return;
+          if (flagNode && selected.dataset.flag) {
+            flagNode.textContent = selected.dataset.flag;
+          }
+        }
+
+        updateOptionLabels("short");
+        syncSelectedState();
+
+        select.addEventListener("mousedown", function () {
+          updateOptionLabels("long");
+        });
+        select.addEventListener("focus", function () {
+          updateOptionLabels("long");
+        });
+        select.addEventListener("change", function () {
+          updateOptionLabels("short");
+          syncSelectedState();
+        });
+        select.addEventListener("blur", function () {
+          updateOptionLabels("short");
+          syncSelectedState();
+        });
+      });
     })();
   </script>
 </body>
