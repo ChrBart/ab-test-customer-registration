@@ -340,7 +340,7 @@ body.summary-lightbox::before {
   .content_right {
     max-width: none;
     order: -1;
-    top: calc(env(safe-area-inset-top, 0px) + 8px);
+    top: 8px;
     min-height: 122px;
   }
   .content_inner {
@@ -1183,7 +1183,7 @@ body.summary-lightbox::before {
     position: fixed;
     left: 16px;
     right: 16px;
-    top: calc(env(safe-area-inset-top, 0px) + 8px);
+    top: 8px;
     width: auto;
     z-index: 40;
   }
@@ -1195,7 +1195,7 @@ body.summary-lightbox::before {
     padding: 8px var(--spacing-xs) var(--spacing-xl);
   }
   .content_right {
-    top: calc(env(safe-area-inset-top, 0px) + 8px);
+    top: 8px;
   }
   .block_h2 {
     font-size: 18px;
