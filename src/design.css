@@ -54,7 +54,7 @@
 * { box-sizing: border-box; }
 
 html {
-  background: var(--surface-canvas);
+  background: transparent;
 }
 
 body {
@@ -64,6 +64,13 @@ body {
   line-height: 1.5;
   color: var(--content-primary);
   background: var(--surface-canvas);
+}
+
+@supports (-webkit-touch-callout: none) {
+  html,
+  body {
+    background: transparent;
+  }
 }
 
 img { max-width: 100%; height: auto; display: block; }
