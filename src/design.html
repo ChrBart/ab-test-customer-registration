@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="/design.css" />
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header class="mobile_nav" aria-label="Mobile navigation">
     <div class="mobile_nav_bar">
-      <a href="#" class="mobile_nav_back" aria-label="Back"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+      <a href="#" class="mobile_nav_back" aria-label="Back"><span class="material-symbols-outlined" aria-hidden="true">arrow_back_ios</span></a>
       <span class="mobile_nav_title">REVIEW YOUR BOOKING</span>
     </div>
   </header>
@@ -18,15 +19,15 @@
     <div class="topbar_inner">
       <a href="#" class="topbar_logo"><img src="/sixt-logo-white.svg" alt="SIXT" /></a>
       <div class="topbar_actions">
-        <span class="topbar_locale"><span class="material-symbols-outlined topbar_icon">language</span> EN / €</span>
-        <a href="#" class="topbar_login" aria-disabled="true" tabindex="-1"><span class="material-symbols-outlined topbar_icon">person</span> Log in / Sign up</a>
+        <span class="topbar_locale"><span class="material-symbols-outlined topbar_icon" aria-hidden="true">language</span> EN / €</span>
+        <a href="#" class="topbar_login" aria-disabled="true" tabindex="-1"><span class="material-symbols-outlined topbar_icon" aria-hidden="true">person</span> Log in / Sign up</a>
       </div>
     </div>
   </header>
   <div class="pageheader">
     <div class="pageheader_inner">
       <div class="pageheader_left">
-        <a href="#" class="pageheader_back" aria-label="Back"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+        <a href="#" class="pageheader_back" aria-label="Back"><span class="material-symbols-outlined" aria-hidden="true">arrow_back_ios</span></a>
         <span class="pageheader_title">REVIEW YOUR BOOKING</span>
       </div>
       <div class="pageheader_right">
@@ -38,7 +39,7 @@
     </div>
   </div>
 
-  <main class="content">
+  <main class="content" id="main-content" tabindex="-1">
     <div class="content_inner">
       <div class="content_left">
         <form class="form" method="post" action="#" autocomplete="on">
@@ -53,7 +54,7 @@
             <div class="row row_phone">
               <label class="lbl lbl_sel">
                 <span class="lbl_t">Country</span>
-                <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp country_select country_select_phone" name="country" aria-label="Phone country code">
+                <span class="sel"><span class="sel_flag" aria-hidden="true">🇩🇪</span><select class="inp country_select country_select_phone" name="country" aria-label="Phone country code">
                   <option value="+49" data-flag="🇩🇪" data-short="+49" data-long="+49 Germany" selected>+49</option>
                   <option value="+43" data-flag="🇦🇹" data-short="+43" data-long="+43 Austria">+43</option>
                   <option value="+41" data-flag="🇨🇭" data-short="+41" data-long="+41 Switzerland">+41</option>
@@ -165,7 +166,7 @@
 
           <section class="block cc_block">
             <h2 class="block_h2">What credit card would you like to pay with?</h2>
-            <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Card number</span><input type="text" class="inp cc_inp" name="card" placeholder="1234 1234 1234 1234" inputmode="numeric" autocomplete="cc-number" /></label>
+            <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Card number</span><input type="text" class="inp cc_inp" name="card" placeholder="1234 1234 1234 1234" inputmode="numeric" autocomplete="cc-number" aria-describedby="payment-note" /></label>
             <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Cardholder name</span><input type="text" class="inp cc_inp" name="cardholder" autocomplete="cc-name" /></label>
             <div class="row row_50">
               <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Expiration date</span><input type="text" class="inp cc_inp" name="exp" placeholder="MM / YY" inputmode="numeric" maxlength="7" autocomplete="cc-exp" /></label>
@@ -179,7 +180,7 @@
               <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="Visa" width="24" height="24" />
               <img src="https://cdn.simpleicons.org/dinersclub/0079BE" alt="Diners Club" width="24" height="24" />
             </div>
-            <p class="pay_note cc_note">The credit card used for payment must be under the driver's name and presented during pickup. Please be aware that debit cards may not be accepted at all locations or for all car categories.</p>
+            <p class="pay_note cc_note" id="payment-note">The credit card used for payment must be under the driver's name and presented during pickup. Please be aware that debit cards may not be accepted at all locations or for all car categories.</p>
           </section>
 
           <section class="block">
@@ -187,7 +188,7 @@
             <label class="chk chk_invoice"><input type="checkbox" name="same_address" /><span class="chk_box"></span><span class="chk_t">Same as driver's address</span></label>
             <label class="lbl lbl_sel">
               <span class="lbl_t">Country/region</span>
-              <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp country_select country_select_addr" name="country_addr" aria-label="Invoice country or region">
+              <span class="sel"><span class="sel_flag" aria-hidden="true">🇩🇪</span><select class="inp country_select country_select_addr" name="country_addr" aria-label="Invoice country or region">
                 <option value="DE" data-flag="🇩🇪" data-short="Germany" data-long="Germany" selected>Germany</option>
                 <option value="AT" data-flag="🇦🇹" data-short="Austria" data-long="Austria">Austria</option>
                 <option value="CH" data-flag="🇨🇭" data-short="Switzerland" data-long="Switzerland">Switzerland</option>
@@ -212,8 +213,8 @@
 
           <section class="block">
             <h2 class="block_h2">Enter flight number</h2>
-            <p class="flight_hint">This is used to see whether your flight is delayed, so we can prepare your car for you.</p>
-            <label class="lbl"><span class="lbl_t">Flight number <span class="lbl_opt">(optional)</span></span><input type="text" class="inp" name="flight" /></label>
+            <p class="flight_hint" id="flight-hint">This is used to see whether your flight is delayed, so we can prepare your car for you.</p>
+            <label class="lbl"><span class="lbl_t">Flight number <span class="lbl_opt">(optional)</span></span><input type="text" class="inp" name="flight" aria-describedby="flight-hint" /></label>
           </section>
 
           <section class="block block_tot">
@@ -246,7 +247,7 @@
       <aside class="sidecard" id="desktop-summary-card">
         <label for="summary-toggle" class="sidecard_head" aria-label="Toggle booking summary">
           <div class="sidecard_vehicle">
-            <div class="sidecard_thumb"><img src="/vw-touareg.png" alt="" /></div>
+            <div class="sidecard_thumb"><img src="/vw-touareg.png" alt="VW Touareg vehicle" /></div>
             <div class="sidecard_vehicle_text">
               <h3 class="sidecard_t">VW Touareg</h3>
               <p class="sidecard_meta">or similar | LFBR</p>
