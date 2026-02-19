@@ -290,7 +290,9 @@ button { font-family: inherit; cursor: pointer; }
 
 /* Form sections */
 .block { margin-bottom: var(--spacing-lg); }
-.block:last-child { margin-bottom: 0; }
+.form > .block { margin-bottom: var(--spacing-4xl); }
+.form > .block.block_tot { margin-bottom: var(--spacing-lg); }
+.form > .block:last-child { margin-bottom: 0; }
 .block_h2 {
   font-size: var(--size-md);
   font-weight: 700;
@@ -1058,6 +1060,8 @@ button { font-family: inherit; cursor: pointer; }
     line-height: 1.35;
     margin-bottom: 12px;
   }
+  .form > .block { margin-bottom: 24px; }
+  .form > .block.block_tot { margin-bottom: 24px; }
   .pkg_row { grid-template-columns: 1fr; }
   .addon_i {
     min-height: 121px;
@@ -1084,6 +1088,8 @@ button { font-family: inherit; cursor: pointer; }
     margin: 0;
     gap: 28px;
   }
+  .form > .block { margin-bottom: 40px; }
+  .form > .block.block_tot { margin-bottom: 24px; }
 }
 
 /* Ensure summary internals fill available width on tablet/mobile */
