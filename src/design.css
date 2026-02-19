@@ -113,18 +113,18 @@ body::after {
   content: "";
   position: fixed;
   left: var(--sticky-shadow-left, 16px);
-  top: var(--sticky-shadow-top, 8px);
+  top: calc(var(--sticky-shadow-top, 8px) - 22px);
   width: var(--sticky-shadow-width, calc(100vw - 32px));
-  height: var(--sticky-shadow-height, 96px);
+  height: calc(var(--sticky-shadow-height, 96px) + 52px);
   border-radius: 18px;
   pointer-events: none;
   opacity: 0;
   transition: opacity 180ms ease;
 }
 body.summary-stuck::after {
-  background: rgba(10, 10, 14, 0.28);
-  filter: blur(24px);
-  transform: translateY(14px);
+  background: rgba(10, 10, 14, 0.46);
+  filter: blur(30px);
+  transform: translateY(18px);
   z-index: 24;
   opacity: 1;
 }
