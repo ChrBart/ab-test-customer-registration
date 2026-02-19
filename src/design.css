@@ -319,6 +319,7 @@ select:focus-visible {
     max-width: none;
     order: -1;
     top: 20px;
+    min-height: 122px;
   }
   .content_inner {
     max-width: none;
@@ -906,6 +907,12 @@ select:focus-visible {
     position: relative;
     z-index: 1;
   }
+  .content_right > .summary_toggle + .sidecard {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
   .sidecard {
     width: 100%;
     max-width: none;
@@ -1157,6 +1164,12 @@ select:focus-visible {
   .topbar,
   .pageheader,
   .foot { display: none; }
+  .content {
+    padding: 8px var(--spacing-xs) var(--spacing-xl);
+  }
+  .content_right {
+    top: 8px;
+  }
   .block_h2 {
     font-size: 18px;
     line-height: 1.35;
