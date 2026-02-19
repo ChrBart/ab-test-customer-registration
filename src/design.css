@@ -943,25 +943,11 @@ body.summary-lightbox::before {
   .sidecard {
     width: 100%;
     max-width: none;
-    max-height: calc(100vh - 20px);
-    overflow: auto;
+    max-height: none;
+    overflow: visible;
   }
   .content_right::before {
     display: none;
-  }
-  .content_right.is-stuck::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 128px;
-    border-radius: 16px;
-    background: rgba(10, 10, 14, 0.24);
-    filter: blur(22px);
-    transform: translateY(12px);
-    pointer-events: none;
-    z-index: 0;
   }
 
   .content_right.is-stuck .sidecard {
@@ -982,8 +968,10 @@ body.summary-lightbox::before {
     overflow: hidden;
   }
   .summary_toggle:checked + .sidecard .sidecard_expandable {
-    max-height: 900px;
+    max-height: calc(100vh - 140px);
     opacity: 1;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .summary_toggle:checked + .sidecard .sidecard_toggle_ico {
     transform: translateY(-50%) rotate(180deg);
