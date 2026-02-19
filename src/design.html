@@ -323,6 +323,7 @@
         const sticky = document.querySelector(".content_right");
         const summaryToggle = document.querySelector(".summary_toggle");
         const pageBody = document.body;
+        const sidecard = sticky ? sticky.querySelector(".sidecard") : null;
         if (!sticky) return;
 
         const syncExpanded = function () {
@@ -337,6 +338,14 @@
           const isExpanded = Boolean(summaryToggle && summaryToggle.checked);
           pageBody.classList.toggle("summary-stuck", isMobile && isStuck);
           pageBody.classList.toggle("summary-lightbox", isMobile && isStuck && isExpanded);
+
+          if (sidecard && isMobile && isStuck) {
+            const rect = sidecard.getBoundingClientRect();
+            pageBody.style.setProperty("--sticky-shadow-left", rect.left + "px");
+            pageBody.style.setProperty("--sticky-shadow-top", rect.top + "px");
+            pageBody.style.setProperty("--sticky-shadow-width", rect.width + "px");
+            pageBody.style.setProperty("--sticky-shadow-height", Math.max(84, rect.height - 28) + "px");
+          }
         };
 
         const updateStickyState = function () {
