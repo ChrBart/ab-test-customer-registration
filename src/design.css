@@ -340,7 +340,7 @@ body.summary-lightbox::before {
   .content_right {
     max-width: none;
     order: -1;
-    top: 8px;
+    top: 20px;
     min-height: 122px;
   }
   .content_inner {
@@ -952,9 +952,9 @@ body.summary-lightbox::before {
 
   .content_right.is-stuck .sidecard {
     box-shadow:
-      0 14px 32px -14px rgba(10, 10, 14, 0.34),
-      0 30px 120px -28px rgba(10, 10, 14, 0.22),
-      0 48px 220px -44px rgba(10, 10, 14, 0.16);
+      0 4px 34px rgba(10, 10, 14, 0.30),
+      0 12px 150px rgba(10, 10, 14, 0.18),
+      0 18px 286px rgba(10, 10, 14, 0.12);
   }
   .sidecard_head {
     cursor: pointer;
@@ -1183,7 +1183,7 @@ body.summary-lightbox::before {
     position: fixed;
     left: 16px;
     right: 16px;
-    top: 8px;
+    top: 20px;
     width: auto;
     z-index: 40;
   }
@@ -1195,7 +1195,7 @@ body.summary-lightbox::before {
     padding: 8px var(--spacing-xs) var(--spacing-xl);
   }
   .content_right {
-    top: 8px;
+    top: 20px;
   }
   .block_h2 {
     font-size: 18px;
