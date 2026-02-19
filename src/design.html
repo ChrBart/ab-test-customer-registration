@@ -181,29 +181,21 @@
       </div>
 
       <div class="content_right">
-      <input type="checkbox" id="mobile-summary-toggle" class="mobile_summary_toggle" aria-controls="desktop-summary-card" />
-      <section class="mobile_summary" aria-label="Review and book summary">
-        <label for="mobile-summary-toggle" class="mobile_summary_row">
-          <div class="mobile_summary_thumb"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=200&fit=crop" alt="" /></div>
-          <div class="mobile_summary_col">
-            <p class="mobile_summary_t">Opel Mokka</p>
-            <p class="mobile_summary_sub">or similar | CDMR</p>
-            <p class="mobile_summary_txt">3 rental days</p>
-          </div>
-          <span class="material-symbols-outlined mobile_summary_chev" aria-hidden="true">arrow_down_ios</span>
-        </label>
-      </section>
+      <input type="checkbox" id="summary-toggle" class="summary_toggle" aria-controls="desktop-summary-card" />
       <aside class="sidecard" id="desktop-summary-card">
-        <label for="mobile-summary-toggle" class="mobile_summary_close" aria-label="Collapse summary"><span class="material-symbols-outlined">expand_less</span></label>
-        <div class="sidecard_vehicle">
-          <div class="sidecard_thumb"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=200&fit=crop" alt="" /></div>
-          <div class="sidecard_vehicle_text">
-            <h3 class="sidecard_t">Opel Mokka</h3>
-            <p class="sidecard_meta">or similar | CDMR</p>
-            <p class="sidecard_meta">3 rental days</p>
+        <label for="summary-toggle" class="sidecard_head" aria-label="Toggle booking summary">
+          <div class="sidecard_vehicle">
+            <div class="sidecard_thumb"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=200&fit=crop" alt="" /></div>
+            <div class="sidecard_vehicle_text">
+              <h3 class="sidecard_t">Opel Mokka</h3>
+              <p class="sidecard_meta">or similar | CDMR</p>
+              <p class="sidecard_meta">3 rental days</p>
+            </div>
           </div>
-        </div>
+          <span class="material-symbols-outlined sidecard_toggle_ico" aria-hidden="true">expand_more</span>
+        </label>
 
+        <div class="sidecard_expandable">
         <div class="sidecard_pr">
           <h4 class="sidecard_sh">Pickup and return</h4>
           <div class="sidecard_pr_col">
@@ -238,6 +230,7 @@
             <li><span class="sidecard_chk material-symbols-outlined">check</span><span class="sidecard_ov_txt">900 km are included, each additional kilometer costs €0.35</span></li>
             <li><span class="sidecard_chk material-symbols-outlined">check</span><span class="sidecard_ov_txt">Booking option: Best price - Pay now, cancel and rebook for a fee</span></li>
           </ul>
+        </div>
         </div>
       </aside>
       </div>

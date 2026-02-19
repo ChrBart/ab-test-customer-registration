@@ -267,7 +267,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 0;
   background: transparent;
   position: sticky;
-  top: 0;
+  top: 20px;
   align-self: start;
   z-index: 30;
 }
@@ -275,66 +275,14 @@ button { font-family: inherit; cursor: pointer; }
   .content_right {
     max-width: none;
     order: -1;
-    top: 8px;
+    top: 20px;
   }
 }
 
-/* Mobile summary card shown above form */
-.mobile_summary_toggle {
+/* Unified expandable summary toggle (mobile/tablet) */
+.summary_toggle {
   display: none;
 }
-.mobile_summary {
-  display: none;
-  background: var(--surface-container2);
-  border-radius: 16px;
-  padding: 24px 20px;
-}
-.mobile_summary_row {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  cursor: pointer;
-}
-.mobile_summary_thumb {
-  width: 92px;
-  height: 72px;
-  border-radius: 8px;
-  overflow: hidden;
-  background: var(--surface-canvas2);
-  flex-shrink: 0;
-}
-.mobile_summary_thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.mobile_summary_col { min-width: 0; flex: 1; }
-.mobile_summary_t {
-  margin: 0;
-  font-size: var(--size-xs);
-  font-weight: 700;
-  line-height: var(--line-xs);
-  color: var(--content-primary);
-}
-.mobile_summary_sub {
-  margin: 0;
-  font-size: var(--size-2xs);
-  line-height: var(--line-2xs);
-  color: var(--content-secondary);
-}
-.mobile_summary_txt {
-  margin: 0;
-  font-size: var(--size-2xs);
-  line-height: var(--line-2xs);
-  color: var(--content-primary);
-}
-.mobile_summary_chev {
-  margin-left: auto;
-  font-size: 24px !important;
-  color: var(--content-primary);
-  transition: transform 0.2s ease;
-}
-.mobile_summary_toggle:checked + .mobile_summary .mobile_summary_chev { transform: rotate(180deg); }
 
 /* Form sections */
 .block { margin-bottom: var(--spacing-lg); }
@@ -789,30 +737,52 @@ button { font-family: inherit; cursor: pointer; }
   position: static;
   height: fit-content;
   padding: 24px 0 16px;
+  overflow: hidden;
+}
+.sidecard_head {
+  display: block;
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
+.sidecard_toggle_ico {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 24px;
+  font-size: 24px !important;
+  color: var(--content-primary);
+  transition: transform 0.22s ease;
+}
+.sidecard_expandable {
+  max-height: none;
+  opacity: 1;
+  overflow: visible;
+  transition: max-height 0.28s ease, opacity 0.2s ease;
 }
 @media (max-width: 1023px) {
   .sidecard {
-    display: none;
-    margin-top: var(--spacing-xs);
-    max-height: calc(100vh - 16px);
+    max-height: calc(100vh - 20px);
     overflow: auto;
   }
-  .mobile_summary { display: block; }
-  .mobile_summary_toggle:checked + .mobile_summary { display: none; }
-  .mobile_summary_toggle:not(:checked) + .mobile_summary + .sidecard { display: none; }
-  .mobile_summary_toggle:checked + .mobile_summary + .sidecard { display: block; }
-}
-.mobile_summary_close {
-  display: none;
-  width: 100%;
-  padding: 0 20px 12px;
-  text-align: right;
-  color: var(--content-primary);
-  text-decoration: none;
-}
-.mobile_summary_close .material-symbols-outlined { font-size: 20px !important; }
-@media (max-width: 1023px) {
-  .mobile_summary_close { display: block; }
+  .sidecard_head {
+    cursor: pointer;
+    padding-right: 56px;
+  }
+  .sidecard_toggle_ico { display: inline-block; }
+  .sidecard_expandable {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+  .summary_toggle:checked + .sidecard .sidecard_expandable {
+    max-height: 900px;
+    opacity: 1;
+  }
+  .summary_toggle:checked + .sidecard .sidecard_toggle_ico {
+    transform: rotate(180deg);
+  }
 }
 
 /* Vehicle row (370x74 inside 410-wide card) */
