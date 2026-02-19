@@ -926,12 +926,7 @@ select:focus-visible {
   .content_right::before {
     content: "";
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: auto;
-    height: 100vh;
-    height: 100dvh;
+    inset: 0;
     pointer-events: none;
     opacity: 0;
     transition: opacity 180ms ease;
