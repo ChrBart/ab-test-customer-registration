@@ -874,7 +874,7 @@ select:focus-visible {
   transition: box-shadow 220ms ease;
   position: static;
   height: fit-content;
-  padding: 24px 0 16px;
+  padding: 16px 0;
   overflow: hidden;
 }
 .sidecard_head {
@@ -887,8 +887,8 @@ select:focus-visible {
 .sidecard_toggle_ico {
   display: none;
   position: absolute;
-  right: 20px;
-  top: 24px;
+  right: 16px;
+  top: 16px;
   font-size: 24px !important;
   color: var(--content-primary);
   transition: transform 0.22s ease;
@@ -954,8 +954,8 @@ select:focus-visible {
 
 /* Vehicle row (370x74 inside 410-wide card) */
 .sidecard_vehicle {
-  width: 370px;
-  max-width: calc(100% - 40px);
+  width: 378px;
+  max-width: calc(100% - 32px);
   margin: 0 auto;
   min-height: 74px;
   display: flex;
@@ -1003,8 +1003,8 @@ select:focus-visible {
 
 /* Pickup/Return block (370 width, icon rail + details) */
 .sidecard_pr {
-  width: 370px;
-  max-width: calc(100% - 40px);
+  width: 378px;
+  max-width: calc(100% - 32px);
   margin: 16px auto 0;
 }
 .sidecard_sh {
@@ -1075,8 +1075,8 @@ select:focus-visible {
 
 /* Overview list (fixed icon/text/info geometry) */
 .sidecard_ov {
-  width: 370px;
-  max-width: calc(100% - 40px);
+  width: 378px;
+  max-width: calc(100% - 32px);
   margin: 16px auto 0;
 }
 .sidecard_ov .sidecard_sh { margin-bottom: 16px; }
@@ -1202,7 +1202,7 @@ select:focus-visible {
     max-width: none;
     margin-left: 0;
     margin-right: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
