@@ -581,6 +581,55 @@ button { font-family: inherit; cursor: pointer; }
 .pay_icons img { width: 42px; height: 28px; object-fit: contain; }
 .pay_note { font-size: var(--size-3xs); color: var(--content-secondary); margin: 0; line-height: 1.5; }
 
+/* Credit card block (Figma 1:12466) */
+.cc_block .block_h2 { margin-bottom: 0; }
+.cc_lbl { margin-bottom: var(--spacing-xs); }
+.cc_lbl_t {
+  margin-bottom: var(--spacing-4xs);
+  font-size: var(--size-3xs);
+  font-weight: 700;
+  line-height: var(--line-3xs);
+  letter-spacing: 0.01em;
+}
+.cc_inp {
+  height: 56px;
+  border-radius: var(--radius-md);
+  border-color: var(--content-tertiary);
+  padding: 0 var(--spacing-2xs);
+  font-size: var(--size-xs);
+  line-height: var(--line-xs);
+}
+.cc_inp::placeholder { color: var(--content-tertiary); }
+.cc_lbl_cvv .cc_inp { padding-right: 44px; }
+.cc_cvv_row {
+  position: relative;
+  display: block;
+}
+.cc_info_btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px !important;
+  color: var(--content-primary);
+  pointer-events: none;
+}
+.cc_info_btn.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.cc_cards {
+  gap: var(--spacing-2xs);
+  margin: 0 0 var(--spacing-2xs);
+}
+.cc_cards img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.cc_note {
+  font-size: var(--size-3xs);
+  line-height: var(--line-3xs);
+  color: var(--content-secondary);
+}
+
 /* Total */
 .block_tot { margin-bottom: var(--spacing-lg); }
 .tot_row { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--spacing-3xs); }
