@@ -53,6 +53,10 @@
 
 * { box-sizing: border-box; }
 
+html {
+  background: var(--header-footer-bg);
+}
+
 body {
   margin: 0;
   font-family: var(--font-copy);
@@ -907,7 +911,7 @@ select:focus-visible {
     position: relative;
     z-index: 1;
   }
-  .content_right > .summary_toggle + .sidecard {
+  .content_right.is-stuck > .summary_toggle + .sidecard {
     position: absolute;
     left: 0;
     right: 0;
