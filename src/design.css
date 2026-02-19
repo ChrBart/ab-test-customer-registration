@@ -109,25 +109,6 @@ body.summary-lightbox::before {
   z-index: 25;
   opacity: 1;
 }
-body::after {
-  content: "";
-  position: fixed;
-  left: var(--sticky-shadow-left, 16px);
-  top: var(--sticky-shadow-top, 8px);
-  width: var(--sticky-shadow-width, calc(100vw - 32px));
-  height: var(--sticky-shadow-height, 96px);
-  border-radius: 18px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 180ms ease;
-}
-body.summary-stuck::after {
-  background: rgba(10, 10, 14, 0.28);
-  filter: blur(24px);
-  transform: translateY(14px);
-  z-index: 24;
-  opacity: 1;
-}
 
 /* Material Symbols – consistent sizing */
 .material-symbols-outlined {
@@ -971,7 +952,10 @@ body.summary-stuck::after {
 
   .content_right.is-stuck .sidecard {
     position: relative;
-    box-shadow: none;
+    box-shadow:
+      0 4px 34px rgba(10, 10, 14, 0.30),
+      0 12px 150px rgba(10, 10, 14, 0.18),
+      0 18px 286px rgba(10, 10, 14, 0.12);
   }
   .sidecard_head {
     cursor: pointer;
