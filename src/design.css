@@ -926,12 +926,7 @@ select:focus-visible {
   .content_right::before {
     content: "";
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: auto;
-    height: 100vh;
-    height: 100dvh;
+    inset: 0;
     pointer-events: none;
     opacity: 0;
     transition: opacity 180ms ease;
@@ -1169,16 +1164,23 @@ select:focus-visible {
 
 /* Mobile and tablet portrait adaptations */
 @media (max-width: 767px) {
+  body {
+    background: var(--header-footer-bg);
+  }
   body::before {
     content: "";
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    height: env(safe-area-inset-top, 0px);
+    height: max(env(safe-area-inset-top, 0px), 44px);
     background: var(--header-footer-bg);
     pointer-events: none;
     z-index: 1200;
+  }
+  .mobile_nav,
+  .content {
+    background: var(--surface-container);
   }
   .mobile_nav { display: block; }
   .topbar,
