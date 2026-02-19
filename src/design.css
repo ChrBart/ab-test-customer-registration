@@ -1179,25 +1179,12 @@ body.summary-lightbox::before {
 
 /* Mobile and tablet portrait adaptations */
 @media (max-width: 767px) {
-  body.summary-stuck::after {
-    content: "";
-    position: fixed;
-    left: 16px;
-    right: 16px;
-    top: 0;
-    height: 24px;
-    border-radius: 16px 16px 0 0;
-    pointer-events: none;
-    z-index: 39;
-    background: rgba(10, 10, 14, 0.14);
-    filter: blur(18px);
-  }
   .content_right.is-stuck > .summary_toggle + .sidecard {
-    position: fixed;
-    left: 16px;
-    right: 16px;
-    top: 8px;
-    width: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
     z-index: 40;
   }
   .mobile_nav { display: block; }
