@@ -54,7 +54,7 @@
 * { box-sizing: border-box; }
 
 html {
-  background: var(--header-footer-bg);
+  background: var(--surface-canvas);
 }
 
 body {
@@ -926,7 +926,10 @@ select:focus-visible {
   .content_right::before {
     content: "";
     position: fixed;
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: env(safe-area-inset-bottom, 0px);
+    left: 0;
     pointer-events: none;
     opacity: 0;
     transition: opacity 180ms ease;
@@ -1164,6 +1167,17 @@ select:focus-visible {
 
 /* Mobile and tablet portrait adaptations */
 @media (max-width: 767px) {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: env(safe-area-inset-top, 0px);
+    background: var(--header-footer-bg);
+    pointer-events: none;
+    z-index: 1200;
+  }
   .mobile_nav { display: block; }
   .topbar,
   .pageheader,
