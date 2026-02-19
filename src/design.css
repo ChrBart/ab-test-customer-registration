@@ -63,11 +63,7 @@ body {
   font-size: var(--size-2xs);
   line-height: 1.5;
   color: var(--content-primary);
-  background: var(--surface-canvas);
-}
-
-@supports (-webkit-touch-callout: none) {
-  html { background: transparent; }
+  background: transparent;
 }
 
 img { max-width: 100%; height: auto; display: block; }
