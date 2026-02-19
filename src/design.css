@@ -951,10 +951,11 @@ body.summary-lightbox::before {
   }
 
   .content_right.is-stuck .sidecard {
-    box-shadow:
-      0 4px 34px rgba(10, 10, 14, 0.30),
-      0 12px 150px rgba(10, 10, 14, 0.18),
-      0 18px 286px rgba(10, 10, 14, 0.12);
+    box-shadow: none;
+    filter:
+      drop-shadow(0 8px 22px rgba(10, 10, 14, 0.22))
+      drop-shadow(0 18px 56px rgba(10, 10, 14, 0.16))
+      drop-shadow(0 28px 110px rgba(10, 10, 14, 0.12));
   }
   .sidecard_head {
     cursor: pointer;
