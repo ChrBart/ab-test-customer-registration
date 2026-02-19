@@ -78,7 +78,7 @@ button { font-family: inherit; cursor: pointer; }
 .material-symbols-outlined.small { font-size: 18px; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20; }
 .material-symbols-outlined.xsmall { font-size: 16px; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20; }
 
-/* Header – single dark row */
+/* Header row 1 */
 .topbar {
   background: var(--header-footer-bg);
   padding: 0 var(--layout-padding-x);
@@ -90,70 +90,96 @@ button { font-family: inherit; cursor: pointer; }
   height: 100%;
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
+  justify-content: space-between;
+  gap: var(--spacing-lg);
 }
 .topbar_logo img {
-  width: 56px;
+  width: 63px;
   height: auto;
   filter: brightness(0) invert(1);
-}
-.topbar_center {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-2xs);
-  flex: 1;
-  min-width: 0;
-}
-.topbar_back {
-  color: var(--onContent-onPrimary);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-}
-.topbar_back .material-symbols-outlined { font-size: 18px; }
-.topbar_title {
-  color: var(--onContent-onPrimary);
-  font-size: var(--size-3xs);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  white-space: nowrap;
 }
 .topbar_actions {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2xs);
+  gap: var(--spacing-lg);
   flex-shrink: 0;
 }
 .topbar_locale,
 .topbar_login {
-  color: var(--onContent-onPrimary);
-  font-size: var(--size-3xs);
+  color: #ffffff;
+  font-size: var(--size-2xs);
+  font-weight: 700;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  opacity: 0.98;
 }
 .topbar_login:hover,
 .topbar_pricedetail:hover { text-decoration: underline; }
 .topbar_icon {
-  font-size: 14px !important;
-  margin-right: 2px;
+  font-size: 18px !important;
+  margin-right: 6px;
   vertical-align: middle;
 }
 .topbar_price {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-left: 4px;
 }
 .topbar_total {
-  color: var(--onContent-onPrimary);
+  color: var(--content-primary);
   font-weight: 700;
-  font-size: var(--size-3xs);
+  font-size: var(--size-xs);
 }
 .topbar_pricedetail {
-  color: var(--onContent-onPrimary);
+  color: var(--content-primary);
   font-size: var(--size-3xs);
+  font-weight: 700;
   text-decoration: underline;
+}
+
+/* Header row 2 */
+.pageheader {
+  background: var(--surface-container);
+  border-bottom: 1px solid var(--surface-canvas2);
+  padding: 0 var(--layout-padding-x);
+  height: 80px;
+}
+.pageheader_inner {
+  max-width: var(--layout-max);
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+.pageheader_left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+.pageheader_back {
+  color: var(--content-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.pageheader_back .material-symbols-outlined { font-size: 24px !important; }
+.pageheader_title {
+  font-family: "Helvetica Now Display", var(--font-copy);
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 0.036em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--content-primary);
+  white-space: nowrap;
+}
+.pageheader_right {
+  flex-shrink: 0;
 }
 
 /* Main content – Figma desktop geometry */
@@ -172,7 +198,7 @@ button { font-family: inherit; cursor: pointer; }
   .content_inner {
     grid-template-columns: 738px 410px;
     justify-content: space-between;
-    gap: var(--spacing-xl);
+    gap: 132px;
     align-items: start;
   }
 }
@@ -529,12 +555,12 @@ button { font-family: inherit; cursor: pointer; }
   width: 410px;
   max-width: 100%;
   background: var(--surface-container2);
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: var(--elevation-medium);
   position: sticky;
-  top: 104px;
+  top: 189px;
   height: fit-content;
-  padding: 20px 0 16px;
+  padding: 24px 0 16px;
 }
 @media (max-width: 959px) { .sidecard { position: static; top: auto; margin-top: var(--spacing-lg); } }
 
@@ -564,25 +590,26 @@ button { font-family: inherit; cursor: pointer; }
 }
 .sidecard_vehicle_text { flex: 1; min-width: 0; }
 .sidecard_t {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
   color: var(--content-primary);
   margin: 0;
 }
 .sidecard_meta {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   color: var(--content-secondary);
   margin: 0;
 }
+.sidecard_meta:last-child { color: var(--content-primary); }
 
 /* Full-width divider with side insets */
 .sidecard_hr {
   border: none;
   height: 1px;
   background: #E0E0E0;
-  margin: 12px 20px;
+  margin: 16px 20px;
 }
 
 /* Pickup/Return block (370 width, icon rail + details) */
@@ -592,38 +619,38 @@ button { font-family: inherit; cursor: pointer; }
   margin: 0 auto;
 }
 .sidecard_sh {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
   color: var(--content-primary);
-  margin: 0 0 12px;
+  margin: 0 0 16px;
 }
 .sidecard_pr_col {
   position: relative;
 }
 .sidecard_pr_line {
   position: absolute;
-  left: 7px;
-  top: 29px;
+  left: 20px;
+  top: 43px;
   width: 2px;
-  height: 30px;
+  height: 38px;
   background: var(--content-tertiary);
   border-radius: 1px;
 }
 .sidecard_pr_i {
-  min-height: 44px;
+  min-height: 60px;
   display: grid;
-  grid-template-columns: 16px 1fr;
-  column-gap: 12px;
+  grid-template-columns: 24px 1fr;
+  column-gap: 24px;
   align-items: start;
 }
 .sidecard_pr_i + .sidecard_pr_i { margin-top: 8px; }
 .sidecard_ico {
-  font-size: 16px !important;
+  font-size: 24px !important;
   color: var(--content-secondary);
-  width: 16px;
-  height: 16px;
-  margin-top: 14px;
+  width: 24px;
+  height: 24px;
+  margin-top: 16px;
 }
 .sidecard_pr_txt { min-width: 0; }
 .sidecard_pr_label {
@@ -637,15 +664,15 @@ button { font-family: inherit; cursor: pointer; }
   margin: 0;
 }
 .sidecard_place {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--content-primary);
   margin: 0;
   line-height: 1.5;
 }
 .sidecard_time {
-  font-size: 12px;
-  color: var(--content-secondary);
+  font-size: 14px;
+  color: var(--content-primary);
   margin: 0;
   line-height: 1.5;
 }
@@ -664,7 +691,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .sidecard_ov_list li {
   display: grid;
-  grid-template-columns: 16px 1fr 16px;
+  grid-template-columns: 24px 1fr 32px;
   column-gap: 8px;
   align-items: start;
 }
@@ -676,21 +703,21 @@ button { font-family: inherit; cursor: pointer; }
   min-width: 0;
 }
 .sidecard_chk {
-  font-size: 16px !important;
-  color: var(--content-positive);
-  margin-top: 1px;
+  font-size: 24px !important;
+  color: var(--content-primary);
+  margin-top: 0;
 }
-.sidecard_chk.material-symbols-outlined { font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 20; }
+.sidecard_chk.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24; }
 .sidecard_inf {
-  font-size: 16px !important;
-  color: var(--content-tertiary);
-  width: 16px;
-  height: 16px;
+  font-size: 20px !important;
+  color: var(--content-primary);
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
-.sidecard_inf.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 16; }
+.sidecard_inf.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20; }
 
 /* Footer – same dark as header */
 .foot {
