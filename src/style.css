@@ -181,6 +181,7 @@ ul { margin: 0; padding-left: 1.2em; }
 }
 select.field__input { cursor: pointer; }
 .field__input::placeholder { color: #9ca3af; }
+.field--no-label .field__input::placeholder { color: #9ca3af; }
 .field__input:focus {
   outline: none;
   border-color: var(--orange);
@@ -195,14 +196,14 @@ select.field__input { cursor: pointer; }
 .field__country .field__input,
 .field__select-wrap .field__input { padding-left: 40px; flex: 1; min-width: 0; }
 .field__country .field__input { height: 40px; }
-.field__country--compact { width: 120px; min-width: 120px; flex: 0 0 120px; }
+.field__country--compact { width: 110px; min-width: 110px; flex: 0 0 110px; }
 .field__country--compact .field__input { padding-left: 36px; padding-right: 28px; }
 .field__flag { position: absolute; left: 12px; font-size: 18px; color: var(--gray-mid); pointer-events: none; }
 .field__chevron { position: absolute; right: 10px; font-size: 18px; color: var(--gray-mid); pointer-events: none; }
 
 .form-row { display: flex; gap: 3%; margin-bottom: 16px; }
 .form-row--half .field { flex: 1 1 48.5%; min-width: 0; }
-.form-row--phone .field--country-code { flex: 0 0 120px; width: 120px; min-width: 120px; }
+.form-row--phone .field--country-code { flex: 0 0 110px; width: 110px; min-width: 110px; }
 .form-row--phone .field--phone { flex: 1 1 0; min-width: 0; }
 .form-row--expiry-cvv .field--expiry { flex: 0 1 60%; min-width: 0; }
 .form-row--expiry-cvv .field--cvv { flex: 0 1 37%; min-width: 0; }
@@ -274,16 +275,26 @@ select.field__input { cursor: pointer; }
 .protection-card:first-child { padding-top: 48px; }
 .protection-card--selected { border: 1px solid var(--input-border); box-shadow: 0 0 0 1px var(--black); }
 .protection-card__input { position: absolute; opacity: 0; width: 0; height: 0; }
-.protection-card__shield {
+.protection-card__shield-wrap {
   position: absolute;
   top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 32px;
-  color: var(--black);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(220, 38, 38, 0.06);
+}
+.protection-card__shield {
+  font-size: 24px;
+  color: #dc2626;
   font-variation-settings: 'FILL' 0;
 }
-.protection-card:not(:first-child) .protection-card__shield { display: none; }
+.protection-card:not(:first-child) .protection-card__shield-wrap { display: none; }
 .protection-card__badge {
   position: absolute;
   top: 16px;
@@ -371,7 +382,7 @@ select.field__input { cursor: pointer; }
   margin: 16px 0;
   flex-wrap: wrap;
 }
-.payment-logos img { width: 32px; height: auto; object-fit: contain; }
+.payment-logos img { width: 40px; height: auto; object-fit: contain; }
 .form-disclaimer {
   font-size: 12px;
   color: var(--gray-dark);
@@ -494,13 +505,18 @@ select.field__input { cursor: pointer; }
   margin-bottom: 4px;
 }
 .summary__car-icon {
-  width: 50px;
-  height: 50px;
-  font-size: 50px !important;
-  color: var(--gray-dark);
-  filter: grayscale(1);
+  width: 45px;
+  height: 45px;
   flex-shrink: 0;
-  font-variation-settings: 'FILL' 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+}
+.summary__car-icon svg {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
 }
 .summary__car-name { font-size: 16px; font-weight: 600; color: var(--black); margin: 0; }
 .summary__car-meta { font-size: 12px; font-weight: 400; color: var(--gray-text); margin: 0 0 8px; }

@@ -40,7 +40,7 @@
       <aside class="summary summary--mobile">
         <div class="summary__card">
           <div class="summary__car-row">
-            <span class="material-symbols-outlined summary__car-icon">directions_car</span>
+            <span class="summary__car-icon" aria-hidden="true"><svg viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14V12h4l2-4h24l2 4h4v2H2zm0 0h44v2H2z"/><circle cx="12" cy="18" r="2.5"/><circle cx="36" cy="18" r="2.5"/></svg></span>
             <p class="summary__car-name">Compact (VOLKSWAGEN TAOS)</p>
           </div>
           <p class="summary__car-meta">or similar | CFAR</p>
@@ -80,31 +80,30 @@
       <form class="form" action="#" method="post">
         <section class="form-section">
           <h2 class="form-section__title">Driver details</h2>
-          <label class="field">
-            <span class="field__label">Email</span>
+          <label class="field field--no-label">
             <input type="email" class="field__input" placeholder="Email" name="email" />
           </label>
           <div class="form-row form-row--half">
             <label class="field">
               <span class="field__label">First name</span>
-              <input type="text" class="field__input" placeholder="First name" name="firstName" />
+              <input type="text" class="field__input" name="firstName" />
             </label>
             <label class="field">
               <span class="field__label">Last name</span>
-              <input type="text" class="field__input" placeholder="Last name" name="lastName" />
+              <input type="text" class="field__input" name="lastName" />
             </label>
           </div>
           <div class="form-row form-row--phone">
             <label class="field field--country-code field--no-label">
               <div class="field__country field__country--compact">
                 <span class="material-symbols-outlined field__flag">flag</span>
-                <select class="field__input" name="countryCode" aria-label="Country"><option value="">Country</option><option value="US">United States</option></select>
+                <select class="field__input" name="countryCode" aria-label="Country"><option value="">Country</option><option value="US">+1</option></select>
                 <span class="material-symbols-outlined field__chevron">expand_more</span>
               </div>
             </label>
             <label class="field field--phone">
               <span class="field__label">Phone number</span>
-              <input type="tel" class="field__input" placeholder="Phone number" name="phone" />
+              <input type="tel" class="field__input" name="phone" />
             </label>
           </div>
           <div class="form-checkboxes">
@@ -132,7 +131,7 @@
           <div class="protection-cards">
             <label class="protection-card protection-card--selected">
               <input type="radio" name="protection" value="none" class="protection-card__input" checked />
-              <span class="material-symbols-outlined protection-card__shield">shield</span>
+              <span class="protection-card__shield-wrap"><span class="material-symbols-outlined protection-card__shield">shield</span></span>
               <span class="protection-card__badge">Included</span>
               <span class="protection-card__name">No extra protection</span>
               <span class="protection-card__warn">Deductible: up to full vehicle value</span>
@@ -196,20 +195,20 @@
           <h2 class="form-section__title">Payment methods</h2>
           <label class="field">
             <span class="field__label">Card number</span>
-            <input type="text" class="field__input" placeholder="Card number" name="cardNumber" maxlength="19" />
+            <input type="text" class="field__input" name="cardNumber" maxlength="19" />
           </label>
           <label class="field">
             <span class="field__label">Cardholder name</span>
-            <input type="text" class="field__input" placeholder="Cardholder name" name="cardholder" />
+            <input type="text" class="field__input" name="cardholder" />
           </label>
           <div class="form-row form-row--expiry-cvv">
             <label class="field field--expiry">
               <span class="field__label">Expiration date</span>
-              <input type="text" class="field__input" placeholder="MM / YY" name="expiry" />
+              <input type="text" class="field__input" name="expiry" />
             </label>
             <label class="field field--cvv">
               <span class="field__label">CVV <button type="button" class="field__info-btn" aria-label="Info"><span class="material-symbols-outlined">info</span></button></span>
-              <input type="text" class="field__input" placeholder="CVV" name="cvv" maxlength="4" />
+              <input type="text" class="field__input" name="cvv" maxlength="4" />
             </label>
           </div>
           <div class="payment-logos">
@@ -227,7 +226,7 @@
           <h2 class="form-section__title">Invoice address</h2>
           <label class="field">
             <span class="field__label">Company (optional)</span>
-            <input type="text" class="field__input" placeholder="Company (optional)" name="company" />
+            <input type="text" class="field__input" name="company" />
           </label>
           <label class="field">
             <span class="field__label">Country</span>
@@ -239,21 +238,22 @@
           </label>
           <label class="field">
             <span class="field__label">Street address</span>
-            <input type="text" class="field__input" placeholder="Street address" name="street" />
+            <input type="text" class="field__input" name="street" />
           </label>
           <div class="form-row form-row--half">
             <label class="field">
               <span class="field__label">Zip</span>
-              <input type="text" class="field__input" placeholder="Zip" name="zip" />
+              <input type="text" class="field__input" name="zip" />
             </label>
             <label class="field">
               <span class="field__label">City</span>
-              <input type="text" class="field__input" placeholder="City" name="city" />
+              <input type="text" class="field__input" name="city" />
             </label>
           </div>
-          <label class="field field--no-label">
+          <label class="field">
+            <span class="field__label">State</span>
             <div class="field__select-wrap">
-              <select class="field__input" name="state" data-placeholder="State"><option value="">State</option></select>
+              <select class="field__input" name="state"><option value=""></option></select>
               <span class="material-symbols-outlined field__chevron">expand_more</span>
             </div>
           </label>
@@ -267,7 +267,7 @@
           </div>
           <label class="field">
             <span class="field__label">Flight number (optional)</span>
-            <input type="text" class="field__input" placeholder="Flight number (optional)" name="flight" />
+            <input type="text" class="field__input" name="flight" />
           </label>
         </section>
 
@@ -294,9 +294,9 @@
           <label class="checkbox-option checkbox-option--terms">
             <input type="checkbox" name="terms" class="checkbox-option__input" />
             <span class="checkbox-option__box"></span>
-            <span class="checkbox-option__text">I have read and accept the <a href="#">Rental Information</a>, the <a href="#">Terms and Conditions</a>, and the <a href="#">Privacy Policy</a> and I acknowledge that I am booking a prepaid rental, where the total reservation price is immediately charged to the payment method I provided.</span>
+            <span class="checkbox-option__text">I have read and accept the <a href="#">Rental information</a>, the <a href="#">Terms and Conditions</a>, and the <a href="#">Privacy Policy</a> and I acknowledge that I am booking a prepaid rental, where the total reservation price is immediately charged to the payment method I provided.</span>
           </label>
-          <p class="form-terms-footer">See <a href="#">Rental Information</a> for more details on accepted payment methods.</p>
+          <p class="form-terms-footer">See <a href="#">Rental information</a> for more details on accepted payment methods.</p>
           <button type="submit" class="cta-btn">Pay and Book</button>
         </section>
       </form>
@@ -305,7 +305,7 @@
     <aside class="summary summary--desktop">
       <div class="summary__card">
         <div class="summary__car-row">
-          <span class="material-symbols-outlined summary__car-icon">directions_car</span>
+          <span class="summary__car-icon" aria-hidden="true"><svg viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14V12h4l2-4h24l2 4h4v2H2zm0 0h44v2H2z"/><circle cx="12" cy="18" r="2.5"/><circle cx="36" cy="18" r="2.5"/></svg></span>
           <p class="summary__car-name">Compact (VOLKSWAGEN TAOS)</p>
         </div>
         <p class="summary__car-meta">or similar | CFAR</p>
