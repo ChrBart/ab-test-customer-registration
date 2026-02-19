@@ -262,6 +262,8 @@
       function updateStickyState() {
         const rect = sticky.getBoundingClientRect();
         const isStuck = rect.top <= TOP_OFFSET + EPSILON && rect.top >= TOP_OFFSET - EPSILON;
+        sticky.style.setProperty('--sticky-left', rect.left + 'px');
+        sticky.style.setProperty('--sticky-width', rect.width + 'px');
         sticky.classList.toggle('is-stuck', isStuck && window.innerWidth <= 1023);
       }
 
