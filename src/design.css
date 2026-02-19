@@ -284,18 +284,18 @@ button { font-family: inherit; cursor: pointer; }
 }
 .inp {
   width: 100%;
-  height: 44px;
-  padding: 10px var(--spacing-2xs);
-  font-size: var(--size-2xs);
-  line-height: 1.4;
+  height: 56px;
+  padding: 0 var(--spacing-2xs);
+  font-size: var(--size-xs);
+  line-height: var(--line-xs);
   color: var(--content-primary);
   background: var(--surface-container);
   border: 1px solid var(--content-tertiary);
-  border-radius: var(--radius-xs);
+  border-radius: var(--radius-md);
   -webkit-appearance: none;
   appearance: none;
 }
-.inp::placeholder { color: var(--content-secondary); }
+.inp::placeholder { color: var(--content-tertiary); }
 .inp:focus {
   outline: none;
   border-color: var(--content-brand);
@@ -583,6 +583,7 @@ button { font-family: inherit; cursor: pointer; }
 
 /* Credit card block (Figma 1:12466) */
 .cc_block .block_h2 { margin-bottom: 0; }
+.cc_block .row_50 { gap: var(--spacing-xs); }
 .cc_lbl { margin-bottom: var(--spacing-xs); }
 .cc_lbl_t {
   margin-bottom: var(--spacing-4xs);
@@ -592,12 +593,7 @@ button { font-family: inherit; cursor: pointer; }
   letter-spacing: 0.01em;
 }
 .cc_inp {
-  height: 56px;
-  border-radius: var(--radius-md);
-  border-color: var(--content-tertiary);
-  padding: 0 var(--spacing-2xs);
-  font-size: var(--size-xs);
-  line-height: var(--line-xs);
+  /* Keep explicit hooks for credit-card fields while using global input geometry. */
 }
 .cc_inp::placeholder { color: var(--content-tertiary); }
 .cc_lbl_cvv .cc_inp { padding-right: 44px; }
@@ -617,7 +613,7 @@ button { font-family: inherit; cursor: pointer; }
 .cc_info_btn.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
 .cc_cards {
   gap: var(--spacing-2xs);
-  margin: 0 0 var(--spacing-2xs);
+  margin: 0;
 }
 .cc_cards img {
   width: 24px;
@@ -625,6 +621,7 @@ button { font-family: inherit; cursor: pointer; }
   object-fit: contain;
 }
 .cc_note {
+  margin-top: var(--spacing-xs);
   font-size: var(--size-3xs);
   line-height: var(--line-3xs);
   color: var(--content-secondary);
