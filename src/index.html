@@ -30,6 +30,10 @@
         <span class="material-symbols-outlined">arrow_back_ios_new</span>
       </a>
       <h1 class="page-title">REVIEW YOUR BOOKING</h1>
+      <div class="header__title-right">
+        <span class="header__title-total">$160.00</span>
+        <a href="#" class="header__title-details">Details <span class="material-symbols-outlined">chevron_right</span></a>
+      </div>
     </div>
   </header>
 
@@ -75,10 +79,10 @@
             <input type="tel" class="input" placeholder="Phone number" name="phone" />
           </div>
           <div class="form__checkboxes">
-            <label class="checkbox-label">
-              <input type="checkbox" name="sms_yes" class="checkbox" />
-              <span class="checkbox__box"></span>
-              <span class="checkbox-label__text">Yes, I want to receive automated text or WhatsApp messages about my rental. By checking this box, I acknowledge that I have read and agree to SIXT's Privacy Policy and SMS Terms.</span>
+            <label class="radio-label">
+              <input type="radio" name="sms" value="yes" class="radio" checked />
+              <span class="radio__circle"></span>
+              <span class="radio-label__text">Yes, I want to receive automated text or WhatsApp messages about my rental. By checking this box, I acknowledge that I have read and agree to <a href="#">SIXT's Privacy Policy</a> and <a href="#">SMS Terms</a>.</span>
             </label>
             <label class="radio-label">
               <input type="radio" name="sms" value="no" class="radio" />
@@ -104,7 +108,7 @@
               <button type="button" class="protection-card__close" aria-label="Remove"><span class="material-symbols-outlined">close</span></button>
               <span class="protection-card__name">No extra protection</span>
               <span class="protection-card__desc protection-card__desc--warn">Deductible: up to full vehicle value</span>
-              <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
+              <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">chevron_right</span></a>
               <span class="protection-card__badge">Included</span>
             </label>
             <label class="protection-card">
@@ -112,11 +116,11 @@
               <span class="radio__circle"></span>
               <span class="protection-card__name">Cover The Car</span>
               <span class="protection-card__desc protection-card__desc--ok">No deductible</span>
-              <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
+              <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">chevron_right</span></a>
               <span class="protection-card__price">$32.00 / day</span>
             </label>
           </div>
-          <a href="#" class="form__link">View all protection packages</a>
+          <a href="#" class="form__link form__link--btn">View all protection packages</a>
         </section>
 
         <!-- Add-ons -->
@@ -163,7 +167,7 @@
               </label>
             </div>
           </div>
-          <a href="#" class="form__link">View all add-on options</a>
+          <a href="#" class="form__link form__link--btn">View all add-on options</a>
         </section>
 
         <!-- Payment -->
@@ -263,7 +267,7 @@
 
         <!-- Sixt program -->
         <section class="form-section">
-          <h2 class="form-section__title">Sixt program</h2>
+          <h2 class="form-section__title">Bonus program</h2>
           <button type="button" class="expandable">
             <span>Bonus program</span>
             <span class="material-symbols-outlined">add</span>

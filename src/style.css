@@ -1,3 +1,21 @@
+/* ===== Helvetica Neue (user font) ===== */
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeue.ttc') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Black Condensed for super bold headlines (REVIEW YOUR BOOKING) – TTC face index 9 = Condensed Black */
+@font-face {
+  font-family: 'Helvetica Neue Condensed';
+  src: url('/fonts/HelveticaNeue.ttc') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  font-face-index: 9;
+}
+
 /* ===== Variables ===== */
 :root {
   --orange: #FF5000;
@@ -14,8 +32,10 @@
   --white: #fff;
   --red: #c62828;
   --green: #2e7d32;
-  --font: "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --fs-title: 22px;
+  --link: #0066cc;
+  --font: "Helvetica Neue", "Helvetica Now", Helvetica, Arial, sans-serif;
+  --font-heading: "Helvetica Neue Condensed", "Helvetica Neue", "Helvetica Now", Helvetica, Arial, sans-serif;
+  --fs-title: 24px;
   --fs-heading: 18px;
   --fs-body: 15px;
   --fs-small: 13px;
@@ -31,7 +51,7 @@
   --space-2xl: 40px;
   --radius: 8px;
   --radius-sm: 4px;
-  --input-height: 48px;
+  --input-height: 44px;
   --header-height: 56px;
   --topbar-height: 44px;
 }
@@ -48,8 +68,12 @@ body {
   background: var(--white);
 }
 img { max-width: 100%; height: auto; display: block; }
-a { color: var(--black); text-decoration: none; }
+a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
+.form__link--warn { color: var(--red); }
+.form__link--warn:hover { text-decoration: underline; }
+.summary-card__link { color: var(--orange); }
+.footer a { color: var(--white); }
 button { font-family: inherit; cursor: pointer; }
 ul { margin: 0; padding-left: 1.2em; }
 
@@ -118,14 +142,29 @@ ul { margin: 0; padding-left: 1.2em; }
 }
 .back-link .material-symbols-outlined { font-size: 22px; }
 .page-title {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: var(--fs-title);
   font-weight: 900;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   margin: 0;
   color: var(--black);
   line-height: var(--lh-tight);
+  flex: 1;
+  text-align: left;
+}
+.header__title-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.header__title-total { font-weight: 700; font-size: var(--fs-body); color: var(--black); }
+.header__title-details { font-size: var(--fs-small); color: var(--link); }
+@media (min-width: 900px) {
+  .header__title-right { display: none; }
+}
+@media (max-width: 899px) {
+  .header__top .header__total { display: none; }
 }
 
 /* ===== Main layout ===== */
@@ -164,7 +203,7 @@ ul { margin: 0; padding-left: 1.2em; }
   object-fit: cover;
   border-radius: var(--radius-sm);
 }
-.vehicle-card__body { flex: 1; min-width: 0; }
+.vehicle-card__body { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
 .vehicle-card__name {
   font-size: 16px;
   font-weight: 700;
@@ -174,12 +213,13 @@ ul { margin: 0; padding-left: 1.2em; }
   letter-spacing: 0.02em;
 }
 .vehicle-card__meta { font-size: var(--fs-small); color: var(--gray-500); margin: 0 0 var(--space-sm); }
-.vehicle-card__price { font-weight: 700; font-size: var(--fs-body); display: block; margin-bottom: var(--space-xs); }
+.vehicle-card__price { font-weight: 700; font-size: var(--fs-body); margin-bottom: var(--space-xs); }
 .vehicle-card__details {
   font-size: var(--fs-small);
   display: inline-flex;
   align-items: center;
   gap: 2px;
+  margin-top: auto;
 }
 .vehicle-card__details .material-symbols-outlined { font-size: 16px; }
 .vehicle-card--desktop { display: none; }
@@ -320,6 +360,7 @@ ul { margin: 0; padding-left: 1.2em; }
   background: var(--white);
 }
 .checkbox-label__text, .radio-label__text { line-height: var(--lh-body); }
+.radio-label__text a { color: var(--link); }
 
 /* ===== Protection cards ===== */
 .protection-cards {
@@ -377,6 +418,13 @@ ul { margin: 0; padding-left: 1.2em; }
   right: var(--space-md);
   font-size: var(--fs-small);
   font-weight: 700;
+}
+.protection-card__badge {
+  color: var(--gray-600);
+  background: var(--gray-100);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--gray-200);
 }
 .protection-card__price { color: var(--black); }
 
@@ -452,10 +500,23 @@ ul { margin: 0; padding-left: 1.2em; }
   gap: 4px;
   font-size: var(--fs-small);
   margin-bottom: var(--space-sm);
+  color: var(--link);
 }
 .form__link .material-symbols-outlined { font-size: 16px; }
 .form__link--warn { color: var(--red); }
 .form__link--small { font-size: var(--fs-tiny); color: var(--gray-600); }
+.form__link--btn {
+  display: inline-flex;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-md);
+  margin-top: var(--space-sm);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--black);
+  font-weight: 400;
+}
+.form__link--btn:hover { background: var(--gray-50); text-decoration: none; }
 .form__disclaimer {
   font-size: var(--fs-small);
   color: var(--gray-600);
@@ -469,6 +530,7 @@ ul { margin: 0; padding-left: 1.2em; }
   gap: var(--space-sm);
   padding: var(--space-md);
   background: var(--gray-50);
+  border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   margin-bottom: var(--space-md);
 }
@@ -536,6 +598,7 @@ ul { margin: 0; padding-left: 1.2em; }
 .summary-card {
   display: none;
   background: var(--gray-50);
+  border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: var(--space-lg);
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -592,5 +655,4 @@ ul { margin: 0; padding-left: 1.2em; }
   justify-content: center;
   gap: var(--space-xs);
 }
-.footer a { color: var(--white); }
 .footer__sep { color: rgba(255,255,255,0.5); user-select: none; }
