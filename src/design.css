@@ -1183,7 +1183,7 @@ body.summary-lightbox::before {
     position: fixed;
     left: 16px;
     right: 16px;
-    top: 20px;
+    top: 32px;
     width: auto;
     z-index: 40;
   }
