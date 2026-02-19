@@ -322,11 +322,21 @@
       function setupStickySummary() {
         const sticky = document.querySelector(".content_right");
         const summaryToggle = document.querySelector(".summary_toggle");
+        const pageBody = document.body;
         if (!sticky) return;
 
         const syncExpanded = function () {
           if (!summaryToggle) return;
           summaryToggle.setAttribute("aria-expanded", String(summaryToggle.checked));
+          syncChromeState();
+        };
+
+        const syncChromeState = function () {
+          const isMobile = window.innerWidth <= MOBILE_BREAKPOINT;
+          const isStuck = sticky.classList.contains("is-stuck");
+          const isExpanded = Boolean(summaryToggle && summaryToggle.checked);
+          pageBody.classList.toggle("summary-stuck", isMobile && isStuck);
+          pageBody.classList.toggle("summary-lightbox", isMobile && isStuck && isExpanded);
         };
 
         const updateStickyState = function () {
@@ -334,6 +344,7 @@
           const stickyTop = Number.parseFloat(window.getComputedStyle(sticky).top) || 0;
           const isAtStickyTop = rect.top <= stickyTop + STICKY_EPSILON;
           sticky.classList.toggle("is-stuck", isAtStickyTop && window.innerWidth <= MOBILE_BREAKPOINT);
+          syncChromeState();
         };
 
         let scheduled = false;
