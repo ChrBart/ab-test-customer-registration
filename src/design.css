@@ -51,14 +51,6 @@
   --elevation-medium: 0 2px 10px rgba(0,0,0,0.08), 0 4px 14px rgba(0,0,0,0.1);
 }
 
-@font-face {
-  font-family: "Sixt Headline";
-  src: url("/fonts/HelveticaNeue.ttc") format("truetype");
-  font-style: normal;
-  font-weight: 700 900;
-  font-display: swap;
-}
-
 * { box-sizing: border-box; }
 
 body {
@@ -115,13 +107,14 @@ button { font-family: inherit; cursor: pointer; }
 }
 .mobile_nav_back .material-symbols-outlined { font-size: 20px !important; }
 .mobile_nav_title {
-  font-family: "Sixt Headline", "Arial Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-CondensedBlack", "Helvetica Neue Condensed Black", "Arial Narrow Bold", "Arial Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 28px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.036em;
   line-height: 1;
   color: var(--content-primary);
   text-transform: uppercase;
+  font-stretch: condensed;
 }
 
 /* Header row 1 */
@@ -144,7 +137,7 @@ button { font-family: inherit; cursor: pointer; }
   text-decoration: none;
 }
 .topbar_logo img {
-  width: 84px;
+  width: 74px;
   height: auto;
 }
 .topbar_actions {
@@ -231,14 +224,15 @@ button { font-family: inherit; cursor: pointer; }
 }
 .pageheader_back .material-symbols-outlined { font-size: 24px !important; }
 .pageheader_title {
-  font-family: "Sixt Headline", "Arial Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-CondensedBlack", "Helvetica Neue Condensed Black", "Arial Narrow Bold", "Arial Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 30px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.036em;
   line-height: 1;
   text-transform: uppercase;
   color: var(--content-primary);
   white-space: nowrap;
+  font-stretch: condensed;
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
 }
