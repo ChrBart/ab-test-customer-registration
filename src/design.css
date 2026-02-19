@@ -13,6 +13,8 @@
   --surface-container2: #f4f4f9;
   --surface-canvas: #ffffff;
   --surface-canvas2: #ebebf0;
+  /* Header/Footer – Figma screenshot #2C2C2C */
+  --header-footer-bg: #2C2C2C;
   /* On-content (text on colored bg) */
   --onContent-onPrimary: #ffffff;
   --onContent-onBrand: #ffffff;
@@ -21,7 +23,7 @@
   --radius-sm: 8px;
   --radius-s: 8px;
   --radius-md: 12px;
-  /* Spacing */
+  /* Spacing – Figma scale */
   --spacing-4xs: 4px;
   --spacing-3xs: 8px;
   --spacing-2xs: 12px;
@@ -29,6 +31,12 @@
   --spacing-lg: 32px;
   --spacing-xl: 40px;
   --spacing-4xl: 80px;
+  /* Layout – Figma */
+  --layout-max: 1280px;
+  --layout-col-main: 65%;
+  --layout-col-side: 35%;
+  --layout-padding-x: 24px;
+  --layout-padding-y: 40px;
   /* Typography – Helvetica Now Text */
   --font-copy: "Helvetica Now Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --size-3xs: 12px;
@@ -57,14 +65,14 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 button { font-family: inherit; cursor: pointer; }
 
-/* Header */
+/* Header – dark bar only (logo left, EN/Login/Total right) */
 .topbar {
-  background: var(--content-primary);
-  padding: 0 var(--spacing-xs);
+  background: var(--header-footer-bg);
+  padding: 0 var(--layout-padding-x);
   height: 56px;
 }
 .topbar_inner {
-  max-width: 1400px;
+  max-width: var(--layout-max);
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -74,23 +82,6 @@ button { font-family: inherit; cursor: pointer; }
 .topbar_logo img {
   width: 56px;
   filter: brightness(0) invert(1);
-}
-.topbar_center {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-3xs);
-}
-.topbar_back {
-  color: var(--onContent-onPrimary);
-  font-size: 24px;
-  line-height: 1;
-  text-decoration: none;
-}
-.topbar_title {
-  color: var(--onContent-onPrimary);
-  font-size: var(--size-xs);
-  font-weight: 700;
-  letter-spacing: 0.02em;
 }
 .topbar_right {
   display: flex;
@@ -120,10 +111,44 @@ button { font-family: inherit; cursor: pointer; }
   opacity: 0.9;
 }
 
-/* Main content */
-.content { padding: var(--spacing-xl) var(--spacing-xs) var(--spacing-4xl); }
+/* Page title bar – white, &lt; REVIEW YOUR BOOKING */
+.pagetitle {
+  background: var(--surface-container);
+  border-bottom: 1px solid var(--content-tertiary);
+  padding: 0 var(--layout-padding-x);
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+.pagetitle_inner {
+  max-width: var(--layout-max);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3xs);
+}
+.pagetitle_back {
+  color: var(--content-primary);
+  font-size: 24px;
+  line-height: 1;
+  text-decoration: none;
+  font-weight: 400;
+}
+.pagetitle_text {
+  color: var(--content-primary);
+  font-size: var(--size-xs);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Main content – Figma spacing and column ratio */
+.content {
+  padding: var(--layout-padding-y) var(--layout-padding-x) var(--spacing-4xl);
+  background: var(--surface-canvas);
+}
 .content_inner {
-  max-width: 1400px;
+  max-width: var(--layout-max);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -131,8 +156,24 @@ button { font-family: inherit; cursor: pointer; }
 }
 @media (min-width: 960px) {
   .content_inner {
-    grid-template-columns: 62% 38%;
-    gap: 4%;
+    grid-template-columns: var(--layout-col-main) var(--layout-col-side);
+    gap: 5%;
+    align-items: start;
+  }
+}
+.content_left {
+  min-width: 0;
+}
+.content_right {
+  background: var(--surface-container2);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  min-width: 0;
+}
+@media (max-width: 959px) {
+  .content_right {
+    margin-top: 0;
+    padding: var(--spacing-xs);
   }
 }
 
@@ -254,10 +295,11 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid var(--content-tertiary);
   border-radius: var(--radius-sm);
 }
+/* Selected = orange border (Figma: No Extra Protection selected) */
 .pkg_card_sel {
   background: var(--surface-container);
-  border-color: var(--content-primary);
-  box-shadow: 0 0 0 1px var(--content-primary);
+  border: 2px solid var(--content-brand);
+  box-shadow: none;
 }
 .pkg_badge {
   position: absolute;
@@ -377,7 +419,7 @@ button { font-family: inherit; cursor: pointer; }
 .legal_ack { font-size: var(--size-3xs); margin: 0 0 var(--spacing-lg); color: var(--content-primary); }
 .legal_ack a { color: var(--content-brand); text-decoration: underline; }
 
-/* CTA – Figma brand button */
+/* CTA – Figma brand button, radius 8px */
 .cta {
   width: 100%;
   height: 48px;
@@ -386,7 +428,7 @@ button { font-family: inherit; cursor: pointer; }
   font-size: var(--size-xs);
   font-weight: 700;
   border: none;
-  border-radius: var(--radius-xs);
+  border-radius: var(--radius-sm);
   cursor: pointer;
 }
 .cta:hover { opacity: 0.95; }
@@ -410,10 +452,10 @@ button { font-family: inherit; cursor: pointer; }
   padding: var(--spacing-lg);
   box-shadow: var(--elevation-medium);
   position: sticky;
-  top: var(--spacing-lg);
+  top: calc(56px + 56px + var(--spacing-lg));
   height: fit-content;
 }
-@media (max-width: 959px) { .sidecard { position: static; margin-top: var(--spacing-lg); } }
+@media (max-width: 959px) { .sidecard { position: static; top: auto; margin-top: var(--spacing-lg); } }
 .sidecard_img {
   width: 100%;
   border-radius: var(--radius-s);
@@ -434,6 +476,14 @@ button { font-family: inherit; cursor: pointer; }
 .sidecard_pr_i { display: flex; gap: var(--spacing-2xs); margin-bottom: var(--spacing-2xs); }
 .sidecard_pr_i:last-child { margin-bottom: 0; }
 .sidecard_ico { font-size: var(--size-xs); flex-shrink: 0; }
+.sidecard_pr_label {
+  display: block;
+  font-size: 11px;
+  color: var(--content-secondary);
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
 .sidecard_place { font-size: var(--size-2xs); font-weight: 500; margin: 0 0 2px; }
 .sidecard_time { font-size: var(--size-3xs); color: var(--content-secondary); margin: 0; }
 .sidecard_ov_list { list-style: none; margin: 0; padding: 0; }
@@ -460,23 +510,23 @@ button { font-family: inherit; cursor: pointer; }
 }
 .sidecard_inf { margin-left: auto; color: var(--content-secondary); font-size: var(--size-2xs); }
 
-/* Footer */
+/* Footer – same dark as header */
 .foot {
-  background: var(--content-primary);
-  padding: var(--spacing-lg) var(--spacing-xs);
+  background: var(--header-footer-bg);
+  padding: var(--spacing-lg) var(--layout-padding-x);
   margin-top: var(--spacing-4xl);
 }
 .foot_inner {
-  max-width: 1400px;
+  max-width: var(--layout-max);
   margin: 0 auto;
   font-size: var(--size-3xs);
-  color: var(--content-secondary);
+  color: var(--onContent-onPrimary);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0;
 }
-.foot_inner a { color: var(--content-secondary); text-decoration: none; }
-.foot_inner a:hover { text-decoration: underline; }
-.foot_sep { margin: 0 var(--spacing-3xs); color: var(--content-secondary); }
-.foot_copy { margin-left: auto; color: var(--content-secondary); }
+.foot_inner a { color: var(--onContent-onPrimary); text-decoration: none; opacity: 0.9; }
+.foot_inner a:hover { text-decoration: underline; opacity: 1; }
+.foot_sep { margin: 0 var(--spacing-3xs); color: var(--onContent-onPrimary); opacity: 0.7; }
+.foot_copy { margin-left: auto; color: var(--onContent-onPrimary); opacity: 0.9; }
