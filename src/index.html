@@ -17,11 +17,11 @@
       </a>
       <p class="logo__tagline">DRIVE SHARE RIDE</p>
       <div class="header__actions">
-        <button type="button" class="header__locale" aria-label="Language and currency">EN | $</button>
-        <a href="#" class="header__auth">Login | Register</a>
+        <a href="#" class="header__icon" aria-label="Login"><span class="material-symbols-outlined">person</span></a>
+        <a href="#" class="header__icon" aria-label="Cart"><span class="material-symbols-outlined">shopping_cart</span></a>
         <div class="header__total">
-          <span class="header__total-label">Total</span>
           <span class="header__total-amount">$160.00</span>
+          <span class="header__total-label">Total</span>
         </div>
       </div>
     </div>
@@ -44,8 +44,8 @@
         <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=120&h=80&fit=crop" alt="" class="vehicle-card__img" />
         <div class="vehicle-card__body">
           <h2 class="vehicle-card__name">Compact (VOLKSWAGEN TAOS)</h2>
-          <p class="vehicle-card__meta">or similar | CFAR</p>
-          <span class="vehicle-card__price">$160.60</span>
+          <p class="vehicle-card__meta">or similar | 2 DAYS</p>
+          <span class="vehicle-card__price">$160.00</span>
           <a href="#" class="vehicle-card__details">Details <span class="material-symbols-outlined">chevron_right</span></a>
         </div>
       </section>
@@ -54,11 +54,11 @@
         <!-- Driver details -->
         <section class="form-section">
           <h2 class="form-section__title">Driver details</h2>
+          <label class="input-wrap">
+            <span class="input-wrap__label">Email</span>
+            <input type="email" class="input" placeholder="Email" name="email" />
+          </label>
           <div class="form__grid form__grid--2">
-            <label class="input-wrap">
-              <span class="input-wrap__label">Email</span>
-              <input type="email" class="input" placeholder="Email" name="email" />
-            </label>
             <label class="input-wrap">
               <span class="input-wrap__label">First name</span>
               <input type="text" class="input" placeholder="First name" name="firstName" />
@@ -107,8 +107,8 @@
               <span class="radio__circle"></span>
               <button type="button" class="protection-card__close" aria-label="Remove"><span class="material-symbols-outlined">close</span></button>
               <span class="protection-card__name">No extra protection</span>
-              <span class="protection-card__desc protection-card__desc--warn">Deductible: up to full vehicle value</span>
-              <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">chevron_right</span></a>
+              <span class="protection-card__desc protection-card__desc--warn">Deductible up to full vehicle value</span>
+              <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
               <span class="protection-card__badge">Included</span>
             </label>
             <label class="protection-card">
@@ -116,8 +116,8 @@
               <span class="radio__circle"></span>
               <span class="protection-card__name">Cover The Car</span>
               <span class="protection-card__desc protection-card__desc--ok">No deductible</span>
-              <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">chevron_right</span></a>
-              <span class="protection-card__price">$32.00 / day</span>
+              <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
+              <span class="protection-card__price">$32.99 / day</span>
             </label>
           </div>
           <a href="#" class="form__link form__link--btn">View all protection packages</a>
@@ -128,12 +128,13 @@
           <h2 class="form-section__title">Which add-ons do you need?</h2>
           <div class="addons">
             <div class="addon-row">
+              <span class="material-symbols-outlined addon-row__icon">shield</span>
               <label class="addon-row__label">
                 <input type="radio" name="addon_liability" class="radio" />
                 <span class="radio__circle"></span>
                 <span>Supplemental liability insurance</span>
               </label>
-              <span class="addon-row__price">$16.85 / day</span>
+              <span class="addon-row__price">$18.99 / day</span>
               <a href="#" class="addon-row__details">Details <span class="material-symbols-outlined">expand_more</span></a>
               <label class="toggle">
                 <input type="checkbox" class="toggle__input" />
@@ -141,12 +142,13 @@
               </label>
             </div>
             <div class="addon-row">
+              <span class="material-symbols-outlined addon-row__icon">local_gas_station</span>
               <label class="addon-row__label">
                 <input type="radio" name="addon_fuel" class="radio" />
                 <span class="radio__circle"></span>
                 <span>Prepaid Fuel</span>
               </label>
-              <span class="addon-row__price">$33.99 / one time</span>
+              <span class="addon-row__price">$41.99 / one-time</span>
               <a href="#" class="addon-row__details">Details <span class="material-symbols-outlined">expand_more</span></a>
               <label class="toggle">
                 <input type="checkbox" class="toggle__input" />
@@ -154,12 +156,13 @@
               </label>
             </div>
             <div class="addon-row">
+              <span class="material-symbols-outlined addon-row__icon">toll</span>
               <label class="addon-row__label">
                 <input type="radio" name="addon_toll" class="radio" />
                 <span class="radio__circle"></span>
                 <span>Toll pass/Express lane</span>
               </label>
-              <span class="addon-row__price">$12.99 / one time</span>
+              <span class="addon-row__price">$10.99 / day</span>
               <a href="#" class="addon-row__details">Details <span class="material-symbols-outlined">expand_more</span></a>
               <label class="toggle">
                 <input type="checkbox" class="toggle__input" />
@@ -205,9 +208,9 @@
             <span class="payment-logo">JCB</span>
             <span class="payment-logo">Discover</span>
           </div>
-          <p class="form__disclaimer">The payment method must be under the renter's name and physically presented at pickup. Debit cards are accepted for select vehicle classes; an additional document may be required in some cases.</p>
+          <p class="form__disclaimer">The payment method must be under the renter's name and physically presented at pickup. Debit cards are accepted for select vehicle classes; <a href="#">additional documentation</a> may be required in some cases.</p>
           <a href="#" class="form__link form__link--warn">No payment method on hand?</a>
-          <a href="#" class="form__link form__link--small">Return to Pay Later, and have the cancellation initiated for just $10.00 more. <span class="material-symbols-outlined">info</span></a>
+          <a href="#" class="form__link form__link--small">Return to Pay Later, and have the cancellation included for just $10.00 more. <span class="material-symbols-outlined">info</span></a>
         </section>
 
         <!-- Invoice address -->
@@ -215,8 +218,8 @@
           <h2 class="form-section__title">Invoice address</h2>
           <div class="form__grid form__grid--1">
             <label class="input-wrap">
-              <span class="input-wrap__label">Company name (optional)</span>
-              <input type="text" class="input" placeholder="Company name (optional)" name="company" />
+              <span class="input-wrap__label">Company (optional)</span>
+              <input type="text" class="input" placeholder="Company (optional)" name="company" />
             </label>
             <label class="input-wrap">
               <span class="input-wrap__label">Country</span>
@@ -290,11 +293,11 @@
             </ul>
           </div>
           <label class="checkbox-label checkbox-label--legal">
-            <input type="checkbox" name="terms" class="checkbox" required />
+            <input type="checkbox" name="terms" class="checkbox" />
             <span class="checkbox__box"></span>
-            <span class="checkbox-label__text">I have read and accept the Rental Information, the Terms and Conditions, and the Privacy Policy, and acknowledge that I am booking a prepaid rental, where the total reservation price is immediately charged to the payment method I provided.</span>
+            <span class="checkbox-label__text">I have read and accept the <a href="#">General Rental Information</a>, the <a href="#">Terms and Conditions</a>, and the <a href="#">Privacy Policy</a>, and acknowledge that I am booking a prepaid rental, where the total reservation price is immediately charged to the payment method I provided.</span>
           </label>
-          <a href="#" class="form__link form__link--small">See more information for new rentals on our general payment methods.</a>
+          <a href="#" class="form__link form__link--small">See further information for more details on accepted payment methods.</a>
           <button type="submit" class="cta-button">Pay and Book</button>
         </section>
       </form>
@@ -306,7 +309,7 @@
         <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=200&h=120&fit=crop" alt="" class="vehicle-card__img" />
         <div class="vehicle-card__body">
           <h2 class="vehicle-card__name">Compact (VOLKSWAGEN TAOS)</h2>
-          <p class="vehicle-card__meta">or similar | 5 doors</p>
+          <p class="vehicle-card__meta">or similar | A004</p>
           <span class="vehicle-card__price">$160.00</span>
           <a href="#" class="vehicle-card__details">Price details</a>
         </div>
@@ -315,28 +318,34 @@
         <h3 class="summary-card__heading">Pickup and return</h3>
         <p class="summary-card__row">
           <span class="material-symbols-outlined summary-card__icon">directions_car</span>
-          Miami Int Airport
+          Miami Intl Airport
         </p>
         <p class="summary-card__row">
           <span class="material-symbols-outlined summary-card__icon">calendar_today</span>
-          Thu, Apr 21, 2026 | 12:30 PM
+          Tue, Apr 21, 2026 | 10:00 PM
         </p>
         <p class="summary-card__row">
           <span class="material-symbols-outlined summary-card__icon">directions_car</span>
-          Miami Int Airport
+          Miami Intl Airport
         </p>
         <p class="summary-card__row">
           <span class="material-symbols-outlined summary-card__icon">calendar_today</span>
-          Fri, Apr 24, 2026 | 12:00 PM
+          Fri, Apr 24, 2026 | 10:00 PM
         </p>
       </div>
       <div class="summary-card__section">
-        <p class="summary-card__pay-now"><strong>Pay now</strong> <a href="#" class="summary-card__link">see prices</a></p>
+        <h3 class="summary-card__heading">Pay now</h3>
+        <span class="badge--orange">BEST PRICE</span>
+        <div class="summary-card__best-price">
+          <span class="material-symbols-outlined summary-card__check">check_circle</span>
+          <span>Best price available for your rental</span>
+          <span class="material-symbols-outlined summary-card__info">info</span>
+        </div>
       </div>
+      <h3 class="summary-card__heading">What's included</h3>
       <ul class="summary-card__included">
-        <li><span class="material-symbols-outlined summary-card__check">check_circle</span> Real price available for your rental.</li>
-        <li><span class="material-symbols-outlined summary-card__check">check_circle</span> 24/7 Roadside Assistance Hotline.</li>
-        <li><span class="material-symbols-outlined summary-card__check">check_circle</span> Unlimited miles.</li>
+        <li><span class="material-symbols-outlined summary-card__check">check_circle</span> 24/7 Roadside Assistance Hotline <span class="material-symbols-outlined summary-card__info">info</span></li>
+        <li><span class="material-symbols-outlined summary-card__check">check_circle</span> Unlimited miles <span class="material-symbols-outlined summary-card__info">info</span></li>
       </ul>
     </aside>
   </main>
@@ -358,11 +367,11 @@
     <span class="footer__sep">|</span>
     <a href="#">Terms & conditions</a>
     <span class="footer__sep">|</span>
-    <a href="#">Compliance with accessibility laws</a>
+    <a href="#">Customers with disabilities</a>
     <span class="footer__sep">|</span>
     <a href="#">Cookie Settings</a>
     <span class="footer__sep">|</span>
-    <span>© 2026 SIXT</span>
+    <span>© 2023 SIXT</span>
   </footer>
 </body>
 </html>
