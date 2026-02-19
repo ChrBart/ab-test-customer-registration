@@ -763,6 +763,8 @@ button { font-family: inherit; cursor: pointer; }
 }
 @media (max-width: 1023px) {
   .sidecard {
+    width: 100%;
+    max-width: none;
     max-height: calc(100vh - 20px);
     overflow: auto;
   }
