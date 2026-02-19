@@ -67,10 +67,7 @@ body {
 }
 
 @supports (-webkit-touch-callout: none) {
-  html,
-  body {
-    background: transparent;
-  }
+  html { background: transparent; }
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -329,7 +326,7 @@ select:focus-visible {
   .content_right {
     max-width: none;
     order: -1;
-    top: 20px;
+    top: calc(env(safe-area-inset-top, 0px) + 8px);
     min-height: 122px;
   }
   .content_inner {
@@ -933,7 +930,10 @@ select:focus-visible {
   .content_right::before {
     content: "";
     position: fixed;
-    inset: 0;
+    top: calc(env(safe-area-inset-top, 0px) * -1);
+    right: 0;
+    bottom: calc(env(safe-area-inset-bottom, 0px) * -1);
+    left: 0;
     pointer-events: none;
     opacity: 0;
     transition: opacity 180ms ease;
@@ -1179,7 +1179,7 @@ select:focus-visible {
     padding: 8px var(--spacing-xs) var(--spacing-xl);
   }
   .content_right {
-    top: 8px;
+    top: calc(env(safe-area-inset-top, 0px) + 8px);
   }
   .block_h2 {
     font-size: 18px;
