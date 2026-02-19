@@ -70,7 +70,7 @@ ul { margin: 0; padding-left: 1.2em; }
 /* ===== PAGE TOP: same grid as main so total aligns with right column ===== */
 .page-top-wrap { background: #f5f5f5; }
 .page-top {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 32px 32px 24px;
   display: flex;
@@ -105,9 +105,9 @@ ul { margin: 0; padding-left: 1.2em; }
 .page-top__total-amount { font-size: 20px; font-weight: 700; color: var(--black); }
 .page-top__price-details { display: block; font-size: 12px; color: var(--gray-mid); text-decoration: underline !important; margin-top: 4px; }
 
-/* ===== MAIN: 62% left, 38% right, max-width 1200px ===== */
+/* ===== MAIN: 62% left, 38% right, max-width 1400px ===== */
 .main {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 32px 48px;
   display: grid;
@@ -259,7 +259,7 @@ select.field__input { cursor: pointer; }
 }
 .radio-option__text a, .checkbox-option__text a { color: var(--blue); text-decoration: underline; }
 
-/* ===== PROTECTION CARDS: 1px #e5e7eb, 8px radius, equal height, Included top-right ===== */
+/* ===== PROTECTION CARDS: solid black shield circle + red border, equal height 200px, Included top-right ===== */
 .protection-cards {
   display: flex;
   gap: 4%;
@@ -268,19 +268,25 @@ select.field__input { cursor: pointer; }
 .protection-card {
   position: relative;
   flex: 1 1 48%;
-  min-height: 180px;
+  min-height: 200px;
+  height: 200px;
   padding: 20px;
-  padding-top: 48px;
+  padding-top: 56px;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   cursor: pointer;
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
 }
 .protection-card--selected { border-color: #e5e7eb; box-shadow: 0 0 0 1px rgba(0,0,0,0.1); }
 .protection-card__input { position: absolute; opacity: 0; width: 0; height: 0; }
+/* Shield: SOLID BLACK circle with red border at TOP of card */
 .protection-card__shield-wrap {
   position: absolute;
-  top: 16px;
+  top: 12px;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
@@ -290,26 +296,27 @@ select.field__input { cursor: pointer; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(220, 38, 38, 0.06);
+  background: #000000;
 }
 .protection-card__shield {
-  font-size: 24px;
-  color: #dc2626;
+  font-size: 22px;
+  color: #e5e7eb;
   font-variation-settings: 'FILL' 0;
 }
 .protection-card:not(:first-child) .protection-card__shield-wrap { display: none; }
+/* Included badge: absolute top-right corner */
 .protection-card__badge {
   position: absolute;
   top: 12px;
   right: 12px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: var(--gray-mid);
 }
 .protection-card__name { font-size: 15px; font-weight: 700; color: var(--black); display: block; margin-bottom: 4px; }
 .protection-card__warn { font-size: 13px; color: var(--red); display: block; margin-bottom: 8px; }
 .protection-card__ok { font-size: 13px; color: #10b981; display: block; margin-bottom: 8px; }
-.protection-card__link { font-size: 13px; color: var(--black); text-decoration: underline; display: inline-flex; align-items: center; gap: 4px; }
+.protection-card__link { font-size: 13px; color: var(--black); text-decoration: underline; display: inline-flex; align-items: center; gap: 4px; margin-top: auto; }
 .protection-card__link .material-symbols-outlined { font-size: 12px; }
 .protection-card__price {
   position: absolute;
@@ -329,7 +336,7 @@ select.field__input { cursor: pointer; }
   display: flex;
   align-items: center;
   gap: 16px;
-  height: 72px;
+  min-height: 72px;
   padding: 16px 20px;
   background: #FFFFFF;
   border: 1px solid var(--gray-border-light);
@@ -377,15 +384,15 @@ select.field__input { cursor: pointer; }
 .toggle__input:checked + .toggle__track { background: var(--orange); }
 .toggle__input:checked + .toggle__track::after { transform: translateX(20px); }
 
-/* ===== PAYMENT: logos 32px width, 4px gap; order Amex, MC, Union Pay, Visa, Discover ===== */
+/* ===== PAYMENT: logos 42px width, 10px gap; order Amex, MC, Union Pay, Visa, Discover ===== */
 .payment-logos {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   margin: 16px 0;
   flex-wrap: wrap;
 }
-.payment-logos img { width: 40px; height: auto; object-fit: contain; }
+.payment-logos img { width: 42px; height: auto; object-fit: contain; }
 .form-disclaimer {
   font-size: 12px;
   color: var(--gray-dark);
@@ -447,8 +454,8 @@ select.field__input { cursor: pointer; }
   justify-content: space-between;
   margin-bottom: 8px;
 }
-.total-line__label { font-size: 20px; font-weight: 700; color: var(--black); }
-.total-line__amount { font-size: 20px; font-weight: 700; color: var(--black); }
+.total-line__label { font-size: 22px; font-weight: 700; color: var(--black); }
+.total-line__amount { font-size: 22px; font-weight: 700; color: var(--black); }
 .form-section--total .form-link--small { display: block; margin-bottom: 24px; font-size: 12px; text-decoration: underline; }
 
 /* ===== IMPORTANT INFO: bullets 14px, line-height 1.5, #6b7280 ===== */
@@ -469,7 +476,8 @@ select.field__input { cursor: pointer; }
   list-style: disc;
 }
 .important-info__list li {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  display: list-item;
 }
 .important-info__list li:last-child { margin-bottom: 0; }
 
