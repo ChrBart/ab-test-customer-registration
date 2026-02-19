@@ -208,9 +208,9 @@ button { font-family: inherit; cursor: pointer; }
 .pageheader_back .material-symbols-outlined { font-size: 24px !important; }
 .pageheader_title {
   font-family: "Helvetica Now Display", var(--font-copy);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 900;
-  letter-spacing: 0.036em;
+  letter-spacing: 1.08px;
   line-height: 1;
   text-transform: uppercase;
   color: var(--content-primary);
@@ -275,6 +275,9 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 /* Mobile summary card shown above form */
+.mobile_summary_toggle {
+  display: none;
+}
 .mobile_summary {
   display: none;
   background: var(--surface-container2);
@@ -287,6 +290,7 @@ button { font-family: inherit; cursor: pointer; }
   grid-template-columns: 1fr auto;
   gap: var(--spacing-2xs);
   align-items: start;
+  cursor: pointer;
 }
 .mobile_summary_col { min-width: 0; }
 .mobile_summary_col_right { text-align: right; padding-right: 20px; }
@@ -316,7 +320,9 @@ button { font-family: inherit; cursor: pointer; }
   top: 2px;
   font-size: 18px !important;
   color: var(--content-primary);
+  transition: transform 0.2s ease;
 }
+.mobile_summary_toggle:checked + .mobile_summary .mobile_summary_chev { transform: rotate(180deg); }
 
 /* Form sections */
 .block { margin-bottom: var(--spacing-lg); }
@@ -769,13 +775,14 @@ button { font-family: inherit; cursor: pointer; }
   border-radius: 16px;
   box-shadow: none;
   position: sticky;
-  top: 24px;
+  top: 0;
   height: fit-content;
   padding: 24px 0 16px;
 }
 @media (max-width: 1023px) {
-  .sidecard { display: none; }
+  .sidecard { display: none; margin-top: var(--spacing-xs); }
   .mobile_summary { display: block; }
+  .mobile_summary_toggle:checked + .mobile_summary + .sidecard { display: block; }
 }
 
 /* Vehicle row (370x74 inside 410-wide card) */

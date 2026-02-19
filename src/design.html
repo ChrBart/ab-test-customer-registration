@@ -181,8 +181,9 @@
       </div>
 
       <div class="content_right">
+      <input type="checkbox" id="mobile-summary-toggle" class="mobile_summary_toggle" aria-controls="desktop-summary-card" />
       <section class="mobile_summary" aria-label="Review and book summary">
-        <div class="mobile_summary_row">
+        <label for="mobile-summary-toggle" class="mobile_summary_row">
           <div class="mobile_summary_col">
             <p class="mobile_summary_lbl">SIXT 60.40</p>
             <p class="mobile_summary_txt">Munich Airport</p>
@@ -193,9 +194,9 @@
             <p class="mobile_summary_total">€91.00</p>
           </div>
           <span class="material-symbols-outlined mobile_summary_chev" aria-hidden="true">expand_more</span>
-        </div>
+        </label>
       </section>
-      <aside class="sidecard">
+      <aside class="sidecard" id="desktop-summary-card">
         <div class="sidecard_vehicle">
           <div class="sidecard_thumb"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=200&fit=crop" alt="" /></div>
           <div class="sidecard_vehicle_text">
