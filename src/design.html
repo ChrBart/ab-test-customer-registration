@@ -8,6 +8,12 @@
   <link rel="stylesheet" href="/design.css" />
 </head>
 <body>
+  <header class="mobile_nav" aria-label="Mobile navigation">
+    <div class="mobile_nav_bar">
+      <a href="#" class="mobile_nav_back" aria-label="Back"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+      <span class="mobile_nav_title">REVIEW YOUR BOOKING</span>
+    </div>
+  </header>
   <header class="topbar">
     <div class="topbar_inner">
       <a href="#" class="topbar_logo"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" /></a>
@@ -175,6 +181,20 @@
       </div>
 
       <div class="content_right">
+      <section class="mobile_summary" aria-label="Review and book summary">
+        <div class="mobile_summary_row">
+          <div class="mobile_summary_col">
+            <p class="mobile_summary_lbl">SIXT 60.40</p>
+            <p class="mobile_summary_txt">Munich Airport</p>
+            <p class="mobile_summary_txt">Thu, Nov 14, 2024 | 12:30 PM</p>
+          </div>
+          <div class="mobile_summary_col mobile_summary_col_right">
+            <p class="mobile_summary_lbl">Total price</p>
+            <p class="mobile_summary_total">€91.00</p>
+          </div>
+          <span class="material-symbols-outlined mobile_summary_chev" aria-hidden="true">expand_more</span>
+        </div>
+      </section>
       <aside class="sidecard">
         <div class="sidecard_vehicle">
           <div class="sidecard_thumb"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=200&fit=crop" alt="" /></div>
