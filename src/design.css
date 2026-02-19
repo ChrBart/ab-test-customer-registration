@@ -54,7 +54,7 @@
 * { box-sizing: border-box; }
 
 html {
-  background: var(--surface-canvas);
+  background: var(--header-footer-bg);
 }
 
 body {
@@ -928,8 +928,10 @@ select:focus-visible {
     position: fixed;
     top: 0;
     right: 0;
-    bottom: env(safe-area-inset-bottom, 0px);
     left: 0;
+    bottom: auto;
+    height: 100vh;
+    height: 100dvh;
     pointer-events: none;
     opacity: 0;
     transition: opacity 180ms ease;
