@@ -314,6 +314,7 @@
       <span class="foot_copy">© SIXT 2024</span>
     </div>
   </footer>
+  <div class="sticky-shadow-proxy" aria-hidden="true"></div>
   <script>
     (function () {
       const MOBILE_BREAKPOINT = 1023;
@@ -322,8 +323,15 @@
       function setupStickySummary() {
         const sticky = document.querySelector(".content_right");
         const summaryToggle = document.querySelector(".summary_toggle");
+        const sidecard = sticky ? sticky.querySelector(".sidecard") : null;
+        const shadowProxy = document.querySelector(".sticky-shadow-proxy");
         const pageBody = document.body;
+        const isIOSSafari = /iP(hone|ad|od)/.test(navigator.userAgent) && /WebKit/.test(navigator.userAgent) && !/(CriOS|FxiOS|EdgiOS|OPiOS)/.test(navigator.userAgent);
         if (!sticky) return;
+
+        if (isIOSSafari) {
+          pageBody.classList.add("ios-safari");
+        }
 
         const syncExpanded = function () {
           if (!summaryToggle) return;
@@ -337,6 +345,16 @@
           const isExpanded = Boolean(summaryToggle && summaryToggle.checked);
           pageBody.classList.toggle("summary-stuck", isMobile && isStuck);
           pageBody.classList.toggle("summary-lightbox", isMobile && isStuck && isExpanded);
+
+          const useShadowProxy = Boolean(shadowProxy && sidecard && isIOSSafari && isMobile && isStuck);
+          pageBody.classList.toggle("sticky-shadow-active", useShadowProxy);
+          if (useShadowProxy) {
+            const rect = sidecard.getBoundingClientRect();
+            pageBody.style.setProperty("--sticky-proxy-left", rect.left + "px");
+            pageBody.style.setProperty("--sticky-proxy-top", rect.top + "px");
+            pageBody.style.setProperty("--sticky-proxy-width", rect.width + "px");
+            pageBody.style.setProperty("--sticky-proxy-height", rect.height + "px");
+          }
         };
 
         const updateStickyState = function () {

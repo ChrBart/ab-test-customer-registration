@@ -109,6 +109,23 @@ body.summary-lightbox::before {
   z-index: 25;
   opacity: 1;
 }
+.sticky-shadow-proxy {
+  position: fixed;
+  left: var(--sticky-proxy-left, 16px);
+  top: var(--sticky-proxy-top, 8px);
+  width: var(--sticky-proxy-width, calc(100vw - 32px));
+  height: var(--sticky-proxy-height, 120px);
+  border-radius: 16px;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 39;
+  transition: opacity 120ms ease;
+  box-shadow:
+    0 4px 34px rgba(10, 10, 14, 0.30),
+    0 12px 150px rgba(10, 10, 14, 0.18),
+    0 18px 286px rgba(10, 10, 14, 0.12);
+}
+body.sticky-shadow-active .sticky-shadow-proxy { opacity: 1; }
 
 /* Material Symbols – consistent sizing */
 .material-symbols-outlined {
@@ -956,6 +973,9 @@ body.summary-lightbox::before {
       0 4px 34px rgba(10, 10, 14, 0.30),
       0 12px 150px rgba(10, 10, 14, 0.18),
       0 18px 286px rgba(10, 10, 14, 0.12);
+  }
+  body.ios-safari.sticky-shadow-active .content_right.is-stuck .sidecard {
+    box-shadow: none;
   }
   .sidecard_head {
     cursor: pointer;
