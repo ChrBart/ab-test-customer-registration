@@ -159,9 +159,10 @@ button { font-family: inherit; cursor: pointer; }
 .topbar_login {
   color: var(--content-secondary);
   pointer-events: none;
-  cursor: default;
+  cursor: not-allowed;
+  user-select: none;
 }
-.topbar_login:hover,
+.topbar_login:hover { text-decoration: none; }
 .topbar_pricedetail:hover { text-decoration: underline; }
 .topbar_icon {
   font-size: 18px !important;
@@ -474,6 +475,7 @@ button { font-family: inherit; cursor: pointer; }
   overflow: hidden;
   cursor: pointer;
   display: block;
+  transition: border-color 140ms ease;
 }
 .pkg_sel {
   position: absolute;
@@ -590,6 +592,7 @@ button { font-family: inherit; cursor: pointer; }
   border-radius: var(--radius-md);
   cursor: pointer;
   display: block;
+  transition: border-color 140ms ease;
 }
 .addon_i:has(.addon_cb:checked) { border-color: var(--content-primary); }
 .addon_cb {

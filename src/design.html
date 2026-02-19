@@ -19,7 +19,7 @@
       <a href="#" class="topbar_logo"><img src="/sixt-logo-white.svg" alt="SIXT" /></a>
       <div class="topbar_actions">
         <span class="topbar_locale"><span class="material-symbols-outlined topbar_icon">language</span> EN / €</span>
-        <a href="#" class="topbar_login"><span class="material-symbols-outlined topbar_icon">person</span> Log in / Sign up</a>
+        <a href="#" class="topbar_login" aria-disabled="true" tabindex="-1"><span class="material-symbols-outlined topbar_icon">person</span> Log in / Sign up</a>
       </div>
     </div>
   </header>
@@ -376,19 +376,26 @@
         updateOptionLabels("short");
         syncSelectedState();
 
-        select.addEventListener("mousedown", function () {
+        function showLongLabels() {
           updateOptionLabels("long");
-        });
-        select.addEventListener("focus", function () {
-          updateOptionLabels("long");
+        }
+
+        function showShortLabels() {
+          updateOptionLabels("short");
+          syncSelectedState();
+        }
+
+        select.addEventListener("pointerdown", showLongLabels);
+        select.addEventListener("touchstart", showLongLabels, { passive: true });
+        select.addEventListener("focus", showLongLabels);
+        select.addEventListener("keydown", function () {
+          showLongLabels();
         });
         select.addEventListener("change", function () {
-          updateOptionLabels("short");
-          syncSelectedState();
+          showShortLabels();
         });
         select.addEventListener("blur", function () {
-          updateOptionLabels("short");
-          syncSelectedState();
+          window.setTimeout(showShortLabels, 0);
         });
       });
     })();
