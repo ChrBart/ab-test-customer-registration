@@ -14,7 +14,11 @@
     <p class="label">A/B test</p>
     <h1>Enable customer registration during the review and booking process</h1>
     <p class="hello">Hello world</p>
+    <img id="cat" class="cat-img" alt="Random cat" width="400" height="400" />
     <p class="intro">This page is hosted online. Share the link with stakeholders—it stays available even when your device is off.</p>
   </main>
+  <script>
+    document.getElementById('cat').src = 'https://cataas.com/cat?' + Date.now();
+  </script>
 </body>
 </html>
