@@ -322,6 +322,7 @@
       function setupStickySummary() {
         const sticky = document.querySelector(".content_right");
         const summaryToggle = document.querySelector(".summary_toggle");
+        const sidecard = document.querySelector(".content_right .sidecard");
         const pageBody = document.body;
         if (!sticky) return;
 
@@ -337,6 +338,14 @@
           const isExpanded = Boolean(summaryToggle && summaryToggle.checked);
           pageBody.classList.toggle("summary-stuck", isMobile && isStuck);
           pageBody.classList.toggle("summary-lightbox", isMobile && isStuck && isExpanded);
+
+          if (sidecard && isMobile && isStuck) {
+            const rect = sidecard.getBoundingClientRect();
+            pageBody.style.setProperty("--summary-shadow-left", rect.left + "px");
+            pageBody.style.setProperty("--summary-shadow-top", rect.top + "px");
+            pageBody.style.setProperty("--summary-shadow-width", rect.width + "px");
+            pageBody.style.setProperty("--summary-shadow-height", rect.height + "px");
+          }
         };
 
         const updateStickyState = function () {
