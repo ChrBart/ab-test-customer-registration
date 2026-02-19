@@ -65,7 +65,7 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 button { font-family: inherit; cursor: pointer; }
 
-/* Header – dark bar only (logo left, EN/Login/Total right) */
+/* Header – single dark bar: logo + back + title left; EN/Login/Total right */
 .topbar {
   background: var(--header-footer-bg);
   padding: 0 var(--layout-padding-x);
@@ -78,15 +78,44 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--spacing-lg);
 }
 .topbar_logo img {
   width: 56px;
+  height: auto;
   filter: brightness(0) invert(1);
+}
+.topbar_center {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3xs);
+  flex: 1;
+  min-width: 0;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .topbar_center { justify-content: flex-start; padding-left: var(--spacing-3xs); }
+}
+.topbar_back {
+  color: var(--onContent-onPrimary);
+  font-size: 22px;
+  line-height: 1;
+  text-decoration: none;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+.topbar_title {
+  color: var(--onContent-onPrimary);
+  font-size: var(--size-xs);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 .topbar_right {
   display: flex;
   align-items: center;
   gap: var(--spacing-lg);
+  flex-shrink: 0;
 }
 .topbar_locale,
 .topbar_login {
@@ -109,37 +138,6 @@ button { font-family: inherit; cursor: pointer; }
   text-decoration: underline;
   margin-top: 2px;
   opacity: 0.9;
-}
-
-/* Page title bar – white, &lt; REVIEW YOUR BOOKING */
-.pagetitle {
-  background: var(--surface-container);
-  border-bottom: 1px solid var(--content-tertiary);
-  padding: 0 var(--layout-padding-x);
-  height: 56px;
-  display: flex;
-  align-items: center;
-}
-.pagetitle_inner {
-  max-width: var(--layout-max);
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-3xs);
-}
-.pagetitle_back {
-  color: var(--content-primary);
-  font-size: 24px;
-  line-height: 1;
-  text-decoration: none;
-  font-weight: 400;
-}
-.pagetitle_text {
-  color: var(--content-primary);
-  font-size: var(--size-xs);
-  font-weight: 700;
-  letter-spacing: 0.02em;
 }
 
 /* Main content – Figma spacing and column ratio */
@@ -165,30 +163,30 @@ button { font-family: inherit; cursor: pointer; }
   min-width: 0;
 }
 .content_right {
-  background: var(--surface-container2);
-  border-radius: var(--radius-md);
-  padding: var(--spacing-lg);
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 @media (max-width: 959px) {
-  .content_right {
-    margin-top: 0;
-    padding: var(--spacing-xs);
-  }
+  .content_right { padding: 0; }
 }
 
 /* Form sections */
 .block { margin-bottom: var(--spacing-lg); }
+.block:last-child { margin-bottom: 0; }
 .block_h2 {
   font-size: var(--size-xs);
   font-weight: 700;
+  line-height: 1.35;
   color: var(--content-primary);
   margin: 0 0 var(--spacing-xs);
 }
 .block_intro {
   font-size: var(--size-2xs);
+  line-height: 1.5;
   color: var(--content-secondary);
-  margin: -4px 0 var(--spacing-xs);
+  margin: -2px 0 var(--spacing-xs);
 }
 .block_link {
   font-size: var(--size-2xs);
@@ -197,32 +195,39 @@ button { font-family: inherit; cursor: pointer; }
   display: inline-block;
   margin-top: var(--spacing-2xs);
 }
+.block_link_wrap { margin: var(--spacing-2xs) 0 0; }
+.block_link_center { display: inline-block; }
+.block_link_wrap:has(.block_link_center) { text-align: center; }
 
 /* Fields */
 .lbl { display: block; margin-bottom: var(--spacing-xs); }
 .lbl_t {
   display: block;
   font-size: var(--size-3xs);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--content-primary);
   margin-bottom: 6px;
+  letter-spacing: 0.01em;
 }
 .inp {
   width: 100%;
   height: 44px;
   padding: 10px var(--spacing-2xs);
   font-size: var(--size-2xs);
+  line-height: 1.4;
   color: var(--content-primary);
   background: var(--surface-container);
   border: 1px solid var(--content-tertiary);
   border-radius: var(--radius-xs);
+  -webkit-appearance: none;
+  appearance: none;
 }
+.inp::placeholder { color: var(--content-secondary); }
 .inp:focus {
   outline: none;
   border-color: var(--content-brand);
   box-shadow: 0 0 0 2px rgba(255, 80, 0, 0.2);
 }
-.inp::placeholder { color: var(--content-secondary); }
 .row { display: flex; gap: var(--spacing-xs); }
 .row_50 .lbl { flex: 1; min-width: 0; }
 .row_phone .lbl_sel { flex: 0 0 140px; }
@@ -291,15 +296,16 @@ button { font-family: inherit; cursor: pointer; }
   position: relative;
   min-height: 160px;
   padding: var(--spacing-xs);
-  background: var(--surface-container2);
+  background: var(--surface-container);
   border: 1px solid var(--content-tertiary);
   border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
-/* Selected = orange border (Figma: No Extra Protection selected) */
+/* Selected = Peace of Mind: darker border, subtle shadow */
 .pkg_card_sel {
   background: var(--surface-container);
-  border: 2px solid var(--content-brand);
-  box-shadow: none;
+  border: 1px solid var(--content-primary);
+  box-shadow: var(--elevation-medium);
 }
 .pkg_badge {
   position: absolute;
@@ -353,8 +359,8 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
-  padding: var(--spacing-xs) var(--spacing-xs);
-  background: var(--surface-container);
+  padding: var(--spacing-xs) var(--spacing-2xs);
+  background: var(--surface-container2);
   border: 1px solid var(--content-tertiary);
   border-radius: var(--radius-sm);
 }
@@ -444,15 +450,15 @@ button { font-family: inherit; cursor: pointer; }
 .deposit_h { font-size: var(--size-2xs); font-weight: 700; margin: 0 0 var(--spacing-3xs); color: var(--content-primary); }
 .deposit_p { font-size: var(--size-3xs); color: var(--content-secondary); margin: 0; line-height: 1.5; }
 
-/* Side card – elevation/medium, radius/md */
+/* Side card – single light grey card (Figma: fixed summary panel) */
 .sidecard {
-  background: var(--surface-container);
-  border: 1px solid var(--content-tertiary);
+  background: var(--surface-container2);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: var(--radius-md);
   padding: var(--spacing-lg);
-  box-shadow: var(--elevation-medium);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   position: sticky;
-  top: calc(56px + 56px + var(--spacing-lg));
+  top: calc(56px + var(--spacing-lg));
   height: fit-content;
 }
 @media (max-width: 959px) { .sidecard { position: static; top: auto; margin-top: var(--spacing-lg); } }
@@ -524,9 +530,10 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0;
+  gap: var(--spacing-3xs) 0;
+  row-gap: var(--spacing-3xs);
 }
-.foot_inner a { color: var(--onContent-onPrimary); text-decoration: none; opacity: 0.9; }
+.foot_inner a { color: var(--onContent-onPrimary); text-decoration: none; opacity: 0.92; }
 .foot_inner a:hover { text-decoration: underline; opacity: 1; }
-.foot_sep { margin: 0 var(--spacing-3xs); color: var(--onContent-onPrimary); opacity: 0.7; }
-.foot_copy { margin-left: auto; color: var(--onContent-onPrimary); opacity: 0.9; }
+.foot_sep { margin: 0 var(--spacing-2xs); color: var(--onContent-onPrimary); opacity: 0.6; user-select: none; }
+.foot_copy { margin-left: auto; color: var(--onContent-onPrimary); opacity: 0.92; }
