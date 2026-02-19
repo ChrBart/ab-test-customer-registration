@@ -402,6 +402,11 @@ button { font-family: inherit; cursor: pointer; }
 }
 .chk_invoice { margin-bottom: var(--spacing-xs); }
 .lbl_hint { font-size: var(--size-3xs); color: var(--content-secondary); margin: -4px 0 var(--spacing-xs); }
+.lbl_opt {
+  font-size: var(--size-3xs);
+  color: var(--content-secondary);
+  font-weight: 400;
+}
 
 /* Checkbox */
 .chk {
@@ -639,6 +644,12 @@ button { font-family: inherit; cursor: pointer; }
 }
 .pay_icons img { width: 42px; height: 28px; object-fit: contain; }
 .pay_note { font-size: var(--size-3xs); color: var(--content-secondary); margin: 0; line-height: 1.5; }
+.flight_hint {
+  margin: 0 0 var(--spacing-xs);
+  font-size: var(--size-3xs);
+  line-height: var(--line-3xs);
+  color: var(--content-secondary);
+}
 
 /* Credit card block (Figma 1:12466) */
 .cc_block .block_h2 { margin-bottom: 0; }
@@ -688,22 +699,57 @@ button { font-family: inherit; cursor: pointer; }
 
 /* Total */
 .block_tot { margin-bottom: var(--spacing-lg); }
-.tot_row { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--spacing-3xs); }
-.tot_l { font-size: var(--size-md); font-weight: 700; color: var(--content-primary); }
-.tot_v { font-size: var(--size-md); font-weight: 700; color: var(--content-primary); }
+.tot_row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0; }
+.tot_l {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+  color: var(--content-primary);
+}
+.tot_v {
+  display: inline-flex;
+  align-items: baseline;
+  font-weight: 700;
+  color: var(--content-primary);
+}
+.tot_cur { font-size: 12px; line-height: 1.5; margin-right: 2px; }
+.tot_major { font-size: 36px; line-height: 1; letter-spacing: 0.45px; }
+.tot_dec { font-size: 14px; line-height: 1.5; margin-left: 1px; }
+.tot_link {
+  margin-top: 4px;
+  display: inline-block;
+  font-size: var(--size-3xs);
+  font-weight: 700;
+  line-height: var(--line-3xs);
+  color: var(--content-primary);
+  text-decoration: underline;
+}
 
 /* Legal */
-.legal_h { font-size: var(--size-3xs); margin: 0 0 var(--spacing-2xs); color: var(--content-primary); }
+.legal_h {
+  font-size: var(--size-2xs);
+  line-height: var(--line-2xs);
+  margin: 0 0 var(--spacing-2xs);
+  color: var(--content-secondary);
+  font-weight: 400;
+}
 .legal_list {
   font-size: var(--size-2xs);
   color: var(--content-secondary);
   margin: 0 0 var(--spacing-xs);
-  padding-left: 1.4em;
-  line-height: 1.5;
+  padding-left: 20px;
+  line-height: var(--line-2xs);
+  list-style-type: square;
 }
 .legal_list li { margin-bottom: var(--spacing-3xs); }
-.legal_ack { font-size: var(--size-3xs); margin: 0 0 var(--spacing-lg); color: var(--content-primary); }
-.legal_ack a { color: var(--content-link); text-decoration: underline; }
+.legal_ack {
+  font-size: var(--size-2xs);
+  line-height: var(--line-2xs);
+  margin: 0 0 var(--spacing-lg);
+  color: var(--content-secondary);
+}
+.legal_ack a { color: var(--content-secondary); text-decoration: underline; }
 .legal_ack a:hover { color: var(--content-primary); }
 
 /* CTA – Figma brand button, radius 8px */
@@ -719,17 +765,18 @@ button { font-family: inherit; cursor: pointer; }
   cursor: pointer;
 }
 .cta:hover { opacity: 0.95; }
+.cta_fixed { width: 407px; max-width: 100%; }
 
 /* Deposit – Figma light grey block */
 .deposit {
   margin-top: var(--spacing-lg);
   padding: var(--spacing-xs);
-  background: #F6F6F6;
-  border: 1px solid var(--content-tertiary);
-  border-radius: var(--radius-sm);
+  background: var(--surface-container2);
+  border: none;
+  border-radius: 16px;
 }
-.deposit_h { font-size: var(--size-2xs); font-weight: 700; margin: 0 0 var(--spacing-3xs); color: var(--content-primary); }
-.deposit_p { font-size: var(--size-3xs); color: var(--content-secondary); margin: 0; line-height: 1.5; }
+.deposit_h { font-size: var(--size-xs); font-weight: 700; margin: 0 0 var(--spacing-3xs); color: var(--content-primary); line-height: var(--line-xs); }
+.deposit_p { font-size: var(--size-2xs); color: var(--content-secondary); margin: 0; line-height: var(--line-2xs); }
 
 /* Right-hand container – booking summary card mapped to Figma frame */
 .sidecard {

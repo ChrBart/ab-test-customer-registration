@@ -151,30 +151,30 @@
 
           <section class="block">
             <h2 class="block_h2">Enter flight number</h2>
-            <p class="block_intro">This is used to see whether your flight is delayed, so we can prepare your car for you.</p>
-            <label class="lbl"><span class="lbl_t">Flight number (optional)</span><input type="text" class="inp" name="flight" /></label>
+            <p class="flight_hint">This is used to see whether your flight is delayed, so we can prepare your car for you.</p>
+            <label class="lbl"><span class="lbl_t">Flight number <span class="lbl_opt">(optional)</span></span><input type="text" class="inp" name="flight" /></label>
           </section>
 
           <section class="block block_tot">
             <div class="tot_row">
               <span class="tot_l">Total price</span>
-              <span class="tot_v">€91.00</span>
+              <span class="tot_v"><span class="tot_cur">€</span><span class="tot_major">91</span><span class="tot_dec">,96</span></span>
             </div>
-            <a href="#" class="block_link">Show details</a>
+            <a href="#" class="tot_link">Price details</a>
           </section>
 
           <section class="block">
-            <p class="legal_h"><strong>IMPORTANT INFORMATION about your PREPAID reservation.</strong> Prepaid rates are subject to the following cancellation, rebooking, and no show charges. Please note that the charges listed below will never exceed the total prepaid amount.</p>
+            <p class="legal_h">IMPORTANT INFORMATION about your PREPAID reservation: Prepaid rates are subject to the following cancellation, rebooking, and no-show charges. Please note that the charges listed below will never exceed the total prepaid amount:</p>
             <ul class="legal_list">
-              <li>Cancellation within 24 hours prior to pickup: charges apply as stated.</li>
-              <li>Cancellation 48 hours or more before pickup: a fee applies.</li>
-              <li>No show: full reservation price will be charged.</li>
+              <li>Booking cancellation: An amount of €91.96 will be charged to cancel the booking (possible until the agreed pickup time). Any remaining prepaid amount over €91.96 will be refunded.</li>
+              <li>No show: No refund will be issued in case of failure to pick up your vehicle (no show) or cancellation after scheduled pick up time.</li>
+              <li>No refund for unused rental days: No refund or credit will be issued for any unused rental days (due to late pickup or early return) once the vehicle has been picked up.</li>
             </ul>
-            <p class="legal_ack">I have read and accept the Rental Information, the Terms and Conditions, and the Privacy Policy. I acknowledge that I'm booking a prepaid rental, where the total rental price is charged to the payment method I provided.</p>
-            <button type="submit" class="cta">Pay and Book</button>
+            <p class="legal_ack">I have read and accept the <a href="#">Rental Information</a>, the <a href="#">Terms and Conditions</a>, and the <a href="#">Privacy Policy</a>. I acknowledge that I'm booking a prepaid rate, where the total rental price is immediately charged to the credit or debit card I provided.</p>
+            <button type="submit" class="cta cta_fixed">Pay and Book</button>
             <div class="deposit">
               <p class="deposit_h">Refundable deposit</p>
-              <p class="deposit_p">An additional €200 deposit will be blocked on your card at the pickup counter and released within a few days of the vehicle's return.</p>
+              <p class="deposit_p">An additional €300 security deposit will be blocked on your card at the pickup counter and released within a few days of the vehicle’s return.</p>
             </div>
           </section>
         </form>
