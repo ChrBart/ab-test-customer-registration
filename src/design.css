@@ -266,11 +266,16 @@ button { font-family: inherit; cursor: pointer; }
   align-items: stretch;
   padding: 0;
   background: transparent;
+  position: sticky;
+  top: 0;
+  align-self: start;
+  z-index: 30;
 }
 @media (max-width: 1023px) {
   .content_right {
     max-width: none;
     order: -1;
+    top: 8px;
   }
 }
 
@@ -281,44 +286,51 @@ button { font-family: inherit; cursor: pointer; }
 .mobile_summary {
   display: none;
   background: var(--surface-container2);
-  border-radius: var(--radius-md);
-  padding: var(--spacing-xs);
+  border-radius: 16px;
+  padding: 24px 20px;
 }
 .mobile_summary_row {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--spacing-2xs);
-  align-items: start;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
   cursor: pointer;
 }
-.mobile_summary_col { min-width: 0; }
-.mobile_summary_col_right { text-align: right; padding-right: 20px; }
-.mobile_summary_lbl {
-  margin: 0 0 2px;
-  font-size: var(--size-3xs);
-  font-weight: 700;
-  line-height: var(--line-3xs);
-  color: var(--content-secondary);
+.mobile_summary_thumb {
+  width: 92px;
+  height: 72px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface-canvas2);
+  flex-shrink: 0;
 }
-.mobile_summary_txt {
-  margin: 0;
-  font-size: var(--size-3xs);
-  line-height: var(--line-3xs);
-  color: var(--content-primary);
+.mobile_summary_thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.mobile_summary_total {
+.mobile_summary_col { min-width: 0; flex: 1; }
+.mobile_summary_t {
   margin: 0;
   font-size: var(--size-xs);
   font-weight: 700;
   line-height: var(--line-xs);
   color: var(--content-primary);
 }
+.mobile_summary_sub {
+  margin: 0;
+  font-size: var(--size-2xs);
+  line-height: var(--line-2xs);
+  color: var(--content-secondary);
+}
+.mobile_summary_txt {
+  margin: 0;
+  font-size: var(--size-2xs);
+  line-height: var(--line-2xs);
+  color: var(--content-primary);
+}
 .mobile_summary_chev {
-  position: absolute;
-  right: 0;
-  top: 2px;
-  font-size: 18px !important;
+  margin-left: auto;
+  font-size: 24px !important;
   color: var(--content-primary);
   transition: transform 0.2s ease;
 }
@@ -774,15 +786,33 @@ button { font-family: inherit; cursor: pointer; }
   background: var(--surface-container2);
   border-radius: 16px;
   box-shadow: none;
-  position: sticky;
-  top: 0;
+  position: static;
   height: fit-content;
   padding: 24px 0 16px;
 }
 @media (max-width: 1023px) {
-  .sidecard { display: none; margin-top: var(--spacing-xs); }
+  .sidecard {
+    display: none;
+    margin-top: var(--spacing-xs);
+    max-height: calc(100vh - 16px);
+    overflow: auto;
+  }
   .mobile_summary { display: block; }
+  .mobile_summary_toggle:checked + .mobile_summary { display: none; }
+  .mobile_summary_toggle:not(:checked) + .mobile_summary + .sidecard { display: none; }
   .mobile_summary_toggle:checked + .mobile_summary + .sidecard { display: block; }
+}
+.mobile_summary_close {
+  display: none;
+  width: 100%;
+  padding: 0 20px 12px;
+  text-align: right;
+  color: var(--content-primary);
+  text-decoration: none;
+}
+.mobile_summary_close .material-symbols-outlined { font-size: 20px !important; }
+@media (max-width: 1023px) {
+  .mobile_summary_close { display: block; }
 }
 
 /* Vehicle row (370x74 inside 410-wide card) */
