@@ -320,7 +320,6 @@
   <script>
     (function () {
       const MOBILE_BREAKPOINT = 1023;
-      const STICKY_TOP = 20;
       const STICKY_EPSILON = 2;
 
       function setupStickySummary() {
@@ -335,7 +334,8 @@
 
         const updateStickyState = function () {
           const rect = sticky.getBoundingClientRect();
-          const isAtStickyTop = rect.top <= STICKY_TOP + STICKY_EPSILON && rect.top >= STICKY_TOP - STICKY_EPSILON;
+          const stickyTop = Number.parseFloat(window.getComputedStyle(sticky).top) || 0;
+          const isAtStickyTop = rect.top <= stickyTop + STICKY_EPSILON;
           sticky.classList.toggle("is-stuck", isAtStickyTop && window.innerWidth <= MOBILE_BREAKPOINT);
         };
 
