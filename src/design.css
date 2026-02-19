@@ -1184,14 +1184,13 @@ body.summary-lightbox::before {
     position: fixed;
     left: 16px;
     right: 16px;
-    top: 8px;
-    height: 1px;
-    border-radius: 16px;
+    top: 0;
+    height: 24px;
+    border-radius: 16px 16px 0 0;
     pointer-events: none;
-    z-index: 24;
-    box-shadow:
-      0 -4px 34px rgba(10, 10, 14, 0.30),
-      0 -10px 80px rgba(10, 10, 14, 0.14);
+    z-index: 39;
+    background: rgba(10, 10, 14, 0.14);
+    filter: blur(18px);
   }
   .content_right.is-stuck > .summary_toggle + .sidecard {
     position: fixed;
