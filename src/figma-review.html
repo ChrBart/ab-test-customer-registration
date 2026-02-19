@@ -1,320 +1,321 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Review Your Booking | SIXT</title>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/figma-review.css" />
 </head>
-<body class="page-figma">
-  <header class="header">
-    <a href="#" class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" class="logo__img" />
-    </a>
-    <div class="header__right">
-      <span class="material-symbols-outlined header__icon">language</span>
-      <span class="header__text">EN / €</span>
-      <span class="header__sep"></span>
-      <span class="material-symbols-outlined header__icon">person</span>
-      <a href="#" class="header__link">Log in / Register</a>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="#" class="site-header__logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" class="site-header__logo-img" />
+      </a>
+      <div class="site-header__actions">
+        <span class="site-header__locale">EN / €</span>
+        <a href="#" class="site-header__auth">Login / Sign-up</a>
+        <span class="site-header__total">Total: 91.00 €</span>
+      </div>
     </div>
   </header>
 
-  <div class="page-top-wrap">
-    <div class="page-top">
-      <div class="page-top__left">
-        <span class="material-symbols-outlined page-top__back">chevron_left</span>
-        <h1 class="page-top__title">&lt; REVIEW YOUR BOOKING</h1>
-      </div>
-      <div class="page-top__total">
-        <span class="page-top__total-label">Total: </span><strong class="page-top__total-amount">175,4€</strong>
-        <a href="#" class="page-top__price-details">Price details</a>
-      </div>
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <a href="#" class="page-hero__back" aria-label="Back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <h1 class="page-hero__title">REVIEW YOUR BOOKING</h1>
     </div>
   </div>
 
-  <main class="main">
-    <div class="main__form">
-      <aside class="summary summary--mobile">
-        <div class="summary__card">
-          <div class="summary__car-row">
-            <span class="summary__car-icon" aria-hidden="true"><svg viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 14V10h4l2-2h24l2 2h4v4H2z"/><circle cx="12" cy="18" r="2.5"/><circle cx="36" cy="18" r="2.5"/></svg></span>
-            <p class="summary__car-name">VW TAYRON</p>
-          </div>
-          <p class="summary__car-meta">or similar | ECMW</p>
-          <p class="summary__car-meta">3 rewald Autos</p>
-          <div class="summary__pickup-return">
-            <h3 class="summary__heading">Pickup and return</h3>
-            <div class="summary__pr-row">
-              <span class="material-symbols-outlined summary__pr-icon summary__pr-icon--pin">location_on</span>
-              <div>
-                <p class="summary__pr-label">Pickup</p>
-                <p class="summary__pr-location">Munich Airport</p>
-                <p class="summary__pr-datetime">Thu, Jan 19, 2023 | 02:30 PM</p>
+  <main class="page-main">
+    <div class="page-main__inner">
+      <div class="content-grid">
+        <div class="content-grid__form">
+          <form class="booking-form" action="#" method="post">
+            <section class="booking-form__section">
+              <h2 class="booking-form__heading">Who will drive?</h2>
+              <div class="field-group">
+                <label class="field">
+                  <span class="field__label">Company name (optional)</span>
+                  <input type="text" class="field__input" name="company" />
+                </label>
+                <div class="field-row field-row--half">
+                  <label class="field">
+                    <span class="field__label">First name</span>
+                    <input type="text" class="field__input" name="firstName" />
+                  </label>
+                  <label class="field">
+                    <span class="field__label">Last name</span>
+                    <input type="text" class="field__input" name="lastName" />
+                  </label>
+                </div>
+                <label class="field">
+                  <span class="field__label">Email</span>
+                  <input type="email" class="field__input" name="email" />
+                </label>
+                <div class="field-row field-row--phone">
+                  <label class="field field--country">
+                    <span class="field__label">Country</span>
+                    <div class="field__select field__select--country">
+                      <span class="field__select-flag">🇩🇪</span>
+                      <select class="field__input" name="countryCode"><option value="DE">+49</option></select>
+                      <span class="field__select-chevron">▼</span>
+                    </div>
+                  </label>
+                  <label class="field field--grow">
+                    <span class="field__label">Phone number</span>
+                    <input type="tel" class="field__input" name="phone" />
+                  </label>
+                </div>
+                <label class="checkbox">
+                  <input type="checkbox" name="age" class="checkbox__input" checked />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__label">I am 23 years or under</span>
+                </label>
               </div>
-            </div>
-            <div class="summary__pr-row">
-              <span class="material-symbols-outlined summary__pr-icon summary__pr-icon--pin">location_on</span>
-              <div>
-                <p class="summary__pr-label">Return</p>
-                <p class="summary__pr-location">Munich Airport</p>
-                <p class="summary__pr-datetime">Sun, Jan 19, 2023 | 09:30 AM</p>
+            </section>
+
+            <section class="booking-form__section">
+              <h2 class="booking-form__heading">Which protection package do you need?</h2>
+              <p class="booking-form__intro">Without protection, the full vehicle price will be charged as a deductible in case of damage or theft.</p>
+              <div class="protection-grid">
+                <article class="protection-card">
+                  <span class="protection-card__badge">Included</span>
+                  <div class="protection-card__icon protection-card__icon--outline">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <h3 class="protection-card__title">No Extra Protection</h3>
+                  <p class="protection-card__sub protection-card__sub--warn">Deductible up to full vehicle value</p>
+                  <a href="#" class="protection-card__link">View coverage</a>
+                  <label class="protection-card__toggle">
+                    <input type="radio" name="protection" value="none" class="protection-card__radio" />
+                    <span class="protection-card__switch"></span>
+                  </label>
+                </article>
+                <article class="protection-card protection-card--selected">
+                  <div class="protection-card__icon protection-card__icon--filled">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <span class="protection-card__check">✓</span>
+                  <h3 class="protection-card__title">Peace of Mind</h3>
+                  <p class="protection-card__sub protection-card__sub--ok">No deductible, no claim, no hassle</p>
+                  <a href="#" class="protection-card__link">View coverage</a>
+                  <span class="protection-card__price">39.00 € / day</span>
+                  <label class="protection-card__toggle">
+                    <input type="radio" name="protection" value="peace" class="protection-card__radio" checked />
+                    <span class="protection-card__switch"></span>
+                  </label>
+                </article>
               </div>
-            </div>
-          </div>
-          <div class="summary__included">
-            <h3 class="summary__heading">Your booking overview</h3>
-            <p><span class="summary__check-wrap"></span> Third party insurance <span class="material-symbols-outlined summary__info">info</span></p>
-            <p><span class="summary__check-wrap"></span> 24/7 Breakdown assistance <span class="material-symbols-outlined summary__info">info</span></p>
-            <p><span class="summary__check-wrap"></span> Tires suitable for winter <span class="material-symbols-outlined summary__info">info</span></p>
-            <p><span class="summary__check-wrap"></span> 900 km are included, each additional kilometer costs €0.05 <span class="material-symbols-outlined summary__info">info</span></p>
-            <p><span class="summary__check-wrap"></span> Booking option: Best price - Pay now, cancel and rebook for a fee <span class="material-symbols-outlined summary__info">info</span></p>
-          </div>
+              <a href="#" class="booking-form__link">View all protection packages</a>
+            </section>
+
+            <section class="booking-form__section">
+              <h2 class="booking-form__heading">Which add-ons do you need?</h2>
+              <div class="addon-list">
+                <div class="addon-item">
+                  <span class="addon-item__icon">👤</span>
+                  <div class="addon-item__text">
+                    <strong class="addon-item__name">Additional driver</strong>
+                    <span class="addon-item__price">€11.99 / day & driver</span>
+                  </div>
+                  <a href="#" class="addon-item__details">Details</a>
+                  <label class="switch">
+                    <input type="checkbox" class="switch__input" />
+                    <span class="switch__track"></span>
+                  </label>
+                </div>
+                <div class="addon-item">
+                  <span class="addon-item__icon">🧭</span>
+                  <div class="addon-item__text">
+                    <strong class="addon-item__name">GPS guaranteed</strong>
+                    <span class="addon-item__price">€19.99 / day</span>
+                  </div>
+                  <a href="#" class="addon-item__details">Details</a>
+                  <label class="switch">
+                    <input type="checkbox" class="switch__input" />
+                    <span class="switch__track"></span>
+                  </label>
+                </div>
+                <div class="addon-item">
+                  <span class="addon-item__icon">🌐</span>
+                  <div class="addon-item__text">
+                    <strong class="addon-item__name">Cross-border driving</strong>
+                    <span class="addon-item__price">€20.99 / one-time</span>
+                  </div>
+                  <a href="#" class="addon-item__details">Details</a>
+                  <label class="switch">
+                    <input type="checkbox" class="switch__input" />
+                    <span class="switch__track"></span>
+                  </label>
+                </div>
+              </div>
+              <a href="#" class="booking-form__link">See more +</a>
+            </section>
+
+            <section class="booking-form__section">
+              <h2 class="booking-form__heading">What credit card would you like to pay with?</h2>
+              <div class="field-group">
+                <label class="field">
+                  <span class="field__label">Card number</span>
+                  <input type="text" class="field__input" name="cardNumber" placeholder="1234 1234 1234 1234" />
+                </label>
+                <label class="field">
+                  <span class="field__label">Cardholder name</span>
+                  <input type="text" class="field__input" name="cardholder" />
+                </label>
+                <div class="field-row field-row--half">
+                  <label class="field">
+                    <span class="field__label">Expiration date</span>
+                    <input type="text" class="field__input" name="expiry" placeholder="MM / YY" />
+                  </label>
+                  <label class="field">
+                    <span class="field__label">CVV</span>
+                    <input type="text" class="field__input" name="cvv" placeholder="123" maxlength="4" />
+                  </label>
+                </div>
+              </div>
+              <div class="payment-icons">
+                <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" width="42" height="28" />
+                <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="" width="42" height="28" />
+                <img src="https://cdn.simpleicons.org/amex/006FCF" alt="" width="42" height="28" />
+                <span class="payment-icons__label">PayPal</span>
+                <span class="payment-icons__label">Google Pay</span>
+                <span class="payment-icons__label">Apple Pay</span>
+              </div>
+              <p class="booking-form__disclaimer">The credit card used for payment must be under the driver's name and physically presented during pickup. Debit cards may not be accepted at all locations or for all car categories.</p>
+            </section>
+
+            <section class="booking-form__section">
+              <h2 class="booking-form__heading">What is your invoice address?</h2>
+              <div class="field-group">
+                <label class="field">
+                  <span class="field__label">Country/region</span>
+                  <div class="field__select">
+                    <span class="field__select-flag">🇩🇪</span>
+                    <select class="field__input" name="country"><option value="DE">Germany</option></select>
+                    <span class="field__select-chevron">▼</span>
+                  </div>
+                </label>
+                <label class="field">
+                  <span class="field__label">Street and house number</span>
+                  <input type="text" class="field__input" name="street" />
+                </label>
+                <label class="field">
+                  <span class="field__label">Optional: Street line 2</span>
+                  <input type="text" class="field__input" name="street2" />
+                </label>
+                <div class="field-row field-row--half">
+                  <label class="field">
+                    <span class="field__label">Postal code</span>
+                    <input type="text" class="field__input" name="zip" />
+                  </label>
+                  <label class="field">
+                    <span class="field__label">City</span>
+                    <input type="text" class="field__input" name="city" />
+                  </label>
+                </div>
+              </div>
+            </section>
+
+            <section class="booking-form__section">
+              <h2 class="booking-form__heading">Enter flight number</h2>
+              <p class="booking-form__intro">This helps us see if your flight is delayed so we can prepare your car.</p>
+              <label class="field">
+                <span class="field__label">Flight number (optional)</span>
+                <input type="text" class="field__input" name="flight" />
+              </label>
+            </section>
+
+            <section class="booking-form__section booking-form__section--total">
+              <div class="total-row">
+                <span class="total-row__label">Total price</span>
+                <span class="total-row__value">91.00 €</span>
+              </div>
+              <a href="#" class="booking-form__link">Show details</a>
+            </section>
+
+            <section class="booking-form__section">
+              <p class="important-title"><strong>IMPORTANT INFORMATION</strong> about your <strong>PREPAID</strong> reservation</p>
+              <ul class="important-list">
+                <li>Cancellation within 24 hours prior to pickup may incur charges. See terms for amounts.</li>
+                <li>Cancellation 48 hours or more before pickup: a fee applies.</li>
+                <li>No refund if you do not show up at pickup; the full reservation price will be charged.</li>
+              </ul>
+              <label class="checkbox checkbox--terms">
+                <input type="checkbox" name="terms" class="checkbox__input" />
+                <span class="checkbox__box"></span>
+                <span class="checkbox__label">I have read and accept the <a href="#">Rental Information</a>, the <a href="#">Terms and Conditions</a>, and the <a href="#">Privacy Policy</a>. I acknowledge that I'm booking a prepaid rental, where the total rental price is charged to the payment method I provided.</span>
+              </label>
+              <p class="booking-form__footer-link">See <a href="#">Rental Information</a> for more details on accepted payment methods.</p>
+              <button type="submit" class="btn-primary">Pay and Book</button>
+              <div class="deposit-box">
+                <p class="deposit-box__title">Refundable deposit</p>
+                <p class="deposit-box__text">An additional €300 security deposit will be blocked on your card at pickup and released within a few days of the vehicle's return.</p>
+              </div>
+            </section>
+          </form>
         </div>
-      </aside>
 
-      <form class="form" action="#" method="post">
-        <section class="form-section">
-          <h2 class="form-section__title">Driver details</h2>
-          <div class="form-row form-row--phone">
-            <label class="field field--country-code field--no-label">
-              <div class="field__country field__country--compact">
-                <span class="material-symbols-outlined field__flag">flag</span>
-                <select class="field__input" name="countryCode" aria-label="Country"><option value="">Country</option><option value="DE" selected>+ 49</option></select>
-                <span class="material-symbols-outlined field__chevron">expand_more</span>
-              </div>
-            </label>
-            <label class="field field--phone">
-              <span class="field__label">Phone number</span>
-              <input type="tel" class="field__input" name="phone" />
-            </label>
-          </div>
-          <label class="checkbox-option">
-            <input type="checkbox" name="age" class="checkbox-option__input" checked />
-            <span class="checkbox-option__box"></span>
-            <span class="checkbox-option__text">I am 23 years or older</span>
-          </label>
-        </section>
-
-        <section class="form-section">
-          <h2 class="form-section__title">Which protection package do you need?</h2>
-          <p class="form-section__desc">Without protection, the full vehicle price will be charged as a deductible in case of damage or theft.</p>
-          <div class="protection-cards">
-            <label class="protection-card protection-card--selected">
-              <input type="radio" name="protection" value="none" class="protection-card__input" checked />
-              <span class="protection-card__shield-wrap"><span class="material-symbols-outlined protection-card__shield">shield</span></span>
-              <span class="protection-card__badge">Included</span>
-              <span class="protection-card__name">No Extra Protection</span>
-              <span class="protection-card__warn">Deductible: up to full vehicle value</span>
-              <a href="#" class="protection-card__link">View coverage &gt; <span class="material-symbols-outlined protection-card__chevron">expand_more</span></a>
-            </label>
-            <label class="protection-card">
-              <input type="radio" name="protection" value="peace" class="protection-card__input" />
-              <span class="protection-card__name">Peace of Mind</span>
-              <span class="protection-card__ok">No deductible - no claim, no hassle</span>
-              <a href="#" class="protection-card__link">View coverage &gt; <span class="material-symbols-outlined protection-card__chevron">expand_more</span></a>
-              <span class="protection-card__price">€ 28.50 / day</span>
-            </label>
-          </div>
-          <a href="#" class="form-link">View all protection packages</a>
-        </section>
-
-        <section class="form-section">
-          <h2 class="form-section__title">Which add-ons do you need?</h2>
-          <div class="addon-rows">
-            <div class="addon-row">
-              <span class="addon-row__icon-wrap"><span class="material-symbols-outlined addon-row__icon">person</span></span>
-              <div class="addon-row__text">
-                <span class="addon-row__name">Additional driver</span>
-                <span class="addon-row__price">€11.99 / day & driver</span>
-              </div>
-              <a href="#" class="addon-row__details">Details</a>
-              <label class="toggle">
-                <input type="checkbox" class="toggle__input" />
-                <span class="toggle__track"></span>
-              </label>
+        <aside class="summary-card">
+          <div class="summary-card__car">
+            <div class="summary-card__car-image">
+              <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=200&fit=crop" alt="" />
             </div>
-            <div class="addon-row">
-              <span class="addon-row__icon-wrap"><span class="material-symbols-outlined addon-row__icon">navigation</span></span>
-              <div class="addon-row__text">
-                <span class="addon-row__name">GPS and Android Auto / Apple CarPlay</span>
-                <span class="addon-row__price">€19.99 / day</span>
+            <h3 class="summary-card__car-name">Opel Mokka</h3>
+            <p class="summary-card__car-meta">or similar | CBMN</p>
+            <p class="summary-card__car-days">3 rental days</p>
+          </div>
+          <div class="summary-card__pickup-return">
+            <h4 class="summary-card__subheading">Pickup and return</h4>
+            <div class="summary-card__pr-item">
+              <span class="summary-card__pr-icon">📍</span>
+              <div>
+                <p class="summary-card__pr-label">Pickup</p>
+                <p class="summary-card__pr-place">Munich Airport</p>
+                <p class="summary-card__pr-time">Thu, Nov 14, 2024 | 12:00 PM</p>
               </div>
-              <a href="#" class="addon-row__details">Details</a>
-              <label class="toggle">
-                <input type="checkbox" class="toggle__input" />
-                <span class="toggle__track"></span>
-              </label>
             </div>
-            <div class="addon-row">
-              <span class="addon-row__icon-wrap"><span class="material-symbols-outlined addon-row__icon">public</span></span>
-              <div class="addon-row__text">
-                <span class="addon-row__name">Cross-border driving</span>
-                <span class="addon-row__price">€20.99 / one-time</span>
+            <div class="summary-card__pr-item">
+              <span class="summary-card__pr-icon">📍</span>
+              <div>
+                <p class="summary-card__pr-label">Return</p>
+                <p class="summary-card__pr-place">Munich Airport</p>
+                <p class="summary-card__pr-time">Sun, Nov 17, 2024 | 09:30 AM</p>
               </div>
-              <a href="#" class="addon-row__details">Details</a>
-              <label class="toggle">
-                <input type="checkbox" class="toggle__input" />
-                <span class="toggle__track"></span>
-              </label>
             </div>
           </div>
-          <a href="#" class="form-link">View all add-on options</a>
-        </section>
-
-        <section class="form-section">
-          <h2 class="form-section__title">What credit card would you like to pay with?</h2>
-          <label class="field">
-            <span class="field__label">Card number</span>
-            <input type="text" class="field__input" name="cardNumber" placeholder="1234 1234 1234 1234" maxlength="19" />
-          </label>
-          <label class="field">
-            <span class="field__label">Cardholder name</span>
-            <input type="text" class="field__input" name="cardholder" />
-          </label>
-          <div class="form-row form-row--expiry-cvv">
-            <label class="field field--expiry">
-              <span class="field__label">Expiration date</span>
-              <input type="text" class="field__input" name="expiry" placeholder="MM / YY" />
-            </label>
-            <label class="field field--cvv">
-              <span class="field__label">CVV <button type="button" class="field__info-btn" aria-label="Info"><span class="material-symbols-outlined">info</span></button></span>
-              <input type="text" class="field__input" name="cvv" placeholder="123" maxlength="4" />
-            </label>
-          </div>
-          <div class="payment-logos">
-            <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="" class="payment-logo" />
-            <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" class="payment-logo" />
-            <img src="https://cdn.simpleicons.org/amex/006FCF" alt="" class="payment-logo" />
-            <img src="https://cdn.simpleicons.org/unionpay/E21836" alt="" class="payment-logo" />
-            <img src="https://cdn.simpleicons.org/discover/FF6000" alt="" class="payment-logo" />
-          </div>
-          <p class="form-disclaimer">The credit card used for payment must be under the driver's name and physically presented during pickup. Please be aware that debit cards may not be accepted at all locations or for all car categories.</p>
-        </section>
-
-        <section class="form-section">
-          <h2 class="form-section__title">What is your invoice address?</h2>
-          <label class="field">
-            <span class="field__label">Country/region</span>
-            <div class="field__country">
-              <span class="material-symbols-outlined field__flag">flag</span>
-              <select class="field__input" name="country"><option value="DE">Germany</option></select>
-              <span class="material-symbols-outlined field__chevron">expand_more</span>
-            </div>
-          </label>
-          <label class="field">
-            <span class="field__label">Street and house number</span>
-            <input type="text" class="field__input" name="street" />
-          </label>
-          <div class="form-row form-row--half">
-            <label class="field">
-              <span class="field__label">Postal code</span>
-              <input type="text" class="field__input" name="zip" />
-            </label>
-            <label class="field">
-              <span class="field__label">City</span>
-              <input type="text" class="field__input" name="city" />
-            </label>
-          </div>
-        </section>
-
-        <section class="form-section">
-          <h2 class="form-section__title">Enter flight number</h2>
-          <div class="info-box">
-            <span class="material-symbols-outlined info-box__icon">info</span>
-            <p class="info-box__text">This is used to see whether your flight is delayed, so we can prepare your car for you.</p>
-          </div>
-          <label class="field">
-            <span class="field__label">Flight number (optional)</span>
-            <input type="text" class="field__input" name="flight" placeholder="Flight number (optional)" />
-          </label>
-        </section>
-
-        <section class="form-section form-section--total">
-          <div class="total-line">
-            <span class="total-line__label">Total price</span>
-            <span class="total-line__amount">€ 89.99</span>
-          </div>
-          <a href="#" class="form-link form-link--small">Price details</a>
-          <div class="important-info">
-            <p class="important-info__title"><strong>IMPORTANT INFORMATION</strong> about your <strong>PREPAID</strong> reservation</p>
-            <ul class="important-info__list">
-              <li>€91.06 for cancellations within 24 hours prior to pickup time. Cancellations within 24 hours prior to the scheduled pickup time will result in charges as stated.</li>
-              <li>Cancellation if you cancel 48 hours or more before pickup, a fee applies.</li>
-              <li>No refund if you do not show up at the pickup time, the total reservation price will be charged.</li>
+          <div class="summary-card__overview">
+            <h4 class="summary-card__subheading">Your booking overview</h4>
+            <ul class="summary-card__list">
+              <li><span class="summary-card__check">✓</span> Third party insurance</li>
+              <li><span class="summary-card__check">✓</span> 24/7 Breakdown assistance</li>
+              <li><span class="summary-card__check">✓</span> Tires suitable for winter</li>
+              <li><span class="summary-card__check">✓</span> 900 km are included, each additional kilometer costs €0.05</li>
+              <li><span class="summary-card__check">✓</span> Booking option: Best prices - Pay now, cancel and rebook for a fee</li>
             </ul>
           </div>
-          <label class="checkbox-option checkbox-option--terms">
-            <input type="checkbox" name="terms" class="checkbox-option__input" />
-            <span class="checkbox-option__box"></span>
-            <span class="checkbox-option__text">I have read and accept the <a href="#">Rental Information</a>, the <a href="#">Terms and Conditions</a>, and the <a href="#">Privacy Policy</a>. I acknowledge that I'm booking a prepaid rental, where the total rental price is immediately charged to the payment method I provided.</span>
-          </label>
-          <p class="form-terms-footer">See <a href="#">Rental Information</a> for more details on accepted payment methods.</p>
-          <button type="submit" class="cta-btn">Pay and Book</button>
-          <div class="deposit-box">
-            <p class="deposit-box__title">Refundable deposit</p>
-            <p class="deposit-box__text">An additional €300 security deposit will be blocked on your card at the pickup counter and released within a few days of the vehicle's return.</p>
-          </div>
-        </section>
-      </form>
-    </div>
-
-    <aside class="summary summary--desktop">
-      <div class="summary__card">
-        <div class="summary__car-row">
-          <span class="summary__car-icon" aria-hidden="true"><svg viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 14V10h4l2-2h24l2 2h4v4H2z"/><circle cx="12" cy="18" r="2.5"/><circle cx="36" cy="18" r="2.5"/></svg></span>
-          <p class="summary__car-name">VW TAYRON</p>
-        </div>
-        <p class="summary__car-meta">or similar | ECMW</p>
-        <p class="summary__car-meta">3 rewald Autos</p>
-        <p class="summary__car-price">€ 89.99</p>
-        <a href="#" class="summary__link">Price details</a>
-        <div class="summary__pickup-return">
-          <h3 class="summary__heading">Pickup and return</h3>
-          <div class="summary__pr-row">
-            <span class="material-symbols-outlined summary__pr-icon summary__pr-icon--pin">location_on</span>
-            <div>
-              <p class="summary__pr-label">Pickup</p>
-              <p class="summary__pr-location">Munich Airport</p>
-              <p class="summary__pr-datetime">Thu, Jan 19, 2023 | 02:30 PM</p>
-            </div>
-          </div>
-          <div class="summary__pr-row">
-            <span class="material-symbols-outlined summary__pr-icon summary__pr-icon--pin">location_on</span>
-            <div>
-              <p class="summary__pr-label">Return</p>
-              <p class="summary__pr-location">Munich Airport</p>
-              <p class="summary__pr-datetime">Sun, Jan 19, 2023 | 09:30 AM</p>
-            </div>
-          </div>
-        </div>
-        <div class="summary__included">
-          <h3 class="summary__heading">Your booking overview</h3>
-          <p><span class="summary__check-wrap"></span> Third party insurance <span class="material-symbols-outlined summary__info">info</span></p>
-          <p><span class="summary__check-wrap"></span> 24/7 Breakdown assistance <span class="material-symbols-outlined summary__info">info</span></p>
-          <p><span class="summary__check-wrap"></span> Tires suitable for winter <span class="material-symbols-outlined summary__info">info</span></p>
-          <p><span class="summary__check-wrap"></span> 900 km are included, each additional kilometer costs €0.05 <span class="material-symbols-outlined summary__info">info</span></p>
-          <p><span class="summary__check-wrap"></span> Booking option: Best price - Pay now, cancel and rebook for a fee <span class="material-symbols-outlined summary__info">info</span></p>
-        </div>
+        </aside>
       </div>
-    </aside>
+    </div>
   </main>
 
-  <footer class="footer">
-    <div class="footer__links">
-      <a href="#">Help</a><span class="footer__pipe">|</span>
-      <a href="#">Rental information</a><span class="footer__pipe">|</span>
-      <a href="#">SIXT for business</a><span class="footer__pipe">|</span>
-      <a href="#">SIXT partners</a><span class="footer__pipe">|</span>
-      <a href="#">SIXT News</a><span class="footer__pipe">|</span>
-      <a href="#">Imprint & privacy</a><span class="footer__pipe">|</span>
-      <a href="#">Do not share or sell my personal information</a><span class="footer__pipe">|</span>
-      <a href="#">Terms & conditions</a><span class="footer__pipe">|</span>
-      <a href="#">Cookie settings</a><span class="footer__pipe">|</span>
-      <a href="#">Customers with disabilities</a><span class="footer__pipe">|</span>
-      <span class="footer__copy">© Sixt 2024</span>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <a href="#">Help</a><span class="site-footer__sep">|</span>
+      <a href="#">Rental information</a><span class="site-footer__sep">|</span>
+      <a href="#">SIXT for business</a><span class="site-footer__sep">|</span>
+      <a href="#">SIXT partners</a><span class="site-footer__sep">|</span>
+      <a href="#">SIXT Magazine</a><span class="site-footer__sep">|</span>
+      <a href="#">Privacy</a><span class="site-footer__sep">|</span>
+      <a href="#">Do not share or sell my personal information</a><span class="site-footer__sep">|</span>
+      <a href="#">Terms & conditions</a><span class="site-footer__sep">|</span>
+      <a href="#">Customers with disabilities</a><span class="site-footer__sep">|</span>
+      <span class="site-footer__copy">© Sixt 2025</span>
     </div>
   </footer>
 </body>
