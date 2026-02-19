@@ -62,20 +62,26 @@
             </label>
           </div>
           <div class="phone-input">
-            <div class="phone-input__country">
-              <span class="material-symbols-outlined phone-input__flag">flag</span>
-              <select class="input input--select" name="countryCode" aria-label="Country">
-                <option value="+1">+1</option>
-              </select>
-              <span class="material-symbols-outlined input__chevron">expand_more</span>
-            </div>
-            <input type="tel" class="input" placeholder="Phone number" name="phone" />
+            <label class="input-wrap input-wrap--phone-left">
+              <span class="input-wrap__label">Country code</span>
+              <div class="phone-input__country">
+                <span class="material-symbols-outlined phone-input__flag">flag</span>
+                <select class="input input--select" name="countryCode" aria-label="Country code">
+                  <option value="+1">+1</option>
+                </select>
+                <span class="material-symbols-outlined input__chevron">expand_more</span>
+              </div>
+            </label>
+            <label class="input-wrap input-wrap--phone-right">
+              <span class="input-wrap__label">Phone number</span>
+              <input type="tel" class="input" placeholder="" name="phone" />
+            </label>
           </div>
           <div class="form__checkboxes">
             <label class="radio-label">
               <input type="radio" name="sms" value="yes" class="radio" checked />
               <span class="radio__circle"></span>
-              <span class="radio-label__text">Yes, I want to receive automated text or WhatsApp messages about my rental. By checking this box, I acknowledge that I have read and agree to <a href="#">SIXT's Privacy Policy</a> and <a href="#">SMS Terms</a>.</span>
+              <span class="radio-label__text">Yes, I want to receive automated text or WhatsApp messages about my rental. By checking this box, I acknowledge that I have read and agree to <a href="#" class="link--blue">SIXT's Privacy Policy</a> and <a href="#" class="link--blue">SMS Terms</a>.</span>
             </label>
             <label class="radio-label">
               <input type="radio" name="sms" value="no" class="radio" />
@@ -112,7 +118,7 @@
               <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
             </label>
           </div>
-          <a href="#" class="form__link form__link--btn">Show more protection packages</a>
+          <a href="#" class="form__link form__link--btn">View all protection packages</a>
         </section>
 
         <!-- Add-ons -->
@@ -150,7 +156,7 @@
               </label>
             </div>
           </div>
-          <a href="#" class="form__link form__link--btn">Show more add-on options</a>
+          <a href="#" class="form__link form__link--btn">View all add-on options</a>
         </section>
 
         <!-- Payment -->
@@ -165,26 +171,23 @@
               <span class="input-wrap__label">Cardholder name</span>
               <input type="text" class="input" placeholder="Cardholder name" name="cardholder" />
             </label>
-            <div class="form__grid form__grid--2">
-              <label class="input-wrap">
+            <div class="form__grid form__grid--expiry-cvv">
+              <label class="input-wrap input-wrap--expiry">
                 <span class="input-wrap__label">Expiration date</span>
                 <input type="text" class="input" placeholder="MM / YY" name="expiry" />
               </label>
-              <label class="input-wrap">
-                <span class="input-wrap__label">CVV</span>
-                <div class="input-wrap__cvv">
-                  <input type="text" class="input" placeholder="CVV" name="cvv" inputmode="numeric" maxlength="4" />
-                  <button type="button" class="input-wrap__info" aria-label="CVV info"><span class="material-symbols-outlined">info</span></button>
-                </div>
+              <label class="input-wrap input-wrap--cvv-wrap">
+                <span class="input-wrap__label input-wrap__label--cvv">CVV <button type="button" class="input-wrap__info-inline" aria-label="CVV info"><span class="material-symbols-outlined">info</span></button></span>
+                <input type="text" class="input" placeholder="CVV" name="cvv" inputmode="numeric" maxlength="4" />
               </label>
             </div>
           </div>
           <div class="payment-logos" aria-hidden="true">
-            <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" class="payment-logo-img" width="40" height="28" />
-            <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="" class="payment-logo-img" width="40" height="28" />
-            <img src="https://cdn.simpleicons.org/maestro/0099DF" alt="" class="payment-logo-img" width="40" height="28" />
-            <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" class="payment-logo-img" width="40" height="28" />
-            <img src="https://cdn.simpleicons.org/visa/142787" alt="" class="payment-logo-img" width="40" height="28" />
+            <img src="https://cdn.simpleicons.org/amex/006FCF" alt="" class="payment-logo-img" width="36" height="24" />
+            <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="" class="payment-logo-img" width="36" height="24" />
+            <img src="https://cdn.simpleicons.org/maestro/0099DF" alt="" class="payment-logo-img" width="36" height="24" />
+            <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" class="payment-logo-img" width="36" height="24" />
+            <img src="https://cdn.simpleicons.org/visa/142787" alt="" class="payment-logo-img" width="36" height="24" />
           </div>
           <p class="form__disclaimer">The payment method must be under the renter's name and physically presented at pickup. Debit cards are accepted for select vehicle classes; <a href="#">additional documentation</a> may be required in some cases.</p>
           <p class="form__pay-later">
@@ -201,7 +204,7 @@
               <span class="input-wrap__label">Company (optional)</span>
               <input type="text" class="input" placeholder="Company (optional)" name="company" />
             </label>
-            <label class="input-wrap input-wrap--show-label">
+            <label class="input-wrap">
               <span class="input-wrap__label">Country</span>
               <div class="input-wrap__select-wrap">
                 <span class="material-symbols-outlined input-wrap__flag">flag</span>
@@ -227,10 +230,12 @@
             </div>
             <label class="input-wrap">
               <span class="input-wrap__label">State</span>
-              <select class="input input--select" name="state">
-                <option value="">State</option>
-              </select>
-              <span class="material-symbols-outlined input__chevron">expand_more</span>
+              <div class="input-wrap__select-wrap">
+                <select class="input input--select" name="state">
+                  <option value="">State</option>
+                </select>
+                <span class="material-symbols-outlined input__chevron">expand_more</span>
+              </div>
             </label>
           </div>
         </section>
@@ -251,6 +256,7 @@
         <!-- Bonus program -->
         <section class="form-section">
           <button type="button" class="expandable expandable--bonus">
+            <span class="material-symbols-outlined expandable__icon">card_giftcard</span>
             <span>Bonus program</span>
             <span class="material-symbols-outlined">chevron_right</span>
           </button>
@@ -264,7 +270,7 @@
           </div>
           <a href="#" class="form__link form__link--small form__link--price-details">Price details</a>
           <div class="legal-block">
-            <p class="legal-block__title">IMPORTANT INFORMATION about your PREPAID reservation</p>
+            <p class="legal-block__title"><strong>IMPORTANT INFORMATION</strong> about your <strong>PREPAID</strong> reservation</p>
             <ul class="legal-block__list">
               <li>Cancellation: If you cancel 48 hours or more before pickup, a fee of $10.00 applies.</li>
               <li>No-show: If you do not show up at the pickup time, the total reservation price will be charged.</li>
@@ -274,9 +280,12 @@
           <label class="checkbox-label checkbox-label--legal">
             <input type="checkbox" name="terms" class="checkbox" />
             <span class="checkbox__box"></span>
-            <span class="checkbox-label__text">I have read and accept the <a href="#">Rental Information</a>, the <a href="#">Terms and Conditions</a>, and the <a href="#">Privacy Policy</a>.</span>
+            <span class="checkbox-label__text">I have read and accept the <a href="#">Rental Information</a>, the <a href="#">Terms and Conditions</a>, and the <a href="#">Privacy Policy</a> and I acknowledge that I am booking a prepaid rental, where the total reservation price is immediately charged to the payment method I provided.</span>
           </label>
-          <button type="submit" class="cta-button">Pay and Book</button>
+          <p class="form__link form__link--small form__link--rental-info">See <a href="#">Rental Information</a> for more details on accepted payment methods.</p>
+          <div class="cta-wrap">
+            <button type="submit" class="cta-button">Pay and Book</button>
+          </div>
         </section>
       </form>
     </div>
@@ -337,27 +346,29 @@
   </main>
 
   <footer class="footer">
-    <a href="#">Help</a>
-    <span class="footer__sep">|</span>
-    <a href="#">Rental information</a>
-    <span class="footer__sep">|</span>
-    <a href="#">SIXT for business</a>
-    <span class="footer__sep">|</span>
-    <a href="#">SIXT partners</a>
-    <span class="footer__sep">|</span>
-    <a href="#">SIXT Magazine</a>
-    <span class="footer__sep">|</span>
-    <a href="#">Privacy</a>
-    <span class="footer__sep">|</span>
-    <a href="#">Do not share or sell my personal information</a>
-    <span class="footer__sep">|</span>
-    <a href="#">Terms & conditions</a>
-    <span class="footer__sep">|</span>
-    <a href="#">Customers with disabilities</a>
-    <span class="footer__sep">|</span>
-    <a href="#">Cookie-Settings</a>
-    <span class="footer__sep">|</span>
-    <span>© Sixt 2025</span>
+    <div class="footer__links">
+      <a href="#">Help</a>
+      <span class="footer__sep">|</span>
+      <a href="#">Rental information</a>
+      <span class="footer__sep">|</span>
+      <a href="#">SIXT for business</a>
+      <span class="footer__sep">|</span>
+      <a href="#">SIXT partners</a>
+      <span class="footer__sep">|</span>
+      <a href="#">SIXT Magazine</a>
+      <span class="footer__sep">|</span>
+      <a href="#">Privacy</a>
+      <span class="footer__sep">|</span>
+      <a href="#">Do not share or sell my personal information</a>
+      <span class="footer__sep">|</span>
+      <a href="#">Terms & conditions</a>
+      <span class="footer__sep">|</span>
+      <a href="#">Customers with disabilities</a>
+    </div>
+    <div class="footer__bottom">
+      <a href="#" class="footer__cookie">Cookie-Settings</a>
+      <span class="footer__copy">© Sixt 2025</span>
+    </div>
   </footer>
 </body>
 </html>
