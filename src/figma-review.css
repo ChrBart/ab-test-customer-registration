@@ -1,0 +1,28 @@
+/* Overrides for Figma design (EU/German SIXT review) */
+
+.page-figma .deposit-box {
+  margin-top: 24px;
+  padding: 16px;
+  background: #f5f5f5;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.page-figma .deposit-box__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 8px;
+}
+
+.page-figma .deposit-box__text {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Right panel: no "Pay now" badge in this design */
+.page-figma .summary__pay-now {
+  display: none;
+}
