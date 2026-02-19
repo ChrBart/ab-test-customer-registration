@@ -952,9 +952,9 @@ body.summary-lightbox::before {
 
   .content_right.is-stuck .sidecard {
     box-shadow:
-      0 4px 34px rgba(10, 10, 14, 0.30),
-      0 12px 150px rgba(10, 10, 14, 0.18),
-      0 18px 286px rgba(10, 10, 14, 0.12);
+      0 14px 34px rgba(10, 10, 14, 0.30),
+      0 28px 150px rgba(10, 10, 14, 0.18),
+      0 42px 286px rgba(10, 10, 14, 0.12);
   }
   .sidecard_head {
     cursor: pointer;
