@@ -925,9 +925,9 @@ select:focus-visible {
 
   .content_right.is-stuck .sidecard {
     box-shadow:
-      0 14px 36px rgba(10, 10, 14, 0.10),
-      0 32px 90px rgba(10, 10, 14, 0.16),
-      0 60px 140px rgba(10, 10, 14, 0.08);
+      0 8px 24px rgba(10, 10, 14, 0.08),
+      0 12px 72px rgba(10, 10, 14, 0.10),
+      0 18px 140px rgba(10, 10, 14, 0.06);
   }
   .sidecard_head {
     cursor: pointer;
