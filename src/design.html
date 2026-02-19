@@ -16,7 +16,10 @@
   </header>
   <header class="topbar">
     <div class="topbar_inner">
-      <a href="#" class="topbar_logo"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" /></a>
+      <a href="#" class="topbar_logo" aria-label="SIXT">
+        <img class="topbar_logo_swoosh" src="/sixt-swoosh.svg" alt="" />
+        <img class="topbar_logo_word" src="/sixt-wordmark.svg" alt="SIXT" />
+      </a>
       <div class="topbar_actions">
         <span class="topbar_locale"><span class="material-symbols-outlined topbar_icon">language</span> EN / €</span>
         <a href="#" class="topbar_login"><span class="material-symbols-outlined topbar_icon">person</span> Log in / Sign up</a>
@@ -31,7 +34,7 @@
       </div>
       <div class="pageheader_right">
         <div class="topbar_price">
-          <span class="topbar_total">Total: 137,94 €</span>
+          <span class="topbar_total">Total: <span class="topbar_total_price"><span class="topbar_total_major">137</span><span class="topbar_total_dec">,94</span><span class="topbar_total_cur">€</span></span></span>
           <a href="#" class="topbar_pricedetail">Price details</a>
         </div>
       </div>
@@ -53,31 +56,75 @@
             <div class="row row_phone">
               <label class="lbl lbl_sel">
                 <span class="lbl_t">Country</span>
-                <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp" name="country"><option>+49</option></select><span class="material-symbols-outlined sel_arrow">expand_more</span></span>
+                <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp" name="country">
+                  <option value="+49">+49 Germany</option>
+                  <option value="+43">+43 Austria</option>
+                  <option value="+41">+41 Switzerland</option>
+                  <option value="+31">+31 Netherlands</option>
+                  <option value="+32">+32 Belgium</option>
+                  <option value="+33">+33 France</option>
+                  <option value="+34">+34 Spain</option>
+                  <option value="+39">+39 Italy</option>
+                  <option value="+44">+44 United Kingdom</option>
+                  <option value="+45">+45 Denmark</option>
+                  <option value="+46">+46 Sweden</option>
+                  <option value="+47">+47 Norway</option>
+                  <option value="+48">+48 Poland</option>
+                  <option value="+351">+351 Portugal</option>
+                  <option value="+353">+353 Ireland</option>
+                  <option value="+358">+358 Finland</option>
+                  <option value="+420">+420 Czechia</option>
+                  <option value="+421">+421 Slovakia</option>
+                  <option value="+36">+36 Hungary</option>
+                  <option value="+40">+40 Romania</option>
+                  <option value="+385">+385 Croatia</option>
+                  <option value="+386">+386 Slovenia</option>
+                  <option value="+30">+30 Greece</option>
+                  <option value="+90">+90 Turkey</option>
+                  <option value="+1">+1 USA/Canada</option>
+                  <option value="+52">+52 Mexico</option>
+                  <option value="+55">+55 Brazil</option>
+                  <option value="+54">+54 Argentina</option>
+                  <option value="+61">+61 Australia</option>
+                  <option value="+64">+64 New Zealand</option>
+                  <option value="+81">+81 Japan</option>
+                  <option value="+82">+82 South Korea</option>
+                  <option value="+86">+86 China</option>
+                  <option value="+65">+65 Singapore</option>
+                  <option value="+971">+971 UAE</option>
+                  <option value="+966">+966 Saudi Arabia</option>
+                  <option value="+27">+27 South Africa</option>
+                  <option value="+20">+20 Egypt</option>
+                  <option value="+91">+91 India</option>
+                </select><span class="material-symbols-outlined sel_arrow">expand_more</span></span>
               </label>
               <label class="lbl lbl_grow"><span class="lbl_t">Phone number</span><input type="tel" class="inp" name="phone" /></label>
             </div>
-            <label class="chk"><input type="checkbox" name="age" checked /><span class="chk_box"></span><span class="chk_t">I am 23 years or under</span></label>
+            <label class="chk"><input type="checkbox" name="age" checked /><span class="chk_box"></span><span class="chk_t">I am 23 years or older</span></label>
           </section>
 
           <section class="block">
             <h2 class="block_h2">Which protection package do you need?</h2>
             <p class="block_intro">Without protection, the full vehicle price will be charged as a deductible in case of damage or theft.</p>
             <div class="pkg_row">
-              <article class="pkg_card">
+              <label class="pkg_card">
+                <input class="pkg_sel" type="radio" name="protection" value="none" />
                 <span class="pkg_radio" aria-hidden="true"></span>
+                <span class="pkg_check" aria-hidden="true"></span>
                 <h3 class="pkg_title">No Extra Protection</h3>
                 <p class="pkg_sub pkg_warn">Deductible: up to full vehicle value</p>
                 <a href="#" class="pkg_link"><span>View coverage</span><span class="material-symbols-outlined pkg_link_ico" aria-hidden="true">expand_more</span></a>
                 <span class="pkg_price pkg_price_inc">Included</span>
-              </article>
-              <article class="pkg_card pkg_card_sel">
+              </label>
+              <label class="pkg_card">
+                <input class="pkg_sel" type="radio" name="protection" value="peace" checked />
+                <span class="pkg_radio" aria-hidden="true"></span>
                 <span class="pkg_check" aria-hidden="true"></span>
                 <h3 class="pkg_title">Peace of Mind</h3>
                 <p class="pkg_sub pkg_ok">No deductible - no claim, no hassle</p>
                 <a href="#" class="pkg_link"><span>View coverage</span><span class="material-symbols-outlined pkg_link_ico" aria-hidden="true">expand_more</span></a>
                 <span class="pkg_price">€ 28.50 / day</span>
-              </article>
+              </label>
             </div>
             <p class="block_btn_wrap"><a href="#" class="pkg_all_btn">View all protection packages</a></p>
           </section>
@@ -85,33 +132,36 @@
           <section class="block">
             <h2 class="block_h2">Which add-ons do you need?</h2>
             <div class="addon_list">
-              <div class="addon_i">
+              <label class="addon_i">
+                <input type="checkbox" class="addon_cb sw_i" />
                 <div class="addon_head">
                   <span class="addon_icon material-symbols-outlined">person_add</span>
-                  <strong class="addon_name">Additional driver</strong>
-                  <a href="#" class="addon_det">Details</a>
-                  <label class="sw"><input type="checkbox" class="sw_i" /><span class="sw_t"></span></label>
+                  <span class="addon_name">Additional driver</span>
+                  <span class="addon_det">Details</span>
+                  <span class="sw"><span class="sw_t"></span></span>
                 </div>
                 <div class="addon_price_row"><span class="addon_price">11,00 € / day &amp; driver</span></div>
-              </div>
-              <div class="addon_i">
+              </label>
+              <label class="addon_i">
+                <input type="checkbox" class="addon_cb sw_i" />
                 <div class="addon_head">
                   <span class="addon_icon material-symbols-outlined">near_me</span>
-                  <strong class="addon_name">GPS guaranteed</strong>
-                  <a href="#" class="addon_det">Details</a>
-                  <label class="sw"><input type="checkbox" class="sw_i" /><span class="sw_t"></span></label>
+                  <span class="addon_name">GPS guaranteed</span>
+                  <span class="addon_det">Details</span>
+                  <span class="sw"><span class="sw_t"></span></span>
                 </div>
                 <div class="addon_price_row"><span class="addon_price">9,99 € / day</span></div>
-              </div>
-              <div class="addon_i">
+              </label>
+              <label class="addon_i">
+                <input type="checkbox" class="addon_cb sw_i" />
                 <div class="addon_head">
                   <span class="addon_icon material-symbols-outlined">public</span>
-                  <strong class="addon_name">Cross-border driving</strong>
-                  <a href="#" class="addon_det">Details</a>
-                  <label class="sw"><input type="checkbox" class="sw_i" /><span class="sw_t"></span></label>
+                  <span class="addon_name">Cross-border driving</span>
+                  <span class="addon_det">Details</span>
+                  <span class="sw"><span class="sw_t"></span></span>
                 </div>
                 <div class="addon_price_row"><span class="addon_price">13,78 € one time</span></div>
-              </div>
+              </label>
             </div>
             <a href="#" class="addon_more"><span>See more</span><span class="material-symbols-outlined">expand_more</span></a>
           </section>
@@ -121,11 +171,11 @@
             <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Card number</span><input type="text" class="inp cc_inp" name="card" placeholder="1234 1234 1234 1234" /></label>
             <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Cardholder name</span><input type="text" class="inp cc_inp" name="cardholder" /></label>
             <div class="row row_50">
-              <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Expiration date</span><input type="text" class="inp cc_inp" name="exp" placeholder="MM / YY" /></label>
-              <label class="lbl cc_lbl cc_lbl_cvv"><span class="lbl_t cc_lbl_t">CVV</span><span class="cc_cvv_row"><input type="text" class="inp cc_inp" name="cvc" placeholder="123" /><span class="cc_info_btn material-symbols-outlined" aria-label="Info">info</span></span></label>
+              <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Expiration date</span><input type="text" class="inp cc_inp" name="exp" placeholder="MM / YY" inputmode="numeric" maxlength="7" /></label>
+              <label class="lbl cc_lbl cc_lbl_cvv"><span class="lbl_t cc_lbl_t">CVV</span><span class="cc_cvv_row"><input type="text" class="inp cc_inp" name="cvc" placeholder="123" inputmode="numeric" maxlength="4" /><span class="cc_info_btn material-symbols-outlined" aria-label="Info">info</span></span></label>
             </div>
             <div class="pay_icons cc_cards">
-              <img src="https://cdn.simpleicons.org/amex/006FCF" alt="" width="24" height="24" />
+              <img src="https://cdn.simpleicons.org/americanexpress/006FCF" alt="" width="24" height="24" />
               <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="" width="24" height="24" />
               <img src="https://cdn.simpleicons.org/discover/FF6000" alt="" width="24" height="24" />
               <img src="https://cdn.simpleicons.org/jcb/0E4C96" alt="" width="24" height="24" />
@@ -268,6 +318,26 @@
       updateStickyState();
       window.addEventListener('scroll', updateStickyState, { passive: true });
       window.addEventListener('resize', updateStickyState);
+    })();
+
+    (function () {
+      const expInput = document.querySelector('input[name="exp"]');
+      const cvcInput = document.querySelector('input[name="cvc"]');
+      if (expInput) {
+        expInput.addEventListener('input', function () {
+          const digits = this.value.replace(/\D/g, '').slice(0, 4);
+          if (digits.length <= 2) {
+            this.value = digits;
+            return;
+          }
+          this.value = digits.slice(0, 2) + " / " + digits.slice(2);
+        });
+      }
+      if (cvcInput) {
+        cvcInput.addEventListener('input', function () {
+          this.value = this.value.replace(/\D/g, '').slice(0, 4);
+        });
+      }
     })();
   </script>
 </body>
