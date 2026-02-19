@@ -888,9 +888,10 @@ select:focus-visible {
   display: none;
   position: absolute;
   right: 16px;
-  top: 16px;
+  top: 50%;
   font-size: 24px !important;
   color: var(--content-primary);
+  transform: translateY(-50%);
   transition: transform 0.22s ease;
 }
 .sidecard_expandable {
@@ -944,7 +945,7 @@ select:focus-visible {
     opacity: 1;
   }
   .summary_toggle:checked + .sidecard .sidecard_toggle_ico {
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
   }
   .summary_toggle:focus-visible + .sidecard .sidecard_head {
     outline: 2px solid var(--content-primary);
