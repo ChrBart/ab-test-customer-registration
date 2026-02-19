@@ -566,7 +566,7 @@ button { font-family: inherit; cursor: pointer; }
   max-width: 100%;
   background: var(--surface-container2);
   border-radius: 16px;
-  box-shadow: var(--elevation-medium);
+  box-shadow: none;
   position: sticky;
   top: 189px;
   height: fit-content;
@@ -663,6 +663,9 @@ button { font-family: inherit; cursor: pointer; }
   position: absolute;
   left: -48px;
   top: 16px;
+}
+.sidecard_ico.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
 }
 .sidecard_pr_txt {
   min-width: 0;
