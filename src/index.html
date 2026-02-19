@@ -4,131 +4,159 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Review Your Booking | SIXT</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
   <header class="header">
-    <div class="header__top">
-      <a href="#" class="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" class="logo__img" width="80" height="33" />
-      </a>
-      <div class="header__actions">
-        <a href="#" class="header__icon" aria-label="Language"><span class="material-symbols-outlined">language</span></a>
-        <span class="header__text">EN | $</span>
-        <a href="#" class="header__icon" aria-label="Account"><span class="material-symbols-outlined">person</span></a>
-        <a href="#" class="header__link">Log in | Register</a>
-      </div>
+    <a href="#" class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" class="logo__img" />
+    </a>
+    <div class="header__right">
+      <span class="material-symbols-outlined header__icon">language</span>
+      <span class="header__text">EN | $</span>
+      <span class="header__sep"></span>
+      <span class="material-symbols-outlined header__icon">person</span>
+      <a href="#" class="header__link">Log in | Register</a>
     </div>
   </header>
-  <div class="title-bar">
-    <a href="#" class="back-link" aria-label="Back">
-      <span class="material-symbols-outlined">chevron_left</span>
-    </a>
-    <h1 class="page-title">REVIEW YOUR BOOKING</h1>
+
+  <div class="page-top-wrap">
+    <div class="page-top">
+      <div class="page-top__left">
+        <span class="material-symbols-outlined page-top__back">chevron_left</span>
+        <h1 class="page-top__title">REVIEW YOUR BOOKING</h1>
+      </div>
+      <div class="page-top__total">
+        <span class="page-top__total-label">Total: </span><strong class="page-top__total-amount">$160.00</strong>
+        <a href="#" class="page-top__price-details">Price details</a>
+      </div>
+    </div>
   </div>
 
   <main class="main">
-    <div class="main__form-wrap">
-      <!-- Vehicle card (mobile: at top) -->
-      <section class="vehicle-card vehicle-card--mobile">
-        <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=120&h=80&fit=crop" alt="" class="vehicle-card__img" />
-        <div class="vehicle-card__body">
-          <h2 class="vehicle-card__name">Compact (VOLKSWAGEN TAOS)</h2>
-          <p class="vehicle-card__meta">or similar (CTA)</p>
-          <span class="vehicle-card__price">$160.00</span>
-          <a href="#" class="vehicle-card__details">Price details</a>
+    <div class="main__form">
+      <!-- Mobile: car card at top -->
+      <aside class="summary summary--mobile">
+        <div class="summary__card">
+          <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400&h=240&fit=crop" alt="" class="summary__car-img" />
+          <p class="summary__car-name">Compact (VOLKSWAGEN TAOS)</p>
+          <p class="summary__car-meta">or similar (CTA)</p>
+          <p class="summary__car-price">$160.00</p>
+          <a href="#" class="summary__link">Price details</a>
+          <div class="summary__pickup-return">
+            <h3 class="summary__heading">Pickup and return</h3>
+            <div class="summary__pr-row">
+              <span class="material-symbols-outlined summary__pr-icon">location_on</span>
+              <div>
+                <p class="summary__pr-label">Pickup</p>
+                <p class="summary__pr-location">Miami Intl Airport</p>
+                <p class="summary__pr-datetime">Tue, Apr 21, 2026 | 12:00 PM</p>
+              </div>
+            </div>
+            <div class="summary__pr-row">
+              <span class="material-symbols-outlined summary__pr-icon">keyboard_return</span>
+              <div>
+                <p class="summary__pr-label">Return</p>
+                <p class="summary__pr-location">Miami Intl Airport</p>
+                <p class="summary__pr-datetime">Fri, Apr 24, 2026 | 12:00 PM</p>
+              </div>
+            </div>
+          </div>
+          <div class="summary__pay-now">
+            <p class="summary__pay-now-line"><span>Pay now</span> <span class="summary__badge">BEST PRICE</span></p>
+            <p class="summary__pay-now-desc">Best price available for your rental <span class="material-symbols-outlined summary__info">info</span></p>
+          </div>
+          <div class="summary__included">
+            <h3 class="summary__heading">What's included</h3>
+            <p><span class="material-symbols-outlined summary__check">check_circle</span> 24/7 Roadside Assistance Hotline <span class="material-symbols-outlined summary__info">info</span></p>
+            <p><span class="material-symbols-outlined summary__check">check_circle</span> Unlimited miles <span class="material-symbols-outlined summary__info">info</span></p>
+          </div>
         </div>
-      </section>
+      </aside>
 
       <form class="form" action="#" method="post">
-        <!-- Driver details -->
         <section class="form-section">
           <h2 class="form-section__title">Driver details</h2>
-          <label class="input-wrap">
-            <span class="input-wrap__label">Email</span>
-            <input type="email" class="input" placeholder="Email" name="email" />
+          <label class="field">
+            <span class="field__label">Email</span>
+            <input type="email" class="field__input" placeholder="Email" name="email" />
           </label>
-          <div class="form__grid form__grid--2">
-            <label class="input-wrap">
-              <span class="input-wrap__label">First name</span>
-              <input type="text" class="input" placeholder="First name" name="firstName" />
+          <div class="form-row form-row--half">
+            <label class="field">
+              <span class="field__label">First name</span>
+              <input type="text" class="field__input" placeholder="First name" name="firstName" />
             </label>
-            <label class="input-wrap">
-              <span class="input-wrap__label">Last name</span>
-              <input type="text" class="input" placeholder="Last name" name="lastName" />
+            <label class="field">
+              <span class="field__label">Last name</span>
+              <input type="text" class="field__input" placeholder="Last name" name="lastName" />
             </label>
           </div>
-          <div class="phone-input">
-            <label class="input-wrap input-wrap--phone-left">
-              <span class="input-wrap__label">Country code</span>
-              <div class="phone-input__country">
-                <span class="material-symbols-outlined phone-input__flag">flag</span>
-                <select class="input input--select" name="countryCode" aria-label="Country code">
-                  <option value="+1">+1</option>
-                </select>
-                <span class="material-symbols-outlined input__chevron">expand_more</span>
+          <div class="form-row form-row--phone">
+            <label class="field field--country-code">
+              <span class="field__label">Country code</span>
+              <div class="field__country">
+                <span class="material-symbols-outlined field__flag">flag</span>
+                <select class="field__input" name="countryCode"><option value="+1">+1</option></select>
+                <span class="material-symbols-outlined field__chevron">expand_more</span>
               </div>
             </label>
-            <label class="input-wrap input-wrap--phone-right">
-              <span class="input-wrap__label">Phone number</span>
-              <input type="tel" class="input" placeholder="" name="phone" />
+            <label class="field field--phone">
+              <span class="field__label">Phone number</span>
+              <input type="tel" class="field__input" placeholder="Phone number" name="phone" />
             </label>
           </div>
-          <div class="form__checkboxes">
-            <label class="radio-label">
-              <input type="radio" name="sms" value="yes" class="radio" checked />
-              <span class="radio__circle"></span>
-              <span class="radio-label__text">Yes, I want to receive automated text or WhatsApp messages about my rental. By checking this box, I acknowledge that I have read and agree to <a href="#" class="link--blue">SIXT's Privacy Policy</a> and <a href="#" class="link--blue">SMS Terms</a>.</span>
+          <div class="form-checkboxes">
+            <label class="radio-option">
+              <input type="radio" name="sms" value="yes" class="radio-option__input" checked />
+              <span class="radio-option__circle"></span>
+              <span class="radio-option__text">Yes, I want to receive automated text or WhatsApp messages about my rental. By checking this box, I acknowledge that I have read and agree to <a href="#">SIXT's Privacy Policy</a> and <a href="#">SMS Terms</a></span>
             </label>
-            <label class="radio-label">
-              <input type="radio" name="sms" value="no" class="radio" />
-              <span class="radio__circle"></span>
-              <span class="radio-label__text">No, I don't want to receive any text messages</span>
+            <label class="radio-option">
+              <input type="radio" name="sms" value="no" class="radio-option__input" />
+              <span class="radio-option__circle"></span>
+              <span class="radio-option__text">No, I don't want to receive any text messages</span>
             </label>
-            <label class="checkbox-label">
-              <input type="checkbox" name="age" class="checkbox" checked />
-              <span class="checkbox__box"></span>
-              <span class="checkbox-label__text">I am 25 years or older</span>
+            <label class="checkbox-option">
+              <input type="checkbox" name="age" class="checkbox-option__input" checked />
+              <span class="checkbox-option__box"></span>
+              <span class="checkbox-option__text">I am 25 years of age or older</span>
             </label>
           </div>
         </section>
 
-        <!-- Protection -->
         <section class="form-section">
           <h2 class="form-section__title">Which protection package do you need?</h2>
-          <p class="form-section__sub">Without protection, up to the full vehicle value will be charged in case of damage or theft.</p>
+          <p class="form-section__desc">Without protection, up to the full vehicle value will be charged in case of damage or theft.</p>
           <div class="protection-cards">
             <label class="protection-card protection-card--selected">
-              <input type="radio" name="protection" value="none" class="radio radio--card" checked />
-              <span class="radio__circle"></span>
-              <span class="protection-card__name">No extra protection</span>
+              <input type="radio" name="protection" value="none" class="protection-card__input" checked />
+              <span class="material-symbols-outlined protection-card__shield">shield</span>
               <span class="protection-card__badge">Included</span>
-              <span class="protection-card__desc protection-card__desc--warn">Deductible: up to full vehicle value</span>
+              <span class="protection-card__name">No extra protection</span>
+              <span class="protection-card__warn">Deductible: up to full vehicle value</span>
               <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
             </label>
             <label class="protection-card">
-              <input type="radio" name="protection" value="cover" class="radio radio--card" />
-              <span class="radio__circle"></span>
+              <input type="radio" name="protection" value="cover" class="protection-card__input" />
               <span class="protection-card__name">Cover The Car</span>
-              <span class="protection-card__price">$32.90 / day</span>
-              <span class="protection-card__desc protection-card__desc--ok">No deductible</span>
+              <span class="protection-card__ok">No deductible</span>
               <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
+              <span class="protection-card__price">$32.90 / day</span>
             </label>
           </div>
-          <a href="#" class="form__link form__link--btn">View all protection packages</a>
+          <a href="#" class="form-link">View all protection packages</a>
         </section>
 
-        <!-- Add-ons -->
         <section class="form-section">
           <h2 class="form-section__title">Which add-ons do you need?</h2>
-          <div class="addons">
+          <div class="addon-rows">
             <div class="addon-row">
-              <span class="material-symbols-outlined addon-row__icon addon-row__icon--shield">shield</span>
-              <span class="addon-row__title">Supplemental Liability Insurance</span>
-              <span class="addon-row__price">$18.59 / day</span>
+              <span class="material-symbols-outlined addon-row__icon">shield</span>
+              <div class="addon-row__text">
+                <span class="addon-row__name">Supplemental Liability Insurance</span>
+                <span class="addon-row__price">$16.18 / day</span>
+              </div>
               <a href="#" class="addon-row__details">Details</a>
               <label class="toggle">
                 <input type="checkbox" class="toggle__input" />
@@ -137,8 +165,10 @@
             </div>
             <div class="addon-row">
               <span class="material-symbols-outlined addon-row__icon">local_gas_station</span>
-              <span class="addon-row__title">Prepaid Fuel</span>
-              <span class="addon-row__price">$41.99 / one-time</span>
+              <div class="addon-row__text">
+                <span class="addon-row__name">Prepaid Fuel</span>
+                <span class="addon-row__price">$41.99 / one-time</span>
+              </div>
               <a href="#" class="addon-row__details">Details</a>
               <label class="toggle">
                 <input type="checkbox" class="toggle__input" />
@@ -147,8 +177,10 @@
             </div>
             <div class="addon-row">
               <span class="material-symbols-outlined addon-row__icon">toll</span>
-              <span class="addon-row__title">Toll pass / Express lane</span>
-              <span class="addon-row__price">$10.99 / day</span>
+              <div class="addon-row__text">
+                <span class="addon-row__name">Toll pass / Express lane</span>
+                <span class="addon-row__price">$13.99 / day</span>
+              </div>
               <a href="#" class="addon-row__details">Details</a>
               <label class="toggle">
                 <input type="checkbox" class="toggle__input" />
@@ -156,213 +188,169 @@
               </label>
             </div>
           </div>
-          <a href="#" class="form__link form__link--btn">View all add-on options</a>
+          <a href="#" class="form-link">View all add-on options</a>
         </section>
 
-        <!-- Payment -->
         <section class="form-section">
           <h2 class="form-section__title">Payment methods</h2>
-          <div class="form__grid form__grid--1">
-            <label class="input-wrap">
-              <span class="input-wrap__label">Card number</span>
-              <input type="text" class="input" placeholder="Card number" name="cardNumber" inputmode="numeric" maxlength="19" />
+          <label class="field">
+            <span class="field__label">Card number</span>
+            <input type="text" class="field__input" placeholder="Card number" name="cardNumber" maxlength="19" />
+          </label>
+          <label class="field">
+            <span class="field__label">Cardholder name</span>
+            <input type="text" class="field__input" placeholder="Cardholder name" name="cardholder" />
+          </label>
+          <div class="form-row form-row--expiry-cvv">
+            <label class="field field--expiry">
+              <span class="field__label">Expiration date</span>
+              <input type="text" class="field__input" placeholder="MM / YY" name="expiry" />
             </label>
-            <label class="input-wrap">
-              <span class="input-wrap__label">Cardholder name</span>
-              <input type="text" class="input" placeholder="Cardholder name" name="cardholder" />
+            <label class="field field--cvv">
+              <span class="field__label">CVV <button type="button" class="field__info-btn" aria-label="Info"><span class="material-symbols-outlined">info</span></button></span>
+              <input type="text" class="field__input" placeholder="CVV" name="cvv" maxlength="4" />
             </label>
-            <div class="form__grid form__grid--expiry-cvv">
-              <label class="input-wrap input-wrap--expiry">
-                <span class="input-wrap__label">Expiration date</span>
-                <input type="text" class="input" placeholder="MM / YY" name="expiry" />
-              </label>
-              <label class="input-wrap input-wrap--cvv-wrap">
-                <span class="input-wrap__label input-wrap__label--cvv">CVV <button type="button" class="input-wrap__info-inline" aria-label="CVV info"><span class="material-symbols-outlined">info</span></button></span>
-                <input type="text" class="input" placeholder="CVV" name="cvv" inputmode="numeric" maxlength="4" />
-              </label>
-            </div>
           </div>
-          <div class="payment-logos" aria-hidden="true">
-            <img src="https://cdn.simpleicons.org/amex/006FCF" alt="" class="payment-logo-img" width="36" height="24" />
-            <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="" class="payment-logo-img" width="36" height="24" />
-            <img src="https://cdn.simpleicons.org/maestro/0099DF" alt="" class="payment-logo-img" width="36" height="24" />
-            <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" class="payment-logo-img" width="36" height="24" />
-            <img src="https://cdn.simpleicons.org/visa/142787" alt="" class="payment-logo-img" width="36" height="24" />
+          <div class="payment-logos">
+            <img src="https://cdn.simpleicons.org/amex/006FCF" alt="" width="40" height="24" />
+            <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="" width="40" height="24" />
+            <img src="https://cdn.simpleicons.org/maestro/0099DF" alt="" width="40" height="24" />
+            <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" width="40" height="24" />
+            <img src="https://cdn.simpleicons.org/discover/FF6000" alt="" width="40" height="24" />
           </div>
-          <p class="form__disclaimer">The payment method must be under the renter's name and physically presented at pickup. Debit cards are accepted for select vehicle classes; <a href="#">additional documentation</a> may be required in some cases.</p>
-          <p class="form__pay-later">
-            <strong class="form__pay-later-text">No payment method on hand?</strong>
-            <a href="#" class="form__link form__link--warn">Switch to Pay Later</a>
-          </p>
+          <p class="form-disclaimer">The payment method must be under the renter's name and physically presented at pickup. Debit cards are accepted for select vehicle classes, and <a href="#">additional documentation</a> may be required in some cases.</p>
+          <p class="form-pay-later"><strong>No payment method on hand?</strong> <a href="#">Switch to Pay Later</a> and have free cancellation included for just $ 61.13 more. <span class="material-symbols-outlined">info</span></p>
         </section>
 
-        <!-- Invoice address -->
         <section class="form-section">
           <h2 class="form-section__title">Invoice address</h2>
-          <div class="form__grid form__grid--1">
-            <label class="input-wrap">
-              <span class="input-wrap__label">Company (optional)</span>
-              <input type="text" class="input" placeholder="Company (optional)" name="company" />
-            </label>
-            <label class="input-wrap">
-              <span class="input-wrap__label">Country</span>
-              <div class="input-wrap__select-wrap">
-                <span class="material-symbols-outlined input-wrap__flag">flag</span>
-                <select class="input input--select" name="country">
-                  <option value="US">United States</option>
-                </select>
-                <span class="material-symbols-outlined input__chevron">expand_more</span>
-              </div>
-            </label>
-            <label class="input-wrap">
-              <span class="input-wrap__label">Street address</span>
-              <input type="text" class="input" placeholder="Street address" name="street" />
-            </label>
-            <div class="form__grid form__grid--2">
-              <label class="input-wrap">
-                <span class="input-wrap__label">Zip</span>
-                <input type="text" class="input" placeholder="Zip" name="zip" />
-              </label>
-              <label class="input-wrap">
-                <span class="input-wrap__label">City</span>
-                <input type="text" class="input" placeholder="City" name="city" />
-              </label>
+          <label class="field">
+            <span class="field__label">Company (optional)</span>
+            <input type="text" class="field__input" placeholder="Company (optional)" name="company" />
+          </label>
+          <label class="field">
+            <span class="field__label">Country</span>
+            <div class="field__country">
+              <span class="material-symbols-outlined field__flag">flag</span>
+              <select class="field__input" name="country"><option value="US">United States</option></select>
+              <span class="material-symbols-outlined field__chevron">expand_more</span>
             </div>
-            <label class="input-wrap">
-              <span class="input-wrap__label">State</span>
-              <div class="input-wrap__select-wrap">
-                <select class="input input--select" name="state">
-                  <option value="">State</option>
-                </select>
-                <span class="material-symbols-outlined input__chevron">expand_more</span>
-              </div>
+          </label>
+          <label class="field">
+            <span class="field__label">Street address</span>
+            <input type="text" class="field__input" placeholder="Street address" name="street" />
+          </label>
+          <div class="form-row form-row--half">
+            <label class="field">
+              <span class="field__label">Zip</span>
+              <input type="text" class="field__input" placeholder="Zip" name="zip" />
+            </label>
+            <label class="field">
+              <span class="field__label">City</span>
+              <input type="text" class="field__input" placeholder="City" name="city" />
             </label>
           </div>
+          <label class="field">
+            <span class="field__label">State</span>
+            <div class="field__select-wrap">
+              <select class="field__input" name="state"><option value="">State</option></select>
+              <span class="material-symbols-outlined field__chevron">expand_more</span>
+            </div>
+          </label>
         </section>
 
-        <!-- Flight number -->
         <section class="form-section">
           <h2 class="form-section__title">Flight number</h2>
           <div class="info-box">
             <span class="material-symbols-outlined info-box__icon">info</span>
             <p class="info-box__text">Your flight number helps us prepare your vehicle and handle delays.</p>
           </div>
-          <label class="input-wrap">
-            <span class="input-wrap__label">Flight number (optional)</span>
-            <input type="text" class="input" placeholder="Flight number (optional)" name="flight" />
+          <label class="field">
+            <span class="field__label">Flight number (optional)</span>
+            <input type="text" class="field__input" placeholder="Flight number (optional)" name="flight" />
           </label>
         </section>
 
-        <!-- Bonus program -->
-        <section class="form-section">
-          <button type="button" class="expandable expandable--bonus">
-            <span class="material-symbols-outlined expandable__icon">card_giftcard</span>
-            <span>Bonus program</span>
-            <span class="material-symbols-outlined">chevron_right</span>
-          </button>
-        </section>
+        <button type="button" class="bonus-row">
+          <span class="material-symbols-outlined bonus-row__icon">card_giftcard</span>
+          <span class="bonus-row__text">Bonus program</span>
+          <span class="material-symbols-outlined bonus-row__arrow">chevron_right</span>
+        </button>
 
-        <!-- Total & CTA -->
         <section class="form-section form-section--total">
-          <div class="total-row">
-            <h2 class="form-section__title form-section__title--inline">Total</h2>
-            <span class="total-row__amount">$160.00</span>
+          <div class="total-line">
+            <span class="total-line__label">Total</span>
+            <span class="total-line__amount">$160.00</span>
           </div>
-          <a href="#" class="form__link form__link--small form__link--price-details">Price details</a>
-          <div class="legal-block">
-            <p class="legal-block__title"><strong>IMPORTANT INFORMATION</strong> about your <strong>PREPAID</strong> reservation</p>
-            <ul class="legal-block__list">
+          <a href="#" class="form-link form-link--small">Price details</a>
+          <div class="important-info">
+            <p class="important-info__title"><strong>IMPORTANT INFORMATION</strong> about your <strong>PREPAID</strong> reservation</p>
+            <ul class="important-info__list">
               <li>Cancellation: If you cancel 48 hours or more before pickup, a fee of $10.00 applies.</li>
               <li>No-show: If you do not show up at the pickup time, the total reservation price will be charged.</li>
               <li>Amendments: Changes to the reservation may incur additional fees.</li>
             </ul>
           </div>
-          <label class="checkbox-label checkbox-label--legal">
-            <input type="checkbox" name="terms" class="checkbox" />
-            <span class="checkbox__box"></span>
-            <span class="checkbox-label__text">I have read and accept the <a href="#">Rental Information</a>, the <a href="#">Terms and Conditions</a>, and the <a href="#">Privacy Policy</a> and I acknowledge that I am booking a prepaid rental, where the total reservation price is immediately charged to the payment method I provided.</span>
+          <label class="checkbox-option checkbox-option--terms">
+            <input type="checkbox" name="terms" class="checkbox-option__input" />
+            <span class="checkbox-option__box"></span>
+            <span class="checkbox-option__text">I have read and accept the <a href="#">Rental Information</a>, the <a href="#">Terms and Conditions</a>, and the <a href="#">Privacy Policy</a> and I acknowledge that I am booking a prepaid rental, where the total reservation price is immediately charged to the payment method I provided.</span>
           </label>
-          <p class="form__link form__link--small form__link--rental-info">See <a href="#">Rental Information</a> for more details on accepted payment methods.</p>
-          <div class="cta-wrap">
-            <button type="submit" class="cta-button">Pay and Book</button>
-          </div>
+          <p class="form-terms-footer">See <a href="#">Rental Information</a> for more details on accepted payment methods.</p>
+          <button type="submit" class="cta-btn">Pay and Book</button>
         </section>
       </form>
     </div>
 
-    <!-- Booking summary (desktop right column) -->
-    <aside class="summary-card">
-      <div class="summary-card__total-block">
-        <span class="summary-card__total-line">Total: <strong>$160.00</strong></span>
-        <a href="#" class="summary-card__price-details">Price details</a>
-      </div>
-      <div class="vehicle-card vehicle-card--desktop">
-        <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=200&h=120&fit=crop" alt="" class="vehicle-card__img" />
-        <div class="vehicle-card__body">
-          <h2 class="vehicle-card__name">Compact (VOLKSWAGEN TAOS)</h2>
-          <p class="vehicle-card__meta">or similar (CTA)</p>
-          <span class="vehicle-card__price">$160.00</span>
-          <a href="#" class="vehicle-card__details">Price details</a>
-        </div>
-      </div>
-      <div class="summary-card__section summary-card__section--pickup-return">
-        <h3 class="summary-card__heading">Pickup and return</h3>
-        <div class="pickup-return">
-          <div class="pickup-return__item">
-            <span class="material-symbols-outlined pickup-return__icon">location_on</span>
-            <div class="pickup-return__content">
-              <span class="pickup-return__label">Pickup</span>
-              <span class="pickup-return__location">Miami Intl Airport</span>
-              <span class="pickup-return__datetime">Tue, Apr 21, 2026 | 12:00 PM</span>
+    <aside class="summary summary--desktop">
+      <div class="summary__card">
+        <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400&h=240&fit=crop" alt="" class="summary__car-img" />
+        <p class="summary__car-name">Compact (VOLKSWAGEN TAOS)</p>
+        <p class="summary__car-meta">or similar (CTA)</p>
+        <p class="summary__car-price">$160.00</p>
+        <a href="#" class="summary__link">Price details</a>
+        <div class="summary__pickup-return">
+          <h3 class="summary__heading">Pickup and return</h3>
+          <div class="summary__pr-row">
+            <span class="material-symbols-outlined summary__pr-icon">location_on</span>
+            <div>
+              <p class="summary__pr-label">Pickup</p>
+              <p class="summary__pr-location">Miami Intl Airport</p>
+              <p class="summary__pr-datetime">Tue, Apr 21, 2026 | 12:00 PM</p>
             </div>
           </div>
-          <div class="pickup-return__item">
-            <span class="material-symbols-outlined pickup-return__icon pickup-return__icon--return">u_turn_right</span>
-            <div class="pickup-return__content">
-              <span class="pickup-return__label">Return</span>
-              <span class="pickup-return__location">Miami Intl Airport</span>
-              <span class="pickup-return__datetime">Fri, Apr 24, 2026 | 12:00 PM</span>
+          <div class="summary__pr-row">
+            <span class="material-symbols-outlined summary__pr-icon">keyboard_return</span>
+            <div>
+              <p class="summary__pr-label">Return</p>
+              <p class="summary__pr-location">Miami Intl Airport</p>
+              <p class="summary__pr-datetime">Fri, Apr 24, 2026 | 12:00 PM</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="summary-card__section">
-        <h3 class="summary-card__heading">Pay now</h3>
-        <div class="summary-card__pay-now-row">
-          <span class="summary-card__pay-now-label">Pay now</span>
-          <span class="badge badge--orange">BEST PRICE</span>
+        <div class="summary__pay-now">
+          <p class="summary__pay-now-line"><span>Pay now</span> <span class="summary__badge">BEST PRICE</span></p>
+          <p class="summary__pay-now-desc">Best price available for your rental <span class="material-symbols-outlined summary__info">info</span></p>
         </div>
-        <div class="summary-card__best-price">
-          <span>Best price available for your rental</span>
-          <span class="material-symbols-outlined summary-card__info">info</span>
+        <div class="summary__included">
+          <h3 class="summary__heading">What's included</h3>
+          <p><span class="material-symbols-outlined summary__check">check_circle</span> 24/7 Roadside Assistance Hotline <span class="material-symbols-outlined summary__info">info</span></p>
+          <p><span class="material-symbols-outlined summary__check">check_circle</span> Unlimited miles <span class="material-symbols-outlined summary__info">info</span></p>
         </div>
       </div>
-      <h3 class="summary-card__heading">What's included</h3>
-      <ul class="summary-card__included">
-        <li><span class="material-symbols-outlined summary-card__check">check_circle</span> 24/7 Roadside Assistance Hotline <span class="material-symbols-outlined summary-card__info">info</span></li>
-        <li><span class="material-symbols-outlined summary-card__check">check_circle</span> Unlimited miles <span class="material-symbols-outlined summary-card__info">info</span></li>
-      </ul>
     </aside>
   </main>
 
   <footer class="footer">
     <div class="footer__links">
-      <a href="#">Help</a>
-      <span class="footer__sep">|</span>
-      <a href="#">Rental information</a>
-      <span class="footer__sep">|</span>
-      <a href="#">SIXT for business</a>
-      <span class="footer__sep">|</span>
-      <a href="#">SIXT partners</a>
-      <span class="footer__sep">|</span>
-      <a href="#">SIXT Magazine</a>
-      <span class="footer__sep">|</span>
-      <a href="#">Privacy</a>
-      <span class="footer__sep">|</span>
-      <a href="#">Do not share or sell my personal information</a>
-      <span class="footer__sep">|</span>
-      <a href="#">Terms & conditions</a>
-      <span class="footer__sep">|</span>
+      <a href="#">Help</a><span class="footer__pipe"> | </span>
+      <a href="#">Rental information</a><span class="footer__pipe"> | </span>
+      <a href="#">SIXT for business</a><span class="footer__pipe"> | </span>
+      <a href="#">SIXT partners</a><span class="footer__pipe"> | </span>
+      <a href="#">SIXT Magazine</a><span class="footer__pipe"> | </span>
+      <a href="#">Privacy</a><span class="footer__pipe"> | </span>
+      <a href="#">Do not share or sell my personal information</a><span class="footer__pipe"> | </span>
+      <a href="#">Terms & conditions</a><span class="footer__pipe"> | </span>
       <a href="#">Customers with disabilities</a>
     </div>
     <div class="footer__bottom">
