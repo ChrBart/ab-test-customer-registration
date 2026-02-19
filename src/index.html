@@ -40,7 +40,7 @@
       <aside class="summary summary--mobile">
         <div class="summary__card">
           <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400&h=240&fit=crop" alt="" class="summary__car-img" />
-          <p class="summary__car-name">Compact (VOLKSWAGEN TAOS)</p>
+          <p class="summary__car-name"><span class="summary__car-name--bold">Compact</span> <span class="summary__car-name--regular">(VOLKSWAGEN TAOS)</span></p>
           <p class="summary__car-meta">or similar (CTA)</p>
           <p class="summary__car-price">$160.00</p>
           <a href="#" class="summary__link">Price details</a>
@@ -93,11 +93,10 @@
             </label>
           </div>
           <div class="form-row form-row--phone">
-            <label class="field field--country-code">
-              <span class="field__label">Country code</span>
+            <label class="field field--country-code field--no-label">
               <div class="field__country">
                 <span class="material-symbols-outlined field__flag">flag</span>
-                <select class="field__input" name="countryCode"><option value="+1">+1</option></select>
+                <select class="field__input" name="countryCode" aria-label="Country code"><option value="+1">+1</option></select>
                 <span class="material-symbols-outlined field__chevron">expand_more</span>
               </div>
             </label>
@@ -219,7 +218,7 @@
             <img src="https://cdn.simpleicons.org/discover/FF6000" alt="" width="40" height="24" />
           </div>
           <p class="form-disclaimer">The payment method must be under the renter's name and physically presented at pickup. Debit cards are accepted for select vehicle classes, and <a href="#">additional documentation</a> may be required in some cases.</p>
-          <p class="form-pay-later"><strong>No payment method on hand?</strong> <a href="#">Switch to Pay Later</a> and have free cancellation included for just $ 61.13 more. <span class="material-symbols-outlined">info</span></p>
+          <p class="form-pay-later"><strong>No payment method on hand?</strong> <a href="#">Switch to Pay Later</a> and have free cancellation included for just <span class="form-pay-later__amount">$ 61.13</span> more. <span class="material-symbols-outlined">info</span></p>
         </section>
 
         <section class="form-section">
@@ -228,8 +227,7 @@
             <span class="field__label">Company (optional)</span>
             <input type="text" class="field__input" placeholder="Company (optional)" name="company" />
           </label>
-          <label class="field">
-            <span class="field__label">Country</span>
+          <label class="field field--country field--no-label">
             <div class="field__country">
               <span class="material-symbols-outlined field__flag">flag</span>
               <select class="field__input" name="country"><option value="US">United States</option></select>
@@ -250,10 +248,9 @@
               <input type="text" class="field__input" placeholder="City" name="city" />
             </label>
           </div>
-          <label class="field">
-            <span class="field__label">State</span>
+          <label class="field field--no-label">
             <div class="field__select-wrap">
-              <select class="field__input" name="state"><option value="">State</option></select>
+              <select class="field__input" name="state" data-placeholder="State"><option value="">State</option></select>
               <span class="material-symbols-outlined field__chevron">expand_more</span>
             </div>
           </label>
@@ -305,7 +302,7 @@
     <aside class="summary summary--desktop">
       <div class="summary__card">
         <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400&h=240&fit=crop" alt="" class="summary__car-img" />
-        <p class="summary__car-name">Compact (VOLKSWAGEN TAOS)</p>
+        <p class="summary__car-name"><span class="summary__car-name--bold">Compact</span> <span class="summary__car-name--regular">(VOLKSWAGEN TAOS)</span></p>
         <p class="summary__car-meta">or similar (CTA)</p>
         <p class="summary__car-price">$160.00</p>
         <a href="#" class="summary__link">Price details</a>
@@ -343,14 +340,14 @@
 
   <footer class="footer">
     <div class="footer__links">
-      <a href="#">Help</a><span class="footer__pipe"> | </span>
-      <a href="#">Rental information</a><span class="footer__pipe"> | </span>
-      <a href="#">SIXT for business</a><span class="footer__pipe"> | </span>
-      <a href="#">SIXT partners</a><span class="footer__pipe"> | </span>
-      <a href="#">SIXT Magazine</a><span class="footer__pipe"> | </span>
-      <a href="#">Privacy</a><span class="footer__pipe"> | </span>
-      <a href="#">Do not share or sell my personal information</a><span class="footer__pipe"> | </span>
-      <a href="#">Terms & conditions</a><span class="footer__pipe"> | </span>
+      <a href="#">Help</a><span class="footer__pipe">|</span>
+      <a href="#">Rental information</a><span class="footer__pipe">|</span>
+      <a href="#">SIXT for business</a><span class="footer__pipe">|</span>
+      <a href="#">SIXT partners</a><span class="footer__pipe">|</span>
+      <a href="#">SIXT Magazine</a><span class="footer__pipe">|</span>
+      <a href="#">Privacy</a><span class="footer__pipe">|</span>
+      <a href="#">Do not share or sell my personal information</a><span class="footer__pipe">|</span>
+      <a href="#">Terms & conditions</a><span class="footer__pipe">|</span>
       <a href="#">Customers with disabilities</a>
     </div>
     <div class="footer__bottom">
