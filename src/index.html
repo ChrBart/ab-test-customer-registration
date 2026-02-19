@@ -39,15 +39,17 @@
       <!-- Mobile: car card at top -->
       <aside class="summary summary--mobile">
         <div class="summary__card">
-          <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400&h=240&fit=crop" alt="" class="summary__car-img" />
-          <p class="summary__car-name"><span class="summary__car-name--bold">Compact</span> <span class="summary__car-name--regular">(VOLKSWAGEN TAOS)</span></p>
-          <p class="summary__car-meta">or similar (CTA)</p>
+          <div class="summary__car-row">
+            <span class="material-symbols-outlined summary__car-icon">directions_car</span>
+            <p class="summary__car-name">Compact (VOLKSWAGEN TAOS)</p>
+          </div>
+          <p class="summary__car-meta">or similar | CFAR</p>
           <p class="summary__car-price">$160.00</p>
           <a href="#" class="summary__link">Price details</a>
           <div class="summary__pickup-return">
             <h3 class="summary__heading">Pickup and return</h3>
             <div class="summary__pr-row">
-              <span class="material-symbols-outlined summary__pr-icon">location_on</span>
+              <span class="material-symbols-outlined summary__pr-icon summary__pr-icon--pin">location_on</span>
               <div>
                 <p class="summary__pr-label">Pickup</p>
                 <p class="summary__pr-location">Miami Intl Airport</p>
@@ -55,7 +57,7 @@
               </div>
             </div>
             <div class="summary__pr-row">
-              <span class="material-symbols-outlined summary__pr-icon">keyboard_return</span>
+              <span class="material-symbols-outlined summary__pr-icon summary__pr-icon--pin">location_on</span>
               <div>
                 <p class="summary__pr-label">Return</p>
                 <p class="summary__pr-location">Miami Intl Airport</p>
@@ -69,8 +71,8 @@
           </div>
           <div class="summary__included">
             <h3 class="summary__heading">What's included</h3>
-            <p><span class="material-symbols-outlined summary__check">check_circle</span> 24/7 Roadside Assistance Hotline <span class="material-symbols-outlined summary__info">info</span></p>
-            <p><span class="material-symbols-outlined summary__check">check_circle</span> Unlimited miles <span class="material-symbols-outlined summary__info">info</span></p>
+            <p><span class="summary__check-wrap"></span> 24/7 Roadside Assistance Hotline <span class="material-symbols-outlined summary__info">info</span></p>
+            <p><span class="summary__check-wrap"></span> Unlimited miles <span class="material-symbols-outlined summary__info">info</span></p>
           </div>
         </div>
       </aside>
@@ -94,9 +96,9 @@
           </div>
           <div class="form-row form-row--phone">
             <label class="field field--country-code field--no-label">
-              <div class="field__country">
+              <div class="field__country field__country--compact">
                 <span class="material-symbols-outlined field__flag">flag</span>
-                <select class="field__input" name="countryCode" aria-label="Country code"><option value="+1">+1</option></select>
+                <select class="field__input" name="countryCode" aria-label="Country"><option value="">Country</option><option value="US">United States</option></select>
                 <span class="material-symbols-outlined field__chevron">expand_more</span>
               </div>
             </label>
@@ -134,13 +136,13 @@
               <span class="protection-card__badge">Included</span>
               <span class="protection-card__name">No extra protection</span>
               <span class="protection-card__warn">Deductible: up to full vehicle value</span>
-              <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
+              <a href="#" class="protection-card__link">View coverage &gt; <span class="material-symbols-outlined protection-card__chevron">expand_more</span></a>
             </label>
             <label class="protection-card">
               <input type="radio" name="protection" value="cover" class="protection-card__input" />
               <span class="protection-card__name">Cover The Car</span>
               <span class="protection-card__ok">No deductible</span>
-              <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
+              <a href="#" class="protection-card__link">View coverage &gt; <span class="material-symbols-outlined protection-card__chevron">expand_more</span></a>
               <span class="protection-card__price">$32.90 / day</span>
             </label>
           </div>
@@ -151,7 +153,7 @@
           <h2 class="form-section__title">Which add-ons do you need?</h2>
           <div class="addon-rows">
             <div class="addon-row">
-              <span class="material-symbols-outlined addon-row__icon">shield</span>
+              <span class="addon-row__icon-wrap"><span class="material-symbols-outlined addon-row__icon">shield</span></span>
               <div class="addon-row__text">
                 <span class="addon-row__name">Supplemental Liability Insurance</span>
                 <span class="addon-row__price">$16.18 / day</span>
@@ -163,7 +165,7 @@
               </label>
             </div>
             <div class="addon-row">
-              <span class="material-symbols-outlined addon-row__icon">local_gas_station</span>
+              <span class="addon-row__icon-wrap"><span class="material-symbols-outlined addon-row__icon">local_gas_station</span></span>
               <div class="addon-row__text">
                 <span class="addon-row__name">Prepaid Fuel</span>
                 <span class="addon-row__price">$41.99 / one-time</span>
@@ -175,7 +177,7 @@
               </label>
             </div>
             <div class="addon-row">
-              <span class="material-symbols-outlined addon-row__icon">toll</span>
+              <span class="addon-row__icon-wrap"><span class="material-symbols-outlined addon-row__icon">toll</span></span>
               <div class="addon-row__text">
                 <span class="addon-row__name">Toll pass / Express lane</span>
                 <span class="addon-row__price">$13.99 / day</span>
@@ -211,14 +213,14 @@
             </label>
           </div>
           <div class="payment-logos">
-            <img src="https://cdn.simpleicons.org/amex/006FCF" alt="" width="40" height="24" />
-            <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="" width="40" height="24" />
-            <img src="https://cdn.simpleicons.org/maestro/0099DF" alt="" width="40" height="24" />
-            <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" width="40" height="24" />
-            <img src="https://cdn.simpleicons.org/discover/FF6000" alt="" width="40" height="24" />
+            <img src="https://cdn.simpleicons.org/amex/006FCF" alt="" class="payment-logo" />
+            <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="" class="payment-logo" />
+            <img src="https://cdn.simpleicons.org/unionpay/E21836" alt="" class="payment-logo" />
+            <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" class="payment-logo" />
+            <img src="https://cdn.simpleicons.org/discover/FF6000" alt="" class="payment-logo" />
           </div>
           <p class="form-disclaimer">The payment method must be under the renter's name and physically presented at pickup. Debit cards are accepted for select vehicle classes, and <a href="#">additional documentation</a> may be required in some cases.</p>
-          <p class="form-pay-later"><strong>No payment method on hand?</strong> <a href="#">Switch to Pay Later</a> and have free cancellation included for just <span class="form-pay-later__amount">$ 61.13</span> more. <span class="material-symbols-outlined">info</span></p>
+          <p class="form-pay-later"><strong class="form-pay-later__q">No payment method on hand?</strong><br><a href="#" class="form-pay-later__link">Switch to Pay Later</a> and have free cancellation included for just $ 61.13 more. <span class="material-symbols-outlined">info</span></p>
         </section>
 
         <section class="form-section">
@@ -227,7 +229,8 @@
             <span class="field__label">Company (optional)</span>
             <input type="text" class="field__input" placeholder="Company (optional)" name="company" />
           </label>
-          <label class="field field--country field--no-label">
+          <label class="field">
+            <span class="field__label">Country</span>
             <div class="field__country">
               <span class="material-symbols-outlined field__flag">flag</span>
               <select class="field__input" name="country"><option value="US">United States</option></select>
@@ -301,15 +304,17 @@
 
     <aside class="summary summary--desktop">
       <div class="summary__card">
-        <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400&h=240&fit=crop" alt="" class="summary__car-img" />
-        <p class="summary__car-name"><span class="summary__car-name--bold">Compact</span> <span class="summary__car-name--regular">(VOLKSWAGEN TAOS)</span></p>
-        <p class="summary__car-meta">or similar (CTA)</p>
+        <div class="summary__car-row">
+          <span class="material-symbols-outlined summary__car-icon">directions_car</span>
+          <p class="summary__car-name">Compact (VOLKSWAGEN TAOS)</p>
+        </div>
+        <p class="summary__car-meta">or similar | CFAR</p>
         <p class="summary__car-price">$160.00</p>
         <a href="#" class="summary__link">Price details</a>
         <div class="summary__pickup-return">
           <h3 class="summary__heading">Pickup and return</h3>
           <div class="summary__pr-row">
-            <span class="material-symbols-outlined summary__pr-icon">location_on</span>
+            <span class="material-symbols-outlined summary__pr-icon summary__pr-icon--pin">location_on</span>
             <div>
               <p class="summary__pr-label">Pickup</p>
               <p class="summary__pr-location">Miami Intl Airport</p>
@@ -317,7 +322,7 @@
             </div>
           </div>
           <div class="summary__pr-row">
-            <span class="material-symbols-outlined summary__pr-icon">keyboard_return</span>
+            <span class="material-symbols-outlined summary__pr-icon summary__pr-icon--pin">location_on</span>
             <div>
               <p class="summary__pr-label">Return</p>
               <p class="summary__pr-location">Miami Intl Airport</p>
@@ -331,8 +336,8 @@
         </div>
         <div class="summary__included">
           <h3 class="summary__heading">What's included</h3>
-          <p><span class="material-symbols-outlined summary__check">check_circle</span> 24/7 Roadside Assistance Hotline <span class="material-symbols-outlined summary__info">info</span></p>
-          <p><span class="material-symbols-outlined summary__check">check_circle</span> Unlimited miles <span class="material-symbols-outlined summary__info">info</span></p>
+          <p><span class="summary__check-wrap"></span> 24/7 Roadside Assistance Hotline <span class="material-symbols-outlined summary__info">info</span></p>
+          <p><span class="summary__check-wrap"></span> Unlimited miles <span class="material-symbols-outlined summary__info">info</span></p>
         </div>
       </div>
     </aside>
@@ -348,11 +353,11 @@
       <a href="#">Privacy</a><span class="footer__pipe">|</span>
       <a href="#">Do not share or sell my personal information</a><span class="footer__pipe">|</span>
       <a href="#">Terms & conditions</a><span class="footer__pipe">|</span>
-      <a href="#">Customers with disabilities</a>
+      <a href="#">Customers with disabilities</a><span class="footer__pipe">|</span>
+      <span class="footer__copy">© Sixt 2025</span>
     </div>
     <div class="footer__bottom">
-      <a href="#" class="footer__cookie">Cookie-Settings</a>
-      <span class="footer__copy">© Sixt 2025</span>
+      <a href="#" class="footer__cookie">Cookie Settings</a>
     </div>
   </footer>
 </body>
