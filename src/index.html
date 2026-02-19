@@ -13,28 +13,21 @@
   <header class="header">
     <div class="header__top">
       <a href="#" class="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" class="logo__img logo__img--dark" width="80" height="33" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" class="logo__img" width="80" height="33" />
       </a>
+      <p class="header__tagline">THE MOBILITY CLOUD</p>
       <div class="header__actions">
-        <a href="#" class="header__icon" aria-label="Language"><span class="material-symbols-outlined">language</span></a>
-        <span class="header__text">EN | $</span>
         <a href="#" class="header__icon" aria-label="Account"><span class="material-symbols-outlined">person</span></a>
+        <span class="header__text">EN | $</span>
+        <button type="button" class="header__icon" aria-label="Help"><span class="material-symbols-outlined">help</span></button>
         <a href="#" class="header__link">Login | Register</a>
-        <div class="header__total-box">
-          <span class="header__total-label">Total</span>
-          <span class="header__total-amount">$160.00</span>
-        </div>
       </div>
     </div>
     <div class="header__title-bar">
       <a href="#" class="back-link" aria-label="Back">
-        <span class="material-symbols-outlined">arrow_back_ios_new</span>
+        <span class="material-symbols-outlined">chevron_left</span>
       </a>
       <h1 class="page-title">REVIEW YOUR BOOKING</h1>
-      <div class="header__title-right">
-        <span class="header__title-total">$160.00</span>
-        <a href="#" class="header__title-details">Details <span class="material-symbols-outlined">chevron_right</span></a>
-      </div>
     </div>
   </header>
 
@@ -93,7 +86,7 @@
             <label class="checkbox-label">
               <input type="checkbox" name="age" class="checkbox" checked />
               <span class="checkbox__box"></span>
-              <span class="checkbox-label__text">I am 25 years of age or older</span>
+              <span class="checkbox-label__text">I am 25 years or older</span>
             </label>
           </div>
         </section>
@@ -103,16 +96,16 @@
           <h2 class="form-section__title">Which protection package do you need?</h2>
           <p class="form-section__sub">Without protection, up to the full vehicle value will be charged in case of damage or theft.</p>
           <div class="protection-cards">
-            <label class="protection-card">
-              <input type="radio" name="protection" value="none" class="radio radio--card" />
+            <label class="protection-card protection-card--selected">
+              <input type="radio" name="protection" value="none" class="radio radio--card" checked />
               <span class="radio__circle"></span>
               <span class="protection-card__name">No extra protection</span>
-              <span class="protection-card__desc protection-card__desc--warn">Deduction up to full vehicle value</span>
+              <span class="protection-card__desc protection-card__desc--warn">Deductible: up to full vehicle value</span>
               <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
               <span class="protection-card__badge">Included</span>
             </label>
-            <label class="protection-card protection-card--selected">
-              <input type="radio" name="protection" value="cover" class="radio radio--card" checked />
+            <label class="protection-card">
+              <input type="radio" name="protection" value="cover" class="radio radio--card" />
               <span class="radio__circle"></span>
               <span class="protection-card__name">Cover The Car</span>
               <span class="protection-card__desc protection-card__desc--ok">No deductible</span>
@@ -305,11 +298,16 @@
 
     <!-- Booking summary (desktop right column) -->
     <aside class="summary-card">
+      <div class="summary-card__total-block">
+        <span class="summary-card__total-label">Total</span>
+        <span class="summary-card__total-amount">$160.00</span>
+        <a href="#" class="summary-card__price-details">Price details</a>
+      </div>
       <div class="vehicle-card vehicle-card--desktop">
         <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=200&h=120&fit=crop" alt="" class="vehicle-card__img" />
         <div class="vehicle-card__body">
           <h2 class="vehicle-card__name">Compact (VOLKSWAGEN TAOS)</h2>
-          <p class="vehicle-card__meta">or similar | A004</p>
+          <p class="vehicle-card__meta">or similar</p>
           <span class="vehicle-card__price">$160.00</span>
           <a href="#" class="vehicle-card__details">Price details</a>
         </div>
@@ -367,7 +365,7 @@
     <span class="footer__sep">|</span>
     <a href="#">Terms & conditions</a>
     <span class="footer__sep">|</span>
-    <a href="#">Customers with disabilities</a>
+    <a href="#">Customers with a disability</a>
     <span class="footer__sep">|</span>
     <a href="#">Cookie-Settings</a>
     <span class="footer__sep">|</span>

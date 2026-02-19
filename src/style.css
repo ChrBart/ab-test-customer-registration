@@ -75,54 +75,52 @@ a:hover { opacity: 0.85; }
   vertical-align: middle;
 }
 
-/* ===== Header ===== */
+/* ===== Header (live: white bar, black logo, tagline, dark grey right) ===== */
 .header__top {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  padding: 8px 16px;
-  min-height: 44px;
-  background: var(--black);
-  color: var(--white);
+  gap: 10px 16px;
+  padding: 12px 24px;
+  min-height: 48px;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-border);
 }
 .logo { display: flex; align-items: center; }
-.logo__img { height: 28px; width: auto; filter: brightness(0) invert(1); }
-.header__actions { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.logo__img { height: 26px; width: auto; }
+.header__tagline {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--gray-text);
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-transform: uppercase;
+}
+.header__actions { margin-left: auto; display: flex; align-items: center; gap: 16px; }
 .header__icon {
-  color: var(--white);
+  color: var(--black);
   padding: 4px 8px;
   text-decoration: none;
   display: flex;
   align-items: center;
+  background: none;
+  border: none;
 }
-.header__icon:hover { opacity: 0.9; text-decoration: none; }
+.header__icon:hover { opacity: 0.7; text-decoration: none; }
 .header__icon .material-symbols-outlined { font-size: 20px; }
-.header__text { font-size: 14px; color: var(--white); }
-.header__link { color: var(--white); font-size: 14px; text-decoration: none; }
+.header__text { font-size: 14px; color: var(--black); }
+.header__link { color: var(--black); font-size: 14px; text-decoration: none; }
 .header__link:hover { text-decoration: underline; }
-.header__total-box {
-  background: #E0E0E0;
-  padding: 8px 12px;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
-  min-width: 70px;
-}
-.header__total-label { font-size: 11px; font-weight: 400; color: var(--black); }
-.header__total-amount { font-size: 16px; font-weight: 700; color: var(--black); }
 
 @media (max-width: 899px) {
-  .header__top { display: none; }
+  .header__tagline { display: none; }
 }
 
 .header__title-bar {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 16px;
+  gap: 10px;
+  padding: 16px 24px;
   background: var(--white);
   border-bottom: 1px solid var(--gray-border);
 }
@@ -130,10 +128,10 @@ a:hover { opacity: 0.85; }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--black);
+  color: var(--gray-text);
   padding: 4px;
 }
-.back-link .material-symbols-outlined { font-size: 22px; }
+.back-link .material-symbols-outlined { font-size: 24px; }
 .page-title {
   font-family: var(--font-heading);
   font-size: 24px;
@@ -145,12 +143,6 @@ a:hover { opacity: 0.85; }
   line-height: 1.2;
   flex: 1;
   text-align: left;
-}
-.header__title-right { display: flex; align-items: center; gap: 8px; }
-.header__title-total { font-weight: 700; font-size: 15px; color: var(--black); }
-.header__title-details { font-size: 13px; }
-@media (min-width: 900px) {
-  .header__title-right { display: none; }
 }
 
 /* ===== Main ===== */
@@ -532,15 +524,24 @@ a:hover { opacity: 0.85; }
 /* ===== Summary card ===== */
 .summary-card {
   display: none;
-  background: var(--white);
+  background: #F8F8F8;
   border: 1px solid var(--gray-border);
   border-radius: var(--radius-card);
   padding: 24px;
-  box-shadow: 4px 0 16px rgba(0,0,0,0.08);
+  box-shadow: 2px 0 12px rgba(0,0,0,0.06);
 }
 @media (min-width: 900px) {
   .summary-card { display: block; }
 }
+.summary-card__total-block {
+  text-align: right;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-border);
+}
+.summary-card__total-label { display: block; font-size: 12px; color: var(--gray-text); margin-bottom: 2px; }
+.summary-card__total-amount { display: block; font-size: 20px; font-weight: 700; color: var(--black); margin-bottom: 4px; }
+.summary-card__price-details { font-size: 13px; color: var(--gray-text); text-decoration: underline; }
 .summary-card .vehicle-card {
   border: none;
   background: transparent;
