@@ -252,5 +252,23 @@
       <span class="foot_copy">© SIXT 2024</span>
     </div>
   </footer>
+  <script>
+    (function () {
+      const sticky = document.querySelector('.content_right');
+      if (!sticky) return;
+      const TOP_OFFSET = 20;
+      const EPSILON = 2;
+
+      function updateStickyState() {
+        const rect = sticky.getBoundingClientRect();
+        const isStuck = rect.top <= TOP_OFFSET + EPSILON && rect.top >= TOP_OFFSET - EPSILON;
+        sticky.classList.toggle('is-stuck', isStuck && window.innerWidth <= 1023);
+      }
+
+      updateStickyState();
+      window.addEventListener('scroll', updateStickyState, { passive: true });
+      window.addEventListener('resize', updateStickyState);
+    })();
+  </script>
 </body>
 </html>
