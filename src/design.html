@@ -10,22 +10,24 @@
 <body>
   <header class="topbar">
     <div class="topbar_inner">
-      <a href="#" class="topbar_logo"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" /></a>
-      <span class="topbar_sep" aria-hidden="true"></span>
-      <div class="topbar_center">
-        <a href="#" class="topbar_back" aria-label="Back"><span class="material-symbols-outlined">arrow_back</span></a>
-        <span class="topbar_title">REVIEW YOUR BOOKING</span>
-      </div>
       <div class="topbar_right">
         <span class="topbar_locale"><span class="material-symbols-outlined topbar_icon">language</span> EN / €</span>
         <a href="#" class="topbar_login"><span class="material-symbols-outlined topbar_icon">person</span> Login / Sign-up</a>
-        <div class="topbar_totalwrap">
-          <span class="topbar_total">Total: 91.00€</span>
-          <a href="#" class="topbar_pricedetail">Price details</a>
-        </div>
+        <span class="topbar_total">Total: 91.00€</span>
       </div>
     </div>
   </header>
+  <div class="pageheader">
+    <div class="pageheader_inner">
+      <a href="#" class="pageheader_logo"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" /></a>
+      <a href="#" class="pageheader_back" aria-label="Back"><span class="material-symbols-outlined">arrow_back</span></a>
+      <span class="pageheader_title">REVIEW YOUR BOOKING</span>
+      <div class="pageheader_right">
+        <span class="pageheader_total">Total: 91.00€</span>
+        <a href="#" class="pageheader_pricedetail">Price details</a>
+      </div>
+    </div>
+  </div>
 
   <main class="content">
     <div class="content_inner">
@@ -46,7 +48,7 @@
               </label>
               <label class="lbl lbl_grow"><span class="lbl_t">Phone number</span><input type="tel" class="inp" name="phone" /></label>
             </div>
-            <label class="chk"><input type="checkbox" name="age" checked /><span class="chk_box"></span><span class="chk_t">I am 23 years or older</span></label>
+            <label class="chk"><input type="checkbox" name="age" checked /><span class="chk_box"></span><span class="chk_t">I am 23 years or under</span></label>
           </section>
 
           <section class="block">
@@ -65,7 +67,7 @@
                 <h3 class="pkg_title">Peace of Mind</h3>
                 <p class="pkg_sub pkg_ok">No deductible, no claim, no hassle</p>
                 <a href="#" class="pkg_link">View coverage</a>
-                <span class="pkg_price">€33.99 / day</span>
+                <span class="pkg_price">€ 33.00 / day</span>
               </article>
             </div>
             <p class="block_btn_wrap"><a href="#" class="btn_secondary">View all protection packages</a></p>
@@ -75,34 +77,34 @@
             <h2 class="block_h2">Which add-ons do you need?</h2>
             <div class="addon_list">
               <div class="addon_i">
-                <span class="addon_icon material-symbols-outlined">person_add</span>
+                <span class="addon_icon material-symbols-outlined">group</span>
                 <div class="addon_body"><strong class="addon_name">Additional driver</strong><span class="addon_price">11.00 € / day & driver</span></div>
                 <a href="#" class="addon_det">Details</a>
                 <label class="sw"><input type="checkbox" class="sw_i" /><span class="sw_t"></span></label>
               </div>
               <div class="addon_i">
-                <span class="addon_icon material-symbols-outlined">explore</span>
-                <div class="addon_body"><strong class="addon_name">GPS guaranteed</strong><span class="addon_price">€19.99 / day</span></div>
+                <span class="addon_icon material-symbols-outlined">send</span>
+                <div class="addon_body"><strong class="addon_name">GPS guaranteed</strong><span class="addon_price">9,99 € / day</span></div>
                 <a href="#" class="addon_det">Details</a>
                 <label class="sw"><input type="checkbox" class="sw_i" /><span class="sw_t"></span></label>
               </div>
               <div class="addon_i">
-                <span class="addon_icon material-symbols-outlined">public</span>
-                <div class="addon_body"><strong class="addon_name">Cross-border driving</strong><span class="addon_price">€20.99 / one-time</span></div>
+                <span class="addon_icon material-symbols-outlined">language</span>
+                <div class="addon_body"><strong class="addon_name">Cross-border driving</strong><span class="addon_price">13,99 € one-time</span></div>
                 <a href="#" class="addon_det">Details</a>
                 <label class="sw"><input type="checkbox" class="sw_i" /><span class="sw_t"></span></label>
               </div>
             </div>
-            <a href="#" class="block_link">See more...</a>
+            <a href="#" class="block_link">See more</a>
           </section>
 
           <section class="block">
             <h2 class="block_h2">What credit card would you like to pay with?</h2>
-            <label class="lbl"><span class="lbl_t">Card number</span><input type="text" class="inp" name="card" placeholder="1234 0784 1934 1234" /></label>
+            <label class="lbl"><span class="lbl_t">Card number</span><input type="text" class="inp" name="card" placeholder="1234 0734 1934 1234" /></label>
             <label class="lbl"><span class="lbl_t">Cardholder name</span><input type="text" class="inp" name="cardholder" /></label>
             <div class="row row_50">
               <label class="lbl"><span class="lbl_t">Expiration date</span><input type="text" class="inp" name="exp" placeholder="MM / YY" /></label>
-              <label class="lbl lbl_cvc"><span class="lbl_t">CVV</span><span class="lbl_cvc_row"><input type="text" class="inp" name="cvc" placeholder="123" /><span class="lbl_info material-symbols-outlined" aria-label="Info">info</span></span></label>
+              <label class="lbl lbl_cvc"><span class="lbl_t">CVC</span><span class="lbl_cvc_row"><input type="text" class="inp" name="cvc" placeholder="123" /><span class="lbl_info material-symbols-outlined" aria-label="Info">info</span></span></label>
             </div>
             <div class="pay_icons">
               <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" width="42" height="28" />
@@ -123,7 +125,7 @@
               <span class="lbl_t">Country/region</span>
               <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp" name="country_addr"><option>Germany</option></select><span class="material-symbols-outlined sel_arrow">expand_more</span></span>
             </label>
-            <label class="lbl"><span class="lbl_t">Street and house number</span><input type="text" class="inp" name="street" placeholder="Example: Street 145B" /></label>
+            <label class="lbl"><span class="lbl_t">Street and house number</span><input type="text" class="inp" name="street" placeholder="Example: Sixt Street 123B" /></label>
             <div class="row row_50">
               <label class="lbl"><span class="lbl_t">Postal code</span><input type="text" class="inp" name="zip" /></label>
               <label class="lbl"><span class="lbl_t">City</span><input type="text" class="inp" name="city" /></label>
@@ -141,7 +143,7 @@
               <span class="tot_l">Total price</span>
               <span class="tot_v">€91.00</span>
             </div>
-            <a href="#" class="block_link">View details</a>
+            <a href="#" class="block_link">Show details</a>
           </section>
 
           <section class="block">
@@ -162,10 +164,6 @@
       </div>
 
       <div class="content_right">
-        <div class="sidebar_top">
-          <span class="sidebar_total">Total: €91.00</span>
-          <a href="#" class="sidebar_pricedetail">Price details</a>
-        </div>
       <aside class="sidecard">
         <div class="sidecard_car">
           <div class="sidecard_img"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=200&fit=crop" alt="" /></div>
@@ -175,7 +173,7 @@
         </div>
         <div class="sidecard_pr">
           <h4 class="sidecard_sh">Pickup and return</h4>
-          <div class="sidecard_pr_i"><span class="sidecard_ico material-symbols-outlined">location_on</span><div><span class="sidecard_pr_label">Pickup</span><p class="sidecard_place">Munich Airport</p><p class="sidecard_time">Thu, Nov 14, 2024 | 12:00 PM</p></div></div>
+          <div class="sidecard_pr_i"><span class="sidecard_ico material-symbols-outlined">location_on</span><div><span class="sidecard_pr_label">Pickup</span><p class="sidecard_place">Munich Airport</p><p class="sidecard_time">Thu, Nov 14, 2024 | 10:00 PM</p></div></div>
           <div class="sidecard_pr_i"><span class="sidecard_ico material-symbols-outlined">location_on</span><div><span class="sidecard_pr_label">Return</span><p class="sidecard_place">Munich Airport</p><p class="sidecard_time">Sun, Nov 17, 2024 | 09:30 AM</p></div></div>
         </div>
         <div class="sidecard_ov">
@@ -183,9 +181,9 @@
           <ul class="sidecard_ov_list">
             <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> Third party insurance <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
             <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> 24/7 Breakdown assistance <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
-            <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> Tyres suitable for winter <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
-            <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> 900 km are included, each additional km costs €0.35 <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
-            <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> Booking option: Flexi price - Pay now, cancel and rebook for a fee <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
+            <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> Tires suitable for winter <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
+            <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> 900 km are included, each additional kilometer costs €0.86 <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
+            <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> Booking option: Rent prices - Pay now, cancel and rebook for a fee <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
           </ul>
         </div>
       </aside>
@@ -196,7 +194,7 @@
   <footer class="foot">
     <div class="foot_inner">
       <a href="#">Help</a><span class="foot_sep">|</span>
-      <a href="#">Reservation information</a><span class="foot_sep">|</span>
+      <a href="#">Rent information</a><span class="foot_sep">|</span>
       <a href="#">SIXT for business</a><span class="foot_sep">|</span>
       <a href="#">Travel agencies</a><span class="foot_sep">|</span>
       <a href="#">SIXT partners</a><span class="foot_sep">|</span>
