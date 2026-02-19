@@ -15,13 +15,14 @@
       <a href="#" class="logo">
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Sixt_Logo_2023.svg" alt="SIXT" class="logo__img logo__img--dark" width="80" height="33" />
       </a>
-      <p class="logo__tagline">DRIVE SHARE RIDE</p>
       <div class="header__actions">
-        <a href="#" class="header__icon" aria-label="Login"><span class="material-symbols-outlined">person</span></a>
-        <a href="#" class="header__icon" aria-label="Cart"><span class="material-symbols-outlined">shopping_cart</span></a>
-        <div class="header__total">
-          <span class="header__total-amount">$160.00</span>
+        <a href="#" class="header__icon" aria-label="Language"><span class="material-symbols-outlined">language</span></a>
+        <span class="header__text">EN | $</span>
+        <a href="#" class="header__icon" aria-label="Account"><span class="material-symbols-outlined">person</span></a>
+        <a href="#" class="header__link">Login | Register</a>
+        <div class="header__total-box">
           <span class="header__total-label">Total</span>
+          <span class="header__total-amount">$160.00</span>
         </div>
       </div>
     </div>
@@ -102,17 +103,16 @@
           <h2 class="form-section__title">Which protection package do you need?</h2>
           <p class="form-section__sub">Without protection, up to the full vehicle value will be charged in case of damage or theft.</p>
           <div class="protection-cards">
-            <label class="protection-card protection-card--selected">
-              <input type="radio" name="protection" value="none" class="radio radio--card" checked />
+            <label class="protection-card">
+              <input type="radio" name="protection" value="none" class="radio radio--card" />
               <span class="radio__circle"></span>
-              <button type="button" class="protection-card__close" aria-label="Remove"><span class="material-symbols-outlined">close</span></button>
               <span class="protection-card__name">No extra protection</span>
-              <span class="protection-card__desc protection-card__desc--warn">Deductible up to full vehicle value</span>
+              <span class="protection-card__desc protection-card__desc--warn">Deduction up to full vehicle value</span>
               <a href="#" class="protection-card__link">View coverage <span class="material-symbols-outlined">expand_more</span></a>
               <span class="protection-card__badge">Included</span>
             </label>
-            <label class="protection-card">
-              <input type="radio" name="protection" value="cover" class="radio radio--card" />
+            <label class="protection-card protection-card--selected">
+              <input type="radio" name="protection" value="cover" class="radio radio--card" checked />
               <span class="radio__circle"></span>
               <span class="protection-card__name">Cover The Car</span>
               <span class="protection-card__desc protection-card__desc--ok">No deductible</span>
@@ -273,7 +273,7 @@
           <h2 class="form-section__title">Bonus program</h2>
           <button type="button" class="expandable">
             <span>Bonus program</span>
-            <span class="material-symbols-outlined">add</span>
+            <span class="material-symbols-outlined">chevron_right</span>
           </button>
         </section>
 
@@ -283,7 +283,7 @@
             <h2 class="form-section__title form-section__title--inline">Total</h2>
             <span class="total-row__amount">$160.00</span>
           </div>
-          <a href="#" class="form__link form__link--small">Price details</a>
+          <a href="#" class="form__link form__link--small form__link--price-details">Price details</a>
           <div class="legal-block">
             <p class="legal-block__title">IMPORTANT INFORMATION</p>
             <ul class="legal-block__list">
@@ -317,7 +317,7 @@
       <div class="summary-card__section">
         <h3 class="summary-card__heading">Pickup and return</h3>
         <p class="summary-card__row">
-          <span class="material-symbols-outlined summary-card__icon">directions_car</span>
+          <span class="material-symbols-outlined summary-card__icon">location_on</span>
           Miami Intl Airport
         </p>
         <p class="summary-card__row">
@@ -325,12 +325,12 @@
           Tue, Apr 21, 2026 | 10:00 PM
         </p>
         <p class="summary-card__row">
-          <span class="material-symbols-outlined summary-card__icon">directions_car</span>
+          <span class="material-symbols-outlined summary-card__icon">location_on</span>
           Miami Intl Airport
         </p>
         <p class="summary-card__row">
           <span class="material-symbols-outlined summary-card__icon">calendar_today</span>
-          Fri, Apr 24, 2026 | 10:00 PM
+          Fri, Apr 24, 2026 | 12:00 PM
         </p>
       </div>
       <div class="summary-card__section">
@@ -369,9 +369,9 @@
     <span class="footer__sep">|</span>
     <a href="#">Customers with disabilities</a>
     <span class="footer__sep">|</span>
-    <a href="#">Cookie Settings</a>
+    <a href="#">Cookie-Settings</a>
     <span class="footer__sep">|</span>
-    <span>© 2023 SIXT</span>
+    <span>© 2024 SIXT</span>
   </footer>
 </body>
 </html>

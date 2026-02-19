@@ -56,10 +56,12 @@ a {
 a:hover { opacity: 0.85; }
 .footer a { color: var(--white); text-decoration: none; }
 .footer a:hover { text-decoration: underline; }
-.vehicle-card__details,
-.summary-card__link,
-.form__link--warn { color: var(--link); }
-.form__link--warn { font-weight: 400; }
+.vehicle-card__details { color: var(--link); }
+.summary-card__link { color: var(--link); }
+.form__link--warn { color: var(--link); font-weight: 400; }
+.form__link--small.form__link--price-details { color: var(--gray-text); }
+.protection-card__link { color: var(--black); }
+.addon-row__details { color: var(--black); }
 .cta-button,
 .badge--orange { color: var(--white); }
 
@@ -86,7 +88,6 @@ a:hover { opacity: 0.85; }
 }
 .logo { display: flex; align-items: center; }
 .logo__img { height: 28px; width: auto; filter: brightness(0) invert(1); }
-.logo__tagline { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.8); margin: 0 0 0 8px; }
 .header__actions { margin-left: auto; display: flex; align-items: center; gap: 12px; }
 .header__icon {
   color: var(--white);
@@ -96,10 +97,22 @@ a:hover { opacity: 0.85; }
   align-items: center;
 }
 .header__icon:hover { opacity: 0.9; text-decoration: none; }
-.header__icon .material-symbols-outlined { font-size: 22px; }
-.header__total { display: flex; align-items: baseline; gap: 6px; }
-.header__total-amount { font-weight: 700; font-size: 15px; order: -1; }
-.header__total-label { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.9); }
+.header__icon .material-symbols-outlined { font-size: 20px; }
+.header__text { font-size: 14px; color: var(--white); }
+.header__link { color: var(--white); font-size: 14px; text-decoration: none; }
+.header__link:hover { text-decoration: underline; }
+.header__total-box {
+  background: #E0E0E0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  min-width: 70px;
+}
+.header__total-label { font-size: 11px; font-weight: 400; color: var(--black); }
+.header__total-amount { font-size: 16px; font-weight: 700; color: var(--black); }
 
 @media (max-width: 899px) {
   .header__top { display: none; }
@@ -442,7 +455,7 @@ a:hover { opacity: 0.85; }
   margin: 0 0 16px;
   line-height: 1.5;
 }
-.form__disclaimer a { color: var(--orange); text-decoration: underline; }
+.form__disclaimer a { color: var(--link); text-decoration: underline; }
 
 /* ===== Info box (reference: #F0F0F0) ===== */
 .info-box {
@@ -519,11 +532,11 @@ a:hover { opacity: 0.85; }
 /* ===== Summary card ===== */
 .summary-card {
   display: none;
-  background: var(--gray-bg-card);
+  background: var(--white);
   border: 1px solid var(--gray-border);
   border-radius: var(--radius-card);
   padding: 24px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 4px 0 16px rgba(0,0,0,0.08);
 }
 @media (min-width: 900px) {
   .summary-card { display: block; }
