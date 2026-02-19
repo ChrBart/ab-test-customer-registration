@@ -5,7 +5,7 @@ export default {
     outDir: '../dist',
     emptyOutDir: true,
     rollupOptions: {
-      input: ['src/index.html', 'src/figma-review.html'],
+      input: ['src/index.html', 'src/design.html'],
     },
   },
   server: {
