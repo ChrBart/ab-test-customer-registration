@@ -41,19 +41,19 @@
   <main class="content">
     <div class="content_inner">
       <div class="content_left">
-        <form class="form" method="post" action="#">
+        <form class="form" method="post" action="#" autocomplete="on">
           <section class="block">
             <h2 class="block_h2">Who will drive?</h2>
-            <label class="lbl"><span class="lbl_t">Company name (optional)</span><input type="text" class="inp" name="company" /></label>
+            <label class="lbl"><span class="lbl_t">Company name (optional)</span><input type="text" class="inp" name="company" autocomplete="organization" /></label>
             <div class="row row_50">
-              <label class="lbl"><span class="lbl_t">First name</span><input type="text" class="inp" name="first" /></label>
-              <label class="lbl"><span class="lbl_t">Last name</span><input type="text" class="inp" name="last" /></label>
+              <label class="lbl"><span class="lbl_t">First name</span><input type="text" class="inp" name="first" autocomplete="given-name" /></label>
+              <label class="lbl"><span class="lbl_t">Last name</span><input type="text" class="inp" name="last" autocomplete="family-name" /></label>
             </div>
-            <label class="lbl"><span class="lbl_t">Email</span><input type="email" class="inp" name="email" /></label>
+            <label class="lbl"><span class="lbl_t">Email</span><input type="email" class="inp" name="email" autocomplete="email" /></label>
             <div class="row row_phone">
               <label class="lbl lbl_sel">
                 <span class="lbl_t">Country</span>
-                <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp country_select country_select_phone" name="country">
+                <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp country_select country_select_phone" name="country" aria-label="Phone country code">
                   <option value="+49" data-flag="🇩🇪" data-short="+49" data-long="+49 Germany" selected>+49</option>
                   <option value="+43" data-flag="🇦🇹" data-short="+43" data-long="+43 Austria">+43</option>
                   <option value="+41" data-flag="🇨🇭" data-short="+41" data-long="+41 Switzerland">+41</option>
@@ -95,7 +95,7 @@
                   <option value="+91" data-flag="🇮🇳" data-short="+91" data-long="+91 India">+91</option>
                 </select><span class="material-symbols-outlined sel_arrow">expand_more</span></span>
               </label>
-              <label class="lbl lbl_grow"><span class="lbl_t">Phone number</span><input type="tel" class="inp" name="phone" /></label>
+              <label class="lbl lbl_grow"><span class="lbl_t">Phone number</span><input type="tel" class="inp" name="phone" autocomplete="tel-national" /></label>
             </div>
             <label class="chk"><input type="checkbox" name="age" checked /><span class="chk_box"></span><span class="chk_t">I am 23 years or older</span></label>
           </section>
@@ -165,19 +165,19 @@
 
           <section class="block cc_block">
             <h2 class="block_h2">What credit card would you like to pay with?</h2>
-            <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Card number</span><input type="text" class="inp cc_inp" name="card" placeholder="1234 1234 1234 1234" /></label>
-            <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Cardholder name</span><input type="text" class="inp cc_inp" name="cardholder" /></label>
+            <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Card number</span><input type="text" class="inp cc_inp" name="card" placeholder="1234 1234 1234 1234" inputmode="numeric" autocomplete="cc-number" /></label>
+            <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Cardholder name</span><input type="text" class="inp cc_inp" name="cardholder" autocomplete="cc-name" /></label>
             <div class="row row_50">
-              <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Expiration date</span><input type="text" class="inp cc_inp" name="exp" placeholder="MM / YY" inputmode="numeric" maxlength="7" /></label>
-              <label class="lbl cc_lbl cc_lbl_cvv"><span class="lbl_t cc_lbl_t">CVV</span><span class="cc_cvv_row"><input type="text" class="inp cc_inp" name="cvc" placeholder="123" inputmode="numeric" maxlength="4" /><span class="cc_info_btn material-symbols-outlined" aria-label="Info">info</span></span></label>
+              <label class="lbl cc_lbl"><span class="lbl_t cc_lbl_t">Expiration date</span><input type="text" class="inp cc_inp" name="exp" placeholder="MM / YY" inputmode="numeric" maxlength="7" autocomplete="cc-exp" /></label>
+              <label class="lbl cc_lbl cc_lbl_cvv"><span class="lbl_t cc_lbl_t">CVV</span><span class="cc_cvv_row"><input type="text" class="inp cc_inp" name="cvc" placeholder="123" inputmode="numeric" maxlength="4" autocomplete="cc-csc" /><span class="cc_info_btn material-symbols-outlined" aria-hidden="true">info</span></span></label>
             </div>
             <div class="pay_icons cc_cards">
-              <img src="https://cdn.simpleicons.org/americanexpress/006FCF" alt="" width="24" height="24" />
-              <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="" width="24" height="24" />
-              <img src="https://cdn.simpleicons.org/discover/FF6000" alt="" width="24" height="24" />
-              <img src="https://cdn.simpleicons.org/jcb/0E4C96" alt="" width="24" height="24" />
-              <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" width="24" height="24" />
-              <img src="https://cdn.simpleicons.org/dinersclub/0079BE" alt="" width="24" height="24" />
+              <img src="https://cdn.simpleicons.org/americanexpress/006FCF" alt="American Express" width="24" height="24" />
+              <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="Mastercard" width="24" height="24" />
+              <img src="https://cdn.simpleicons.org/discover/FF6000" alt="Discover" width="24" height="24" />
+              <img src="https://cdn.simpleicons.org/jcb/0E4C96" alt="JCB" width="24" height="24" />
+              <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="Visa" width="24" height="24" />
+              <img src="https://cdn.simpleicons.org/dinersclub/0079BE" alt="Diners Club" width="24" height="24" />
             </div>
             <p class="pay_note cc_note">The credit card used for payment must be under the driver's name and presented during pickup. Please be aware that debit cards may not be accepted at all locations or for all car categories.</p>
           </section>
@@ -187,7 +187,7 @@
             <label class="chk chk_invoice"><input type="checkbox" name="same_address" /><span class="chk_box"></span><span class="chk_t">Same as driver's address</span></label>
             <label class="lbl lbl_sel">
               <span class="lbl_t">Country/region</span>
-              <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp country_select country_select_addr" name="country_addr">
+              <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp country_select country_select_addr" name="country_addr" aria-label="Invoice country or region">
                 <option value="DE" data-flag="🇩🇪" data-short="Germany" data-long="Germany" selected>Germany</option>
                 <option value="AT" data-flag="🇦🇹" data-short="Austria" data-long="Austria">Austria</option>
                 <option value="CH" data-flag="🇨🇭" data-short="Switzerland" data-long="Switzerland">Switzerland</option>
@@ -203,10 +203,10 @@
                 <option value="JP" data-flag="🇯🇵" data-short="Japan" data-long="Japan">Japan</option>
               </select><span class="material-symbols-outlined sel_arrow">expand_more</span></span>
             </label>
-            <label class="lbl"><span class="lbl_t">Street and house number</span><input type="text" class="inp" name="street" placeholder="Example: Sixt Street 123B" /></label>
+            <label class="lbl"><span class="lbl_t">Street and house number</span><input type="text" class="inp" name="street" placeholder="Example: Sixt Street 123B" autocomplete="address-line1" /></label>
             <div class="row row_50">
-              <label class="lbl"><span class="lbl_t">Postal code</span><input type="text" class="inp" name="zip" /></label>
-              <label class="lbl"><span class="lbl_t">City</span><input type="text" class="inp" name="city" /></label>
+              <label class="lbl"><span class="lbl_t">Postal code</span><input type="text" class="inp" name="zip" autocomplete="postal-code" /></label>
+              <label class="lbl"><span class="lbl_t">City</span><input type="text" class="inp" name="city" autocomplete="address-level2" /></label>
             </div>
           </section>
 
@@ -242,7 +242,7 @@
       </div>
 
       <div class="content_right">
-      <input type="checkbox" id="summary-toggle" class="summary_toggle" aria-controls="desktop-summary-card" />
+      <input type="checkbox" id="summary-toggle" class="summary_toggle" aria-controls="desktop-summary-card" aria-expanded="false" />
       <aside class="sidecard" id="desktop-summary-card">
         <label for="summary-toggle" class="sidecard_head" aria-label="Toggle booking summary">
           <div class="sidecard_vehicle">
@@ -285,9 +285,9 @@
         <div class="sidecard_ov">
           <h4 class="sidecard_sh">Your booking overview</h4>
           <ul class="sidecard_ov_list">
-            <li><span class="sidecard_chk material-symbols-outlined">check</span><span class="sidecard_ov_txt">Third party insurance</span><span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
-            <li><span class="sidecard_chk material-symbols-outlined">check</span><span class="sidecard_ov_txt">24/7 Breakdown assistance</span><span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
-            <li><span class="sidecard_chk material-symbols-outlined">check</span><span class="sidecard_ov_txt">Tires suitable for winter</span><span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
+            <li><span class="sidecard_chk material-symbols-outlined">check</span><span class="sidecard_ov_txt">Third party insurance</span><span class="sidecard_inf material-symbols-outlined" aria-hidden="true">info</span></li>
+            <li><span class="sidecard_chk material-symbols-outlined">check</span><span class="sidecard_ov_txt">24/7 Breakdown assistance</span><span class="sidecard_inf material-symbols-outlined" aria-hidden="true">info</span></li>
+            <li><span class="sidecard_chk material-symbols-outlined">check</span><span class="sidecard_ov_txt">Tires suitable for winter</span><span class="sidecard_inf material-symbols-outlined" aria-hidden="true">info</span></li>
             <li><span class="sidecard_chk material-symbols-outlined">check</span><span class="sidecard_ov_txt">900 km are included, each additional kilometer costs €0.35</span></li>
             <li><span class="sidecard_chk material-symbols-outlined">check</span><span class="sidecard_ov_txt">Booking option: Best price - Pay now, cancel and rebook for a fee</span></li>
           </ul>
@@ -315,89 +315,118 @@
   </footer>
   <script>
     (function () {
-      const sticky = document.querySelector('.content_right');
-      if (!sticky) return;
-      const TOP_OFFSET = 20;
-      const EPSILON = 2;
+      const MOBILE_BREAKPOINT = 1023;
+      const STICKY_TOP = 20;
+      const STICKY_EPSILON = 2;
 
-      function updateStickyState() {
-        const rect = sticky.getBoundingClientRect();
-        const isStuck = rect.top <= TOP_OFFSET + EPSILON && rect.top >= TOP_OFFSET - EPSILON;
-        sticky.classList.toggle('is-stuck', isStuck && window.innerWidth <= 1023);
+      function setupStickySummary() {
+        const sticky = document.querySelector(".content_right");
+        const summaryToggle = document.querySelector(".summary_toggle");
+        if (!sticky) return;
+
+        const syncExpanded = function () {
+          if (!summaryToggle) return;
+          summaryToggle.setAttribute("aria-expanded", String(summaryToggle.checked));
+        };
+
+        const updateStickyState = function () {
+          const rect = sticky.getBoundingClientRect();
+          const isAtStickyTop = rect.top <= STICKY_TOP + STICKY_EPSILON && rect.top >= STICKY_TOP - STICKY_EPSILON;
+          sticky.classList.toggle("is-stuck", isAtStickyTop && window.innerWidth <= MOBILE_BREAKPOINT);
+        };
+
+        let scheduled = false;
+        const scheduleStickyUpdate = function () {
+          if (scheduled) return;
+          scheduled = true;
+          window.requestAnimationFrame(function () {
+            updateStickyState();
+            scheduled = false;
+          });
+        };
+
+        if (summaryToggle) {
+          syncExpanded();
+          summaryToggle.addEventListener("change", syncExpanded);
+          window.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && summaryToggle.checked) {
+              summaryToggle.checked = false;
+              syncExpanded();
+            }
+          });
+        }
+
+        scheduleStickyUpdate();
+        window.addEventListener("scroll", scheduleStickyUpdate, { passive: true });
+        window.addEventListener("resize", scheduleStickyUpdate);
       }
 
-      updateStickyState();
-      window.addEventListener('scroll', updateStickyState, { passive: true });
-      window.addEventListener('resize', updateStickyState);
-    })();
+      function setupCardInputFormatting() {
+        const expInput = document.querySelector('input[name="exp"]');
+        const cvcInput = document.querySelector('input[name="cvc"]');
 
-    (function () {
-      const expInput = document.querySelector('input[name="exp"]');
-      const cvcInput = document.querySelector('input[name="cvc"]');
-      if (expInput) {
-        expInput.addEventListener('input', function () {
-          const digits = this.value.replace(/\D/g, '').slice(0, 4);
-          if (digits.length <= 2) {
-            this.value = digits;
-            return;
-          }
-          this.value = digits.slice(0, 2) + " / " + digits.slice(2);
-        });
+        if (expInput) {
+          expInput.addEventListener("input", function () {
+            const digits = this.value.replace(/\D/g, "").slice(0, 4);
+            this.value = digits.length > 2 ? digits.slice(0, 2) + " / " + digits.slice(2) : digits;
+          });
+        }
+
+        if (cvcInput) {
+          cvcInput.addEventListener("input", function () {
+            this.value = this.value.replace(/\D/g, "").slice(0, 4);
+          });
+        }
       }
-      if (cvcInput) {
-        cvcInput.addEventListener('input', function () {
-          this.value = this.value.replace(/\D/g, '').slice(0, 4);
-        });
-      }
-    })();
 
-    (function () {
-      const countrySelects = document.querySelectorAll('.country_select');
-      countrySelects.forEach(function (select) {
-        const selWrap = select.closest('.sel');
-        const flagNode = selWrap ? selWrap.querySelector('.sel_flag') : null;
+      function setupCountrySelects() {
+        const countrySelects = document.querySelectorAll(".country_select");
 
-        function updateOptionLabels(mode) {
-          for (const option of select.options) {
-            const shortLabel = option.dataset.short || option.textContent || "";
-            const longLabel = option.dataset.long || shortLabel;
-            option.textContent = mode === "long" ? longLabel : shortLabel;
-          }
-        }
+        countrySelects.forEach(function (select) {
+          const selWrap = select.closest(".sel");
+          const flagNode = selWrap ? selWrap.querySelector(".sel_flag") : null;
 
-        function syncSelectedState() {
-          const selected = select.options[select.selectedIndex];
-          if (!selected) return;
-          if (flagNode && selected.dataset.flag) {
-            flagNode.textContent = selected.dataset.flag;
-          }
-        }
+          const updateOptionLabels = function (mode) {
+            for (const option of select.options) {
+              const shortLabel = option.dataset.short || option.textContent || "";
+              const longLabel = option.dataset.long || shortLabel;
+              option.textContent = mode === "long" ? longLabel : shortLabel;
+            }
+          };
 
-        updateOptionLabels("short");
-        syncSelectedState();
+          const syncSelectedState = function () {
+            const selected = select.options[select.selectedIndex];
+            if (!selected) return;
+            if (flagNode && selected.dataset.flag) {
+              flagNode.textContent = selected.dataset.flag;
+            }
+          };
 
-        function showLongLabels() {
-          updateOptionLabels("long");
-        }
+          const showLongLabels = function () {
+            updateOptionLabels("long");
+          };
 
-        function showShortLabels() {
-          updateOptionLabels("short");
-          syncSelectedState();
-        }
+          const showShortLabels = function () {
+            updateOptionLabels("short");
+            syncSelectedState();
+          };
 
-        select.addEventListener("pointerdown", showLongLabels);
-        select.addEventListener("touchstart", showLongLabels, { passive: true });
-        select.addEventListener("focus", showLongLabels);
-        select.addEventListener("keydown", function () {
-          showLongLabels();
-        });
-        select.addEventListener("change", function () {
           showShortLabels();
+
+          select.addEventListener("pointerdown", showLongLabels);
+          select.addEventListener("touchstart", showLongLabels, { passive: true });
+          select.addEventListener("focus", showLongLabels);
+          select.addEventListener("keydown", showLongLabels);
+          select.addEventListener("change", showShortLabels);
+          select.addEventListener("blur", function () {
+            window.setTimeout(showShortLabels, 0);
+          });
         });
-        select.addEventListener("blur", function () {
-          window.setTimeout(showShortLabels, 0);
-        });
-      });
+      }
+
+      setupStickySummary();
+      setupCardInputFormatting();
+      setupCountrySelects();
     })();
   </script>
 </body>

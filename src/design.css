@@ -486,6 +486,10 @@ button { font-family: inherit; cursor: pointer; }
 .pkg_card:has(.pkg_sel:checked) {
   border: 2px solid var(--content-primary);
 }
+.pkg_card:has(.pkg_sel:focus-visible) {
+  outline: 2px solid var(--content-primary);
+  outline-offset: 2px;
+}
 .pkg_radio {
   position: absolute;
   top: 14px;
@@ -595,6 +599,10 @@ button { font-family: inherit; cursor: pointer; }
   transition: border-color 140ms ease;
 }
 .addon_i:has(.addon_cb:checked) { border-color: var(--content-primary); }
+.addon_i:has(.addon_cb:focus-visible) {
+  outline: 2px solid var(--content-primary);
+  outline-offset: 2px;
+}
 .addon_cb {
   position: absolute;
   opacity: 0;
@@ -914,6 +922,10 @@ button { font-family: inherit; cursor: pointer; }
   .summary_toggle:checked + .sidecard .sidecard_toggle_ico {
     transform: rotate(180deg);
   }
+  .summary_toggle:focus-visible + .sidecard .sidecard_head {
+    outline: 2px solid var(--content-primary);
+    outline-offset: 2px;
+  }
 }
 
 /* Vehicle row (370x74 inside 410-wide card) */
@@ -1102,6 +1114,17 @@ button { font-family: inherit; cursor: pointer; }
 .foot_inner a:hover { text-decoration: underline; opacity: 1; }
 .foot_sep { margin: 0 var(--spacing-2xs); color: var(--onContent-onPrimary); opacity: 0.6; user-select: none; }
 .foot_copy { margin-left: auto; color: var(--onContent-onPrimary); opacity: 0.92; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 /* Mobile and tablet portrait adaptations */
 @media (max-width: 767px) {
