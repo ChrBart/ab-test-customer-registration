@@ -20,7 +20,7 @@
         <span class="topbar_locale"><span class="material-symbols-outlined topbar_icon">language</span> EN / €</span>
         <a href="#" class="topbar_login"><span class="material-symbols-outlined topbar_icon">person</span> Login / Sign-up</a>
         <div class="topbar_totalwrap">
-          <span class="topbar_total">Total: 91.00 €</span>
+          <span class="topbar_total">Total: 91.00€</span>
           <a href="#" class="topbar_pricedetail">Price details</a>
         </div>
       </div>
@@ -54,6 +54,7 @@
             <p class="block_intro">Without protection, the full vehicle price will be charged as a deductible in case of damage or theft.</p>
             <div class="pkg_row">
               <article class="pkg_card">
+                <span class="pkg_radio" aria-hidden="true"></span>
                 <span class="pkg_badge">Included</span>
                 <h3 class="pkg_title">No Extra Protection</h3>
                 <p class="pkg_sub pkg_warn">Deductible up to full vehicle value</p>
@@ -64,7 +65,7 @@
                 <h3 class="pkg_title">Peace of Mind</h3>
                 <p class="pkg_sub pkg_ok">No deductible, no claim, no hassle</p>
                 <a href="#" class="pkg_link">View coverage</a>
-                <span class="pkg_price">€ 39.00 / day</span>
+                <span class="pkg_price">€33.99 / day</span>
               </article>
             </div>
             <p class="block_btn_wrap"><a href="#" class="btn_secondary">View all protection packages</a></p>
@@ -75,7 +76,7 @@
             <div class="addon_list">
               <div class="addon_i">
                 <span class="addon_icon material-symbols-outlined">person_add</span>
-                <div class="addon_body"><strong class="addon_name">Additional driver</strong><span class="addon_price">17.00 € / day & driver</span></div>
+                <div class="addon_body"><strong class="addon_name">Additional driver</strong><span class="addon_price">11.00 € / day & driver</span></div>
                 <a href="#" class="addon_det">Details</a>
                 <label class="sw"><input type="checkbox" class="sw_i" /><span class="sw_t"></span></label>
               </div>
@@ -92,16 +93,16 @@
                 <label class="sw"><input type="checkbox" class="sw_i" /><span class="sw_t"></span></label>
               </div>
             </div>
-            <a href="#" class="block_link">See more &gt;</a>
+            <a href="#" class="block_link">See more...</a>
           </section>
 
           <section class="block">
             <h2 class="block_h2">What credit card would you like to pay with?</h2>
-            <label class="lbl"><span class="lbl_t">Card number</span><input type="text" class="inp" name="card" placeholder="1234 0734 1934 1234" /></label>
+            <label class="lbl"><span class="lbl_t">Card number</span><input type="text" class="inp" name="card" placeholder="1234 0784 1934 1234" /></label>
             <label class="lbl"><span class="lbl_t">Cardholder name</span><input type="text" class="inp" name="cardholder" /></label>
             <div class="row row_50">
               <label class="lbl"><span class="lbl_t">Expiration date</span><input type="text" class="inp" name="exp" placeholder="MM / YY" /></label>
-              <label class="lbl lbl_cvc"><span class="lbl_t">CVV</span><span class="lbl_cvc_row"><input type="text" class="inp" name="cvc" /><span class="lbl_info material-symbols-outlined" aria-label="Info">info</span></span></label>
+              <label class="lbl lbl_cvc"><span class="lbl_t">CVV</span><span class="lbl_cvc_row"><input type="text" class="inp" name="cvc" placeholder="123" /><span class="lbl_info material-symbols-outlined" aria-label="Info">info</span></span></label>
             </div>
             <div class="pay_icons">
               <img src="https://cdn.simpleicons.org/visa/1A1F71" alt="" width="42" height="28" />
@@ -122,8 +123,7 @@
               <span class="lbl_t">Country/region</span>
               <span class="sel"><span class="sel_flag">🇩🇪</span><select class="inp" name="country_addr"><option>Germany</option></select><span class="material-symbols-outlined sel_arrow">expand_more</span></span>
             </label>
-            <label class="lbl"><span class="lbl_t">Street and house number</span><input type="text" class="inp" name="street" /></label>
-            <p class="lbl_hint">Example: Street 143B</p>
+            <label class="lbl"><span class="lbl_t">Street and house number</span><input type="text" class="inp" name="street" placeholder="Example: Street 145B" /></label>
             <div class="row row_50">
               <label class="lbl"><span class="lbl_t">Postal code</span><input type="text" class="inp" name="zip" /></label>
               <label class="lbl"><span class="lbl_t">City</span><input type="text" class="inp" name="city" /></label>
@@ -139,7 +139,7 @@
           <section class="block block_tot">
             <div class="tot_row">
               <span class="tot_l">Total price</span>
-              <span class="tot_v">€ 91.00</span>
+              <span class="tot_v">€91.00</span>
             </div>
             <a href="#" class="block_link">View details</a>
           </section>
@@ -155,13 +155,17 @@
             <button type="submit" class="cta">Pay and Book</button>
             <div class="deposit">
               <p class="deposit_h">Refundable deposit</p>
-              <p class="deposit_p">An additional €200 refundable deposit will be blocked on your card at the pickup counter and released within a few days of the vehicle's return.</p>
+              <p class="deposit_p">An additional €200 deposit will be blocked on your card at the pickup counter and released within a few days of the vehicle's return.</p>
             </div>
           </section>
         </form>
       </div>
 
       <div class="content_right">
+        <div class="sidebar_top">
+          <span class="sidebar_total">Total: €91.00</span>
+          <a href="#" class="sidebar_pricedetail">Price details</a>
+        </div>
       <aside class="sidecard">
         <div class="sidecard_car">
           <div class="sidecard_img"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=200&fit=crop" alt="" /></div>
@@ -171,7 +175,7 @@
         </div>
         <div class="sidecard_pr">
           <h4 class="sidecard_sh">Pickup and return</h4>
-          <div class="sidecard_pr_i"><span class="sidecard_ico material-symbols-outlined">location_on</span><div><span class="sidecard_pr_label">Pickup</span><p class="sidecard_place">Munich Airport</p><p class="sidecard_time">Thu, Nov 14, 2024 | 12:30 PM</p></div></div>
+          <div class="sidecard_pr_i"><span class="sidecard_ico material-symbols-outlined">location_on</span><div><span class="sidecard_pr_label">Pickup</span><p class="sidecard_place">Munich Airport</p><p class="sidecard_time">Thu, Nov 14, 2024 | 12:00 PM</p></div></div>
           <div class="sidecard_pr_i"><span class="sidecard_ico material-symbols-outlined">location_on</span><div><span class="sidecard_pr_label">Return</span><p class="sidecard_place">Munich Airport</p><p class="sidecard_time">Sun, Nov 17, 2024 | 09:30 AM</p></div></div>
         </div>
         <div class="sidecard_ov">
@@ -179,9 +183,9 @@
           <ul class="sidecard_ov_list">
             <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> Third party insurance <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
             <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> 24/7 Breakdown assistance <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
-            <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> Tires suitable for winter <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
-            <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> 900 km included, each additional km €0.05 <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
-            <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> Booking option: Best prices - Pay now, cancel and rebook for a fee <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
+            <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> Tyres suitable for winter <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
+            <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> 900 km are included, each additional km costs €0.35 <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
+            <li><span class="sidecard_chk material-symbols-outlined">check_circle</span> Booking option: Flexi price - Pay now, cancel and rebook for a fee <span class="sidecard_inf material-symbols-outlined" aria-label="Info">info</span></li>
           </ul>
         </div>
       </aside>
@@ -192,7 +196,7 @@
   <footer class="foot">
     <div class="foot_inner">
       <a href="#">Help</a><span class="foot_sep">|</span>
-      <a href="#">Rental information</a><span class="foot_sep">|</span>
+      <a href="#">Reservation information</a><span class="foot_sep">|</span>
       <a href="#">SIXT for business</a><span class="foot_sep">|</span>
       <a href="#">Travel agencies</a><span class="foot_sep">|</span>
       <a href="#">SIXT partners</a><span class="foot_sep">|</span>
@@ -201,7 +205,7 @@
       <a href="#">Do not sell my personal information</a><span class="foot_sep">|</span>
       <a href="#">Terms & Conditions</a><span class="foot_sep">|</span>
       <a href="#">Cookie settings</a>
-      <span class="foot_copy">© Sixt SE 2024</span>
+      <span class="foot_copy">© SIXT 2024</span>
     </div>
   </footer>
 </body>

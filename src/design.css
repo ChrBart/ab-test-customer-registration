@@ -6,6 +6,7 @@
   --content-secondary: #828287;
   --content-tertiary: #c9c9cf;
   --content-brand: #ff5000;
+  --content-link: #2563eb;
   --content-negative: #d70015;
   --content-positive: #3cc60c;
   /* Surfaces */
@@ -13,8 +14,8 @@
   --surface-container2: #f4f4f9;
   --surface-canvas: #ffffff;
   --surface-canvas2: #ebebf0;
-  /* Header/Footer – Figma screenshot #2C2C2C */
-  --header-footer-bg: #2C2C2C;
+  /* Header/Footer – Figma content/primary */
+  --header-footer-bg: #1a1a1a;
   /* On-content (text on colored bg) */
   --onContent-onPrimary: #ffffff;
   --onContent-onBrand: #ffffff;
@@ -193,10 +194,30 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  background: var(--surface-container2);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  gap: var(--spacing-xs);
 }
 @media (max-width: 959px) {
-  .content_right { padding: 0; }
+  .content_right { padding: var(--spacing-xs); }
 }
+.sidebar_top {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sidebar_total {
+  font-size: var(--size-xs);
+  font-weight: 700;
+  color: var(--content-primary);
+}
+.sidebar_pricedetail {
+  font-size: var(--size-3xs);
+  color: var(--content-link);
+  text-decoration: underline;
+}
+.sidebar_pricedetail:hover { color: var(--content-primary); }
 
 /* Form sections */
 .block { margin-bottom: var(--spacing-lg); }
@@ -216,11 +237,12 @@ button { font-family: inherit; cursor: pointer; }
 }
 .block_link {
   font-size: var(--size-2xs);
-  color: var(--content-brand);
+  color: var(--content-link);
   text-decoration: underline;
   display: inline-block;
   margin-top: var(--spacing-2xs);
 }
+.block_link:hover { color: var(--content-primary); }
 .block_link_wrap { margin: var(--spacing-2xs) 0 0; }
 .block_link_center { display: inline-block; }
 .block_link_wrap:has(.block_link_center) { text-align: center; }
@@ -230,15 +252,15 @@ button { font-family: inherit; cursor: pointer; }
   padding: 10px var(--spacing-lg);
   font-size: var(--size-2xs);
   font-weight: 600;
-  color: var(--onContent-onPrimary);
-  background: var(--content-primary);
-  border: none;
+  color: var(--content-primary);
+  background: var(--surface-container2);
+  border: 1px solid var(--content-tertiary);
   border-radius: var(--radius-sm);
   text-decoration: none;
   cursor: pointer;
   font-family: var(--font-copy);
 }
-.btn_secondary:hover { opacity: 0.92; }
+.btn_secondary:hover { background: var(--surface-canvas2); }
 
 /* Fields */
 .lbl { display: block; margin-bottom: var(--spacing-xs); }
@@ -361,6 +383,16 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid var(--content-primary);
   box-shadow: var(--elevation-medium);
 }
+.pkg_radio {
+  position: absolute;
+  top: var(--spacing-2xs);
+  right: var(--spacing-2xs);
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--content-tertiary);
+  border-radius: 50%;
+  background: var(--surface-container);
+}
 .pkg_badge {
   position: absolute;
   top: var(--spacing-2xs);
@@ -368,6 +400,7 @@ button { font-family: inherit; cursor: pointer; }
   font-size: var(--size-3xs);
   color: var(--content-secondary);
 }
+.pkg_card .pkg_radio + .pkg_badge { right: calc(var(--spacing-2xs) + 24px); }
 .pkg_check {
   position: absolute;
   top: var(--spacing-2xs);
@@ -486,7 +519,8 @@ button { font-family: inherit; cursor: pointer; }
 }
 .legal_list li { margin-bottom: var(--spacing-3xs); }
 .legal_ack { font-size: var(--size-3xs); margin: 0 0 var(--spacing-lg); color: var(--content-primary); }
-.legal_ack a { color: var(--content-brand); text-decoration: underline; }
+.legal_ack a { color: var(--content-link); text-decoration: underline; }
+.legal_ack a:hover { color: var(--content-primary); }
 
 /* CTA – Figma brand button, radius 8px */
 .cta {
@@ -502,11 +536,11 @@ button { font-family: inherit; cursor: pointer; }
 }
 .cta:hover { opacity: 0.95; }
 
-/* Deposit – Figma surface/container2 */
+/* Deposit – Figma light grey block */
 .deposit {
   margin-top: var(--spacing-lg);
   padding: var(--spacing-xs);
-  background: var(--surface-container2);
+  background: #F6F6F6;
   border: 1px solid var(--content-tertiary);
   border-radius: var(--radius-sm);
 }
